@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CourseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\ProfileController;
@@ -39,8 +40,10 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::group(['namespace'=>'Frontend'], function(){
-    Route::get('/about', [WebController::class,'about'])->name('about.us');
-});
 
-Route::get('optimize', [WebController::class, 'optimize'])->name('optimize');
+
+
+// admin route
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
+    Route::get('/course', [CourseController::class, 'index']);
+});

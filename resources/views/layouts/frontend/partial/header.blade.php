@@ -12,6 +12,6 @@
 </div>
 @endif
 <ul class="d-flex">
-    <li><a href="{{ route('about.us') }}"">About</a></li>
+    <li><a href="">About</a></li>
     <li><a href="">Service</a></li>
 </ul>
