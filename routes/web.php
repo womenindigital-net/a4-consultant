@@ -27,8 +27,8 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth','admin')->group(function () {
     Route::get('/admin/dashboard', function () {
-        return view('layouts.admin.master');
-    })->middleware(['auth', 'verified'])->name('dashboard');
+        return view('admin.dashboard');
+    })->middleware(['auth', 'verified'])->name('admin.dashboard');
 });
 
 
@@ -45,5 +45,6 @@ require __DIR__.'/auth.php';
 
 // admin route
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
-    Route::get('/course', [CourseController::class, 'index']);
+    Route::get('/course/list', [CourseController::class, 'index'])->name('course.list');
+    Route::get('/course/create', [CourseController::class, 'create'])->name('course.create');
 });

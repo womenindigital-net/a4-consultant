@@ -12,12 +12,12 @@
                     </span>
                 </a>
 
-                <a href="index.html" class="logo logo-light">
+                <a href="{{ route('admin.dashboard') }}" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('assets/admin') }}/assets/images/logo-light.svg" alt="" height="22">
+                        <img src="{{ asset('assets/image/favicon.png') }}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('assets/frontend/img/LOGO/circle_logo.png') }}" alt="" height="25">
+                        <img src="{{ asset('assets/image/favicon.png') }}" alt="" height="50">
                     </span>
                 </a>
             </div>
@@ -34,7 +34,7 @@
                 </div>
             </form>
 
-            
+
         </div>
 
         <div class="d-flex">
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-         
+
 
 
 
@@ -72,10 +72,6 @@
                     <img class="rounded-circle header-profile-user" src="{{ asset('assets/image/logo.jpg') }}"
                         alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1" key="t-henry">{{ Auth::user()->name }}</span>
-
-                    <i class="fa-solid fa-circle-caret-down text-danger"></i>
-                    <i class="fa-solid fa-house text-danger"></i>
-                    <i class="fa-solid fa-bell"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
