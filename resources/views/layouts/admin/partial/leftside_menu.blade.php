@@ -46,10 +46,21 @@
                         <span key="t-dashboards">Enroll</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ url('admin/organization/package/page') }}" key="t-horizontal">Organization package
+                        <li><a href="{{ url('admin/organization/package/page') }}" key="t-horizontal">hello
                             create</a></li>
-                            <li><a href="{{ url('admin/organization/package/list') }}" key="t-horizontal">Organization Package
+                            <li><a href="{{ url('admin/organization/package/list') }}" key="t-horizontal">Hi
                                 list</a></li>
+                    </ul>
+                </li>
+                {{-- Courses instructor --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-film text-danger"></i>
+                        <span key="t-dashboards">Courses instructor</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('instructor.create') }}" key="t-horizontal">Create Courses instructor</a></li>
+                            <li><a href="{{ route('instructor.list')}}" key="t-horizontal">Courses instructor list</a></li>
                     </ul>
                 </li>
 

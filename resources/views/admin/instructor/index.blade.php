@@ -12,7 +12,7 @@
                 </div>
                 <div class="card-header">
                     <h3 class="text-primary">Curses List
-                        <a href="{{ route('course.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Add
+                        <a href="{{ route('instructor.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Add
                             Courses
                         </a>
                     </h3>
@@ -23,44 +23,34 @@
                             <thead>
                                 <tr>
                                     <th>SL</th>
-                                    <th>Course Category</th>
-                                    <th>Course Name</th>
-                                    <th>Course Title</th>
-                                    <th>Course Description</th>
-                                    <th>Courses Image</th>
-                                    <th>Price</th>
-                                    <th>Start Date</th>
-                                    <th>Time</th>
-                                    <th>Duration</th>
-                                    <th>Select Instructor</th>
-                                    <th>status</th>
+                                    <th>Instructor Name</th>
+                                    <th>Instructor Title</th>
+                                    <th>Description</th>
+                                    <th>Position </th>
+                                    <th>Instrutor Image</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($courses as $key  => $course)
+                                @forelse ($instructors as $key  => $instructor)
                                     <tr>
 
                                         <td>{{ $key+ 1}}</td>
-                                        <td>{{ $course->courseCategory }}</td>
-                                        <td>{{ $course->CourseName }}</td>
-                                        <td>{{ $course->courseTitle }}</td>
-                                        <td>{{ $course->courseDescription }}</td>
-                                        <td><img src="{{ asset($course->coursesImage) }}" width="50px" height="50px" alt=""></td>
-                                        <td>{{ $course->price }}</td>
-                                        <td>{{ $course->startDate }}</td>
-                                        <td>{{ $course->time }}</td>
-                                        <td>{{ $course->duration }}</td>
-                                        <td>{{ $course->SelectInstructor }}</td>
-                                        <td>{{ $course->status == '1' ? 'Active' : 'Inactive' }}</td>
+                                        <td>{{ $instructor->instructorName }}</td>
+                                        <td>{{ $instructor->instructorTitle }}</td>
+                                        <td>{{ $instructor->instructorDescription }}</td>
+                                        <td>{{ $instructor->instructorPosition }}</td>
+                                        <td><img src="{{ asset($instructor->instructorImage) }}" width="50px" height="50px" alt=""></td>
+                                        <td>{{ $instructor->status == '1' ? 'Active' : 'Inactive' }}</td>
                                             <td>
-                                                <a href="{{ route('course.edit',$course->id) }}"
+                                                <a href="{{ route('instructor.edit',$instructor->id) }}"
                                                     type="button"
                                                     class="btn btn-sm btn-success btn-rounded waves-effect waves-light mb-2 me-1"
                                                     class="btn btn-sm btn-success"> <i class="mdi mdi-pencil"></i></a>
 
                                                 <a type="button"
-                                                    href="{{ route('course.delete',$course->id) }}"
+                                                    href="{{ route('instructor.delete',$instructor->id) }}"
                                                     onclick="return confirm('Are you sure, you want to delete ')"
                                                     class="btn btn-sm mb-2 me-1 btn-danger btn-rounded waves-effect waves-light">
                                                     <i class="fas fa-trash-alt"></i>
@@ -75,7 +65,7 @@
                             </tbody>
                         </table>
                         <div>
-                        {{ $courses->links() }}
+                        {{-- {{ $courses->links() }} --}}
                     </div>
                     </div>
                 </div>

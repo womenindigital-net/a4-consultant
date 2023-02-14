@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\InstructorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\ProfileController;
@@ -45,6 +46,18 @@ require __DIR__.'/auth.php';
 
 // admin route
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
+    //course
     Route::get('/course/list', [CourseController::class, 'index'])->name('course.list');
     Route::get('/course/create', [CourseController::class, 'create'])->name('course.create');
+    Route::post('/course/create/store', [CourseController::class, 'store'])->name('course.store');
+    Route::get('/course/edit/{course_id}', [CourseController::class, 'edit'])->name('course.edit');
+    Route::put('/course/update/{course_id}', [CourseController::class, 'update'])->name('course.update');
+    Route::get('/course/delete/{course_id}', [CourseController::class, 'destroy'])->name('course.delete');
+    //instructor
+    Route::get('/instructor/list', [InstructorController::class, 'index'])->name('instructor.list');
+    Route::get('/instructor/create', [InstructorController::class, 'create'])->name('instructor.create');
+    Route::post('/instructor/create/store', [InstructorController::class, 'store'])->name('instructor.store');
+    Route::get('/instructor/edit/{instructor_id}', [InstructorController::class, 'edit'])->name('instructor.edit');
+    Route::put('/course/update/{course_id}', [CourseController::class, 'update'])->name('instructor.update');
+    Route::get('/instructor/delete/{course_id}', [InstructorController::class, 'destroy'])->name('instructor.delete');
 });

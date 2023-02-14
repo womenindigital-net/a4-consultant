@@ -2,65 +2,62 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Course;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CourseRequest;
-use Illuminate\Support\Facades\File;
+use App\Http\Requests\InstructorRequest;
+use App\Models\Instructor;
+use Illuminate\Http\Request;
 
-class CourseController extends Controller
+class InstructorController extends Controller
 {
-    //course list
-    public function index(){
-        $data['courses'] = Course::orderBy('id', 'DESC')->paginate(5);
-        return view('admin.course.index',$data);
+    //instructor list
+    public function index()
+    {
+        $data['instructors'] = Instructor::orderBy('id', 'DESC')->paginate(5);
+        return view('admin.instructor.index', $data);
     }
-    //course create
-    public function create(){
-        return view('admin.course.create');
+    //instructor create
+    public function create()
+    {
+        return view('admin.instructor.create');
     }
-    //  course store
-    public function store(CourseRequest $request){
 
-        $record = new Course();
-        $record->courseCategoryId = request('courseCategoryId');
-        $record->CourseName = request('CourseName');
-        $record->courseTitle = request('courseTitle');
-        $record->courseDescription = request('courseDescription');
-        $record->price = request('price');
-        $record->startDate = request('startDate');
-        $record->time = request('time');
-        $record->duration = request('duration');
-        $record->InstructorId = request('InstructorId');
-        $uploadPath = 'uploads/courses/';
-        if ($request->hasFile('coursesImage')) {
-            $file = $request->file('coursesImage');
+    //instructor store
+    public function store(InstructorRequest $request)
+    {
+        $record = new Instructor();
+        $record->instructorName = request('instructorName');
+        $record->instructorTitle = request('instructorTitle');
+        $record->instructorDescription = request('instructorDescription');
+        $record->instructorPosition = request('instructorPosition');
+        $uploadPath = 'uploads/instructors/';
+        if ($request->hasFile('instructorImage')) {
+            $file = $request->file('instructorImage');
             $ext = $file->getClientOriginalExtension();
             $filename = time() . '.' . $ext;
-            $file->move('uploads/courses/', $filename);
-            $record->coursesImage = $uploadPath.$filename;
+            $file->move('uploads/instructors/', $filename);
+            $record->instructorImage = $uploadPath . $filename;
         }
         $record->status = request('status');
         $record->save();
         // session()->flash('message', 'Successfully Courses Create');
-        return redirect()->route('course.list')->with('message','Successfully Courses Create');
+        return redirect()->route('instructor.list')->with('message', 'Successfully Instructor Created');
     }
 
-    //course edit
-    public function edit($course_id){
-        $course = Course::findOrFail($course_id);
+
+    //instructor edit
+    public function edit($instructor_id){
+        $instructor = Instructor::findOrFail($instructor_id);
         $data = [
-            'courses' => $course
+            'instructors' => $instructor
         ];
-        return view('admin.course.edit',$data);
+        return view('admin.instructor.edit',$data);
     }
 
+    //update instructor
+    public function update(InstructorRequest $request ,$instructor_id){
 
-    //update courses
-    public function update(CourseRequest $request ,$course_id){
-
-        $course_id = $course_id;
-        $record = Course::find($course_id);
+        $instructor_id = $instructor_id;
+        $record = Instructor::find($instructor_id);
         $record->courseCategoryId = request('courseCategoryId');
         $record->CourseName = request('CourseName');
         $record->courseTitle = request('courseTitle');
@@ -86,7 +83,7 @@ class CourseController extends Controller
         return redirect()->route('course.list')->with('message','Successfully Courses Updated');
     }
 
-    //delete Courses
+    //delete instructor
 
     public function destroy($course_id)
     {
@@ -100,4 +97,5 @@ class CourseController extends Controller
         }
         return redirect()->back()->with('message', 'Successfully Delete Courses');
     }
+
 }
