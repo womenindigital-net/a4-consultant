@@ -146,7 +146,7 @@
                                                 <li type="button"  data-bs-toggle="dropdown">
                                                     <a type="button" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role=""
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <?php echo "<img src='" . asset(Auth::user()->image) . "' alt='name' style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>"; ?> {{ Auth::user()->fullname }}
+                                                    <?php echo "<img src='" . asset(Auth::user()->prodicle) . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>"; ?> {{ Auth::user()->name }}
                                                     </a>
                                                 </li>
                                                 <ul class="dropdown-menu dropdown-menu-lg-end">
@@ -155,7 +155,8 @@
                                                     <a class="dropdown-item" href="{{ url('notification') }}">Notifications</a>
                                                     <a class="dropdown-item" href="#">Purchase History</a>
                                                     <a class="dropdown-item" href="{{ url('help') }}">Help</a>
-                                                    <a class="dropdown-item" href="{{ url('logout') }}">Log Out</a>
+                                                   <a class="dropdown-item" href="{{ route('logout') }}">Log out </a>
+
                                                 </ul>
                                             </li>
                                         @else

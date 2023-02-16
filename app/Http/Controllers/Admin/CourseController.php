@@ -61,7 +61,6 @@ class CourseController extends Controller
 
     //update courses
     public function update(CourseRequest $request ,$course_id){
-
         $course_id = $course_id;
         $record = Course::find($course_id);
         $record->course_category_id = request('course_category_id');
