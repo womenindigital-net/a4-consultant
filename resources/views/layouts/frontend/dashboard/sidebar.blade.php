@@ -20,7 +20,7 @@
                 <p>email</p>
             </div>
             <div class="create_new_btn_sidebar dash_menu mb-2">
-                <a href="#" class="btn"><i class="fa fa-user" aria-hidden="true"></i>User Profile</a>
+                <a href="{{route('profile.edit')}}" class="btn"><i class="fa fa-user" aria-hidden="true"></i>User Profile</a>
             </div>
             <div class="create_new_btn_sidebar dash_menu mb-2">
                 <a href="#" class="btn"><i class="fa fa-book" aria-hidden="true"></i>Course Info</a>

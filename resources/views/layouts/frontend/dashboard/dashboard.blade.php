@@ -42,9 +42,9 @@
     <body>
         
         <section class="container-fluid bg-color ">
-            <div class="row">
+            {{-- <div class="row">
                 @include('layouts.frontend.dashboard.tophead')
-            </div>
+            </div> --}}
             <div class="row">
                 <div class="col-md-3 col-lg-2 m-0 p-0">
                     @include('layouts.frontend.dashboard.sidebar')

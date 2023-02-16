@@ -13,7 +13,7 @@
 @endif --}}
 <!--====== PRELOADER PART START ======-->
 
-<div class="preloader">
+{{-- <div class="preloader">
     <div class="loader rubix-cube">
         <div class="layer layer-1"></div>
         <div class="layer layer-2"></div>
@@ -23,7 +23,7 @@
         <div class="layer layer-6"></div>
         <div class="layer layer-7"></div>
         <div class="layer layer-8"></div>
-    </div>
+    </div> --}}
 </div>
 
 <!--====== PRELOADER PART START ======-->
@@ -79,18 +79,17 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="active" href="index.html">Home</a>
+                                    <a class="active" href="{{route('index')}}">Home</a>
 
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route('aboutus')}}">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="service.html">Our Services</a>
+                                    <a href="{{route('service')}}">Our Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="courses.html">Courses</a>
-
+                                    <a href="{{route('aboutus')}}">Courses</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="teachers.html">Our teachers</a>

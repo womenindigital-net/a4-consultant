@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\InstructorController;
+use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\ProfileController;
@@ -27,7 +28,7 @@ Route::get('/dashboard', function () {
     return view('layouts.frontend.dashboard.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth','admin')->group(function () {
+Route::middleware('auth', 'admin')->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard');
     })->middleware(['auth', 'verified'])->name('admin.dashboard');
@@ -40,9 +41,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
+// frontend
 
+Route::namespace('frontend')->group(function () {
+    Route::get('/', [FrontendController::class, 'index'])->name('index');
+    Route::get('/aboutus', [FrontendController::class, 'aboutus'])->name('aboutus');
+    Route::get('/service', [FrontendController::class, 'service'])->name('service');
+    Route::get('/courses', [FrontendController::class, 'courses'])->name('courses');
+});
 
 
 // admin route
