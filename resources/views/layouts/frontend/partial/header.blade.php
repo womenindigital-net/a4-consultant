@@ -1,4 +1,4 @@
-@if (Route::has('login'))
+{{-- @if (Route::has('login'))
     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
         @auth
             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
@@ -10,11 +10,7 @@
             @endif
         @endauth
     </div>
-@endif
-<ul class="d-flex">
-    <li><a href="">About</a></li>
-    <li><a href="">Service</a></li>
-</ul>
+@endif --}}
 <!--====== PRELOADER PART START ======-->
 
 <div class="preloader">
@@ -59,7 +55,7 @@
                             </div>
                         </div>
                         <div class="button float-left">
-                            <a href="#" class="main-btn">Apply Now</a>
+                            <a href="#" class="main-btn" style="padding: 0 30px; line-height: 45px;">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -117,28 +113,72 @@
 
                             </ul>
                             <ul class="navbar-nav">
+                                {{-- @auth
+                                <li class="nav-item dropdown  navig-link">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <?php echo "<img src='" . asset(Auth::user()->image) . "' alt='sdfd' style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>"; ?> {{ Auth::user()->fullname }}
+                                    </a>
+                                    <div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ url('user/dashboard') }}">Dashboard</a>
+                                        <a class="dropdown-item" href="{{ url('live-chat') }}">Message</a>
+                                        <a class="dropdown-item" href="{{ url('notification') }}">Notifications</a>
+                                        <a class="dropdown-item" href="#">Purchase History</a>
+                                        <a class="dropdown-item" href="{{ url('help') }}">Help</a>
+                                        <a class="dropdown-item" href="{{ url('logout') }}">Log Out</a>
+                                    </div>
+                                </li>
+                            @else
+                                <li class="nav-item {{ request()->is('login') ? 'active' : '' }}  navig-link">
+                                    <a class="nav-link text-success-custom" href="{{ url('login') }}">Log in</a>
+                                </li>
+                                <li class="nav-item  navig-link">
+                                    <a class="nav-link text-success-custom" href="#">|</a>
+                                </li>
+                                <li class="nav-item {{ request()->is('user-type') ? 'active' : '' }}  navig-link">
+                                    <a class="nav-link text-success-custom" href="{{ url('register') }}">Sign up</a>
+                                </li>
+                            @endauth --}}
                                 @if (Route::has('login'))
-                                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                    <div class="hidden fixed top-0 right-0 px-6 sm:block d-flex">
                                         @auth
-                                            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                                            <li class="nav-item btn-group">
+                                                <li type="button"  data-bs-toggle="dropdown">
+                                                    <a type="button" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role=""
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <?php echo "<img src='" . asset(Auth::user()->image) . "' alt='name' style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>"; ?> {{ Auth::user()->fullname }}
+                                                    </a>
+                                                </li>
+                                                <ul class="dropdown-menu dropdown-menu-lg-end">
+                                                    <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                                                    <a class="dropdown-item" href="{{ url('live-chat') }}">Message</a>
+                                                    <a class="dropdown-item" href="{{ url('notification') }}">Notifications</a>
+                                                    <a class="dropdown-item" href="#">Purchase History</a>
+                                                    <a class="dropdown-item" href="{{ url('help') }}">Help</a>
+                                                    <a class="dropdown-item" href="{{ url('logout') }}">Log Out</a>
+                                                </ul>
+                                            </li>
                                         @else
+                                            <li class="nav-item {{ request()->is('login') ? 'active' : '' }}">
+                                                <a class="nav-link text-success-custom" href="{{ url('login') }}">Log in</a>
+                                            </li>
                                             <li class="nav-item">
-                                                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                                                <a class="nav-link text-success-custom" href="#">|</a>
                                             </li>
 
                                             @if (Route::has('register'))
-                                            <li class="nav-item">
-                                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                                            <li class="nav-item {{ request()->is('user-type') ? 'active' : '' }}">
+                                                <a href="{{ route('register') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
                                             </li>
                                             @endif
                                         @endauth
                                     </div>
                                 @endif
-
-                                <li class="nav-item">
-                                    <a href="#">Register</a>
-                                </li>
                             </ul>
+                            <div class="">
+                                
+                              </div>
+                            
                         </div>
                     </nav> <!-- nav -->
                 </div>
