@@ -50,15 +50,15 @@
                                 <label class="form-label">Status</label>
                                 <select name="status" class="form-select">
                                     <option selected disabled value="">Select</option>
-                                    <option value="1">Active</option>
-                                    <option value="0">Inactive</option>
+                                    <option value="1"{{ $instructors->status == 1 ? 'selected' : '' }}>Active</option>
+                                    <option value="0" {{ $instructors->status == 0 ? 'selected' : '' }}>Inactive</option>
                                 </select>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Instrutor Image</label>
                                     <input type="file" name="instructorImage" id="imgInp" class="form-control"
-                                        id="validationCustom02" required>
+                                        id="validationCustom02" >
                                 </div>
                             </div>
                             <div class="col-md-6">

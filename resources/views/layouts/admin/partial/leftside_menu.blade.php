@@ -35,8 +35,8 @@
                         <span key="t-dashboards">Category Courses</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ url('dd') }}" key="t-horizontal">Courses Category create</a></li>
-                        <li><a href="{{ url('admin/package/list') }}" key="t-horizontal">Courses Category list</a></li>
+                        <li><a href="{{ route('course.category.create') }}" key="t-horizontal">Courses Category create</a></li>
+                        <li><a href="{{ route('course.category.list')}}" key="t-horizontal">Courses Category list</a></li>
                     </ul>
                 </li>
                 {{-- Enroll --}}

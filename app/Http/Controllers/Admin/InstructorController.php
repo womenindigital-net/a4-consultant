@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\InstructorRequest;
 use App\Models\Instructor;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
+use App\Http\Requests\InstructorRequest;
 
 class InstructorController extends Controller
 {
@@ -55,47 +56,40 @@ class InstructorController extends Controller
 
     //update instructor
     public function update(InstructorRequest $request ,$instructor_id){
-
-        $instructor_id = $instructor_id;
         $record = Instructor::find($instructor_id);
-        $record->courseCategoryId = request('courseCategoryId');
-        $record->CourseName = request('CourseName');
-        $record->courseTitle = request('courseTitle');
-        $record->courseDescription = request('courseDescription');
-        $record->price = request('price');
-        $record->startDate = request('startDate');
-        $record->time = request('time');
-        $record->duration = request('duration');
-        $record->InstructorId = request('InstructorId');
-        if ($request->hasFile('coursesImage')) {
-            $uploadPath = 'uploads/courses/' . $record->coursesImage;
-            if(File::exists($uploadPath)){
-                File::delete($uploadPath);
+        $record->instructorName = request('instructorName');
+        $record->instructorTitle = request('instructorTitle');
+        $record->instructorDescription = request('instructorDescription');
+        $record->instructorPosition = request('instructorPosition');
+        if ($request->hasFile('instructorImage')) {
+            $destination = $record->instructorImage;
+            if(File::exists($destination)){
+                File::delete($destination);
             }
-            $file = $request->file('coursesImage');
+            $file = $request->file('instructorImage');
             $ext = $file->getClientOriginalExtension();
             $filename = time() . '.' . $ext;
-            $file->move('uploads/courses/', $filename);
-            $record->coursesImage = $filename;
+            $file->move('uploads/instructors/', $filename);
+            $record->instructorImage = 'uploads/instructors/' . $filename;
         }
         $record->status = request('status');
         $record->update();
-        return redirect()->route('course.list')->with('message','Successfully Courses Updated');
+        return redirect()->route('instructor.list')->with('message','Successfully Instructor Updated');
     }
 
     //delete instructor
 
     public function destroy($course_id)
     {
-        $record = Course::findOrFail($course_id);
+        $record = Instructor::findOrFail($course_id);
         if($record->count() > 0){
-            $destination = $record->coursesImage;
+            $destination = $record->instructorImage;
             if(File::exists($destination)){
                 File::delete($destination);
             }
             $record->delete();
         }
-        return redirect()->back()->with('message', 'Successfully Delete Courses');
+        return redirect()->back()->with('message', 'Successfully Delete Instructor');
     }
 
 }

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->integer('courseCategoryId')->nullable();
+            $table->unsignedBigInteger('course_category_id');
             $table->string('CourseName')->nullable();
             $table->string('courseTitle')->nullable();
             $table->longText('courseDescription')->nullable();
@@ -23,9 +23,11 @@ return new class extends Migration
             $table->date('startDate')->nullable();
             $table->time('time')->nullable();
             $table->string('duration')->nullable();
-            $table->integer('InstructorId')->nullable();
+            $table->unsignedBigInteger('instructor_id')->nullable();
             $table->string('coursesImage')->nullable();
             $table->string('status')->nullable();
+            $table->foreign('course_category_id')->references('id')->on('course_categories')->onDelete('cascade');
+            $table->foreign('instructor_id')->references('id')->on('instructors')->onDelete('cascade');
             $table->timestamps();
         });
     }

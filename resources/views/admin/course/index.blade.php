@@ -42,7 +42,7 @@
                                     <tr>
 
                                         <td>{{ $key+ 1}}</td>
-                                        <td>{{ $course->courseCategory }}</td>
+                                        <td>{{ $course->courseCategory->categoryTitle }}</td>
                                         <td>{{ $course->CourseName }}</td>
                                         <td>{{ $course->courseTitle }}</td>
                                         <td>{{ $course->courseDescription }}</td>
@@ -51,7 +51,7 @@
                                         <td>{{ $course->startDate }}</td>
                                         <td>{{ $course->time }}</td>
                                         <td>{{ $course->duration }}</td>
-                                        <td>{{ $course->SelectInstructor }}</td>
+                                        <td>{{ $course->Instructor->instructorName }}</td>
                                         <td>{{ $course->status == '1' ? 'Active' : 'Inactive' }}</td>
                                             <td>
                                                 <a href="{{ route('course.edit',$course->id) }}"

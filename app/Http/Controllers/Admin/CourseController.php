@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CourseRequest;
 use Illuminate\Support\Facades\File;
+use App\Models\CourseCategory;
+use App\Models\Instructor;
 
 class CourseController extends Controller
 {
@@ -17,13 +19,14 @@ class CourseController extends Controller
     }
     //course create
     public function create(){
-        return view('admin.course.create');
+        $data['courseCategory'] = CourseCategory::all();
+        $data['instructors'] = Instructor::all();
+        return view('admin.course.create',$data);
     }
     //  course store
     public function store(CourseRequest $request){
-
         $record = new Course();
-        $record->courseCategoryId = request('courseCategoryId');
+        $record->course_category_id = request('course_category_id');
         $record->CourseName = request('CourseName');
         $record->courseTitle = request('courseTitle');
         $record->courseDescription = request('courseDescription');
@@ -31,7 +34,7 @@ class CourseController extends Controller
         $record->startDate = request('startDate');
         $record->time = request('time');
         $record->duration = request('duration');
-        $record->InstructorId = request('InstructorId');
+        $record->instructor_id = request('instructor_id');
         $uploadPath = 'uploads/courses/';
         if ($request->hasFile('coursesImage')) {
             $file = $request->file('coursesImage');
@@ -49,9 +52,9 @@ class CourseController extends Controller
     //course edit
     public function edit($course_id){
         $course = Course::findOrFail($course_id);
-        $data = [
-            'courses' => $course
-        ];
+        $data = ['courses' => $course];
+        $data['courseCategory'] = CourseCategory::all();
+        $data['instructors'] = Instructor::all();
         return view('admin.course.edit',$data);
     }
 
@@ -61,7 +64,7 @@ class CourseController extends Controller
 
         $course_id = $course_id;
         $record = Course::find($course_id);
-        $record->courseCategoryId = request('courseCategoryId');
+        $record->course_category_id = request('course_category_id');
         $record->CourseName = request('CourseName');
         $record->courseTitle = request('courseTitle');
         $record->courseDescription = request('courseDescription');
@@ -69,7 +72,7 @@ class CourseController extends Controller
         $record->startDate = request('startDate');
         $record->time = request('time');
         $record->duration = request('duration');
-        $record->InstructorId = request('InstructorId');
+        $record->instructor_id = request('instructor_id');
         if ($request->hasFile('coursesImage')) {
             $uploadPath = 'uploads/courses/' . $record->coursesImage;
             if(File::exists($uploadPath)){

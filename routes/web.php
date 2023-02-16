@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\InstructorController;
 use Illuminate\Support\Facades\Route;
@@ -53,11 +54,18 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/course/edit/{course_id}', [CourseController::class, 'edit'])->name('course.edit');
     Route::put('/course/update/{course_id}', [CourseController::class, 'update'])->name('course.update');
     Route::get('/course/delete/{course_id}', [CourseController::class, 'destroy'])->name('course.delete');
+    //course category
+    Route::get('/course/category/list', [CourseCategoryController::class, 'index'])->name('course.category.list');
+    Route::get('/course/category/create', [CourseCategoryController::class, 'create'])->name('course.category.create');
+    Route::post('/course/category/create/store', [CourseCategoryController::class, 'store'])->name('course.category.store');
+    Route::get('/course/category/edit/{course_id}', [CourseCategoryController::class, 'edit'])->name('course.category.edit');
+    Route::put('/course/category/update/{course_id}', [CourseCategoryController::class, 'update'])->name('course.category.update');
+    Route::get('/course/category/delete/{course_id}', [CourseCategoryController::class, 'destroy'])->name('course.category.delete');
     //instructor
     Route::get('/instructor/list', [InstructorController::class, 'index'])->name('instructor.list');
     Route::get('/instructor/create', [InstructorController::class, 'create'])->name('instructor.create');
     Route::post('/instructor/create/store', [InstructorController::class, 'store'])->name('instructor.store');
     Route::get('/instructor/edit/{instructor_id}', [InstructorController::class, 'edit'])->name('instructor.edit');
-    Route::put('/course/update/{course_id}', [CourseController::class, 'update'])->name('instructor.update');
+    Route::put('/instructor/update/{instructor_id}', [InstructorController::class, 'update'])->name('instructor.update');
     Route::get('/instructor/delete/{course_id}', [InstructorController::class, 'destroy'])->name('instructor.delete');
 });

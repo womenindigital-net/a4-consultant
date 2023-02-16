@@ -24,7 +24,7 @@ class CourseRequest extends FormRequest
     public function rules()
     {
         return [
-            'courseCategoryId' => 'nullable',
+            'course_category_id' => 'nullable',
             'CourseName' => 'nullable',
             'courseTitle' => 'nullable',
             'courseDescription' => 'nullable',
@@ -32,7 +32,7 @@ class CourseRequest extends FormRequest
             'startDate' => 'nullable',
             'time' => 'nullable',
             'duration' => 'nullable',
-            'InstructorId' => 'nullable',
+            'instructor_id' => 'nullable',
             'coursesImage' => 'nullable',
             'status' => 'nullable',
             'courseCategory' => 'nullable',

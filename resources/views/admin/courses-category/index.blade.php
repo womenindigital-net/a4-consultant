@@ -11,8 +11,8 @@
                     @endif
                 </div>
                 <div class="card-header">
-                    <h3 class="text-primary">Curses List
-                        <a href="{{ route('instructor.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Add
+                    <h3 class="text-primary">Curses Category List
+                        <a href="{{ route('course.category.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Add Category
                             Courses
                         </a>
                     </h3>
@@ -23,35 +23,28 @@
                             <thead>
                                 <tr>
                                     <th>SL</th>
-                                    <th>Instructor Name</th>
-                                    <th>Instructor Title</th>
-                                    <th>Description</th>
-                                    <th>Position </th>
-                                    <th>Instrutor Image</th>
-                                    <th>Status</th>
+                                    <th>Course Title</th>
+                                    <th>Courses Image</th>
+                                    <th>status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($instructors as $key  => $instructor)
+                                @forelse ($coursesCategories as $key  => $category)
                                     <tr>
-
                                         <td>{{ $key+ 1}}</td>
-                                        <td>{{ $instructor->instructorName }}</td>
-                                        <td>{{ $instructor->instructorTitle }}</td>
-                                        <td>{{ $instructor->instructorDescription }}</td>
-                                        <td>{{ $instructor->instructorPosition }}</td>
-                                        <td><img src="{{ asset($instructor->instructorImage) }}" width="50px" height="50px" alt=""></td>
-                                        <td>{{ $instructor->status == '1' ? 'Active' : 'Inactive' }}</td>
+                                        <td>{{ $category->categoryTitle }}</td>
+                                        <td><img src="{{ asset($category->categoryImage) }}" width="50px" height="50px" alt=""></td>
+                                        <td>{{ $category->status == '1' ? 'Active' : 'Inactive' }}</td>
                                             <td>
-                                                <a href="{{ route('instructor.edit',$instructor->id) }}"
+                                                <a href="{{ route('course.category.edit',$category->id) }}"
                                                     type="button"
                                                     class="btn btn-sm btn-success btn-rounded waves-effect waves-light mb-2 me-1"
                                                     class="btn btn-sm btn-success"> <i class="mdi mdi-pencil"></i></a>
 
                                                 <a type="button"
-                                                    href="{{ route('instructor.delete',$instructor->id) }}"
-                                                    onclick="return confirm('Are you sure, you want to delete?')"
+                                                    href="{{ route('course.category.delete',$category->id) }}"
+                                                    onclick="return confirm('Are you sure, you want to delete ')"
                                                     class="btn btn-sm mb-2 me-1 btn-danger btn-rounded waves-effect waves-light">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </a>
@@ -59,13 +52,13 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="13" class="text-danger text-center">No instructors Available</td>
+                                        <td colspan="13" class="text-danger text-center">No Courses Available</td>
                                     </tr>
                                 @endforelse
                             </tbody>
                         </table>
                         <div>
-                        {{ $instructors->links() }}
+                        {{ $coursesCategories->links() }}
                     </div>
                     </div>
                 </div>

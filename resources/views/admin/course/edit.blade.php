@@ -21,10 +21,9 @@
                                     <label for="validationCustom02" class="form-label"> Course Category</label>
                                     <select class="form-select" name="courseCategoryId" id="validationCustom02" required>
                                         <option selected disabled value="">Select Category</option>
-                                        <option value="30">category One </option>
-                                        <option value="90">Category two</option>
-                                        <option value="180">Category three</option>
-                                        <option value="365">Category Frou</option>
+                                        @foreach ($courseCategory as $category)
+                                        <option value="{{ $category->id }}"  >{{ $category->categoryTitle }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -101,8 +100,8 @@
                                 <label class="col-md-2 col-form-label">Status</label>
                                 <select name="status" class="form-select">
                                     <option selected disabled value="">Select</option>
-                                    <option value="1">Active</option>
-                                    <option value="0">Inactive</option>
+                                    <option value="1" {{ $courses->status == 1 ? 'selected' : '' }}>Active</option>
+                                    <option value="0" {{ $courses->status == 0 ? 'selected' : '' }}>Inactive</option>
                                 </select>
                             </div>
                             <div class="col-md-6">

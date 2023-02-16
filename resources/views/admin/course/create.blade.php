@@ -19,12 +19,11 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom02" class="form-label"> Course Category</label>
-                                    <select class="form-select" name="courseCategoryId" id="validationCustom02" required>
+                                    <select class="form-select" name="course_category_id" id="validationCustom02" required>
                                         <option selected disabled value="">Select Category</option>
-                                        <option value="30">category One </option>
-                                        <option value="90">Category two</option>
-                                        <option value="180">Category three</option>
-                                        <option value="365">Category Frou</option>
+                                        @foreach ($courseCategory as $category)
+                                        <option value="{{ $category->id }}">{{ $category->categoryTitle }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -80,12 +79,11 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom02" class="form-label">Select Instructor</label>
-                                    <select class="form-select" name="InstructorId" id="validationCustom02" required>
+                                    <select class="form-select" name="instructor_id" id="validationCustom02" required>
                                         <option selected disabled value="">Select Instructor</option>
-                                        <option value="30">category One </option>
-                                        <option value="90">Category two</option>
-                                        <option value="180">Category three</option>
-                                        <option value="365">Category Frou</option>
+                                        @foreach ($instructors as $instructor)
+                                        <option value="{{ $instructor->id }}">{{ $instructor->instructorName }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
