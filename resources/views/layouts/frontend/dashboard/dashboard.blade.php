@@ -1,19 +1,20 @@
-<x-app-layout>
-        {{-- <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Dashboard') }}
-            </h2>
-        </x-slot>
-    
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 bg-white border-b border-gray-200">
-                        You're logged in!
+    {{-- <x-app-layout>
+            <x-slot name="header">
+                <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                    {{ __('Dashboard') }}
+                </h2>
+            </x-slot>
+        
+            <div class="py-12">
+                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                        <div class="p-6 bg-white border-b border-gray-200">
+                            You're logged in!
+                        </div>
                     </div>
                 </div>
             </div>
-        </div> --}}
+    </x-app-layout> --}}
     
     <!DOCTYPE html>
     <html lang="en">
@@ -39,7 +40,11 @@
    
     </head>
     <body>
+        
         <section class="container-fluid bg-color ">
+            <div class="row">
+                @include('layouts.frontend.dashboard.tophead')
+            </div>
             <div class="row">
                 <div class="col-md-3 col-lg-2 m-0 p-0">
                     @include('layouts.frontend.dashboard.sidebar')
@@ -76,4 +81,4 @@
     </body>
     </html>
     
-</x-app-layout>
+
