@@ -387,7 +387,7 @@ p {
 
 /*===== Header Logo support =====*/
 .logo img {
-    width: 100px;
+    width: 85px;
     height: auto;
 }
 .align-center {
@@ -479,15 +479,17 @@ p {
 
 .navigation .navbar .navbar-nav{}
 .navigation .navbar .navbar-nav li{
-    margin-right: 30px;
+    margin-right: 20px;
     position: relative;
 }
 .navigation .navbar .navbar-nav li:last-child{
     margin-right: 0;
 }
-
+a.dropdown-item {
+    padding: 5px 15px !important;
+}
 .navigation .navbar .navbar-nav li a{
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #000;
@@ -966,7 +968,7 @@ p {
 .category-slied .slick-arrow {
 	position: absolute;
 	top: 50%;
-	right: -50px;
+	right: -590px;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
