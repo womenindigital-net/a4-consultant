@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="{{route('index')}}">
                             <img src="{{ asset('assets/frontend/images/logo.png') }}" alt="Logo">
                         </a>
                     </div>
@@ -89,24 +89,24 @@
                                     <a href="{{route('service')}}">Our Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('aboutus')}}">Courses</a>
+                                    <a href="{{route('courses')}}">Courses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="teachers.html">Our teachers</a>
+                                    <a href="{{route('teachers')}}">Our teachers</a>
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="blog.html">Stories</a>
+                                    <a href="{{route('stories')}}">Stories</a>
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="clint.html">Our Clints</a>
+                                    <a href="{{route('clints')}}">Our Clints</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="events.html">News & Events</a>
+                                    <a href="{{route('news')}}">News & Events</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="contact.html">Contact Us</a>
+                                    <a href="{{route('contact')}}">Contact Us</a>
 
                                 </li>
 

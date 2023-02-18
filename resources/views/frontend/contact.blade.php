@@ -2,7 +2,7 @@
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-6.jpg)">
+    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-6.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

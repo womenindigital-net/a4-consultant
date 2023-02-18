@@ -3,7 +3,7 @@
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-1.jpg)">
+    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-1.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -31,10 +31,10 @@
                <div class="col-lg-4">
                    <div class="singel-blog mt-30">
                        <div class="blog-image">
-                           <img src="images/blog/b-1.jpg" alt="Blog">
+                           <img src="{{ asset('assets/frontend/images/blog/b-1.jpg')}}" alt="Blog">
                        </div>
                        <div class="blog">
-                           <a href="blog-singel.html"><h3>Few tips for get better results in examination</h3></a>
+                           <a href="{{route('story.details')}}"><h3>Few tips for get better results in examination</h3></a>
                            <a href="#"><i class="fa fa-calendar"></i>25 Dec 2018</a>
                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
                        </div>
@@ -43,10 +43,10 @@
                <div class="col-lg-4">
                    <div class="singel-blog mt-30">
                        <div class="blog-image">
-                           <img src="images/blog/b-1.jpg" alt="Blog">
+                           <img src="{{ asset('assets/frontend/images/blog/b-1.jpg')}}" alt="Blog">
                        </div>
                        <div class="blog">
-                           <a href="blog-singel.html"><h3>Few tips for get better results in examination</h3></a>
+                           <a href="{{route('story.details')}}"><h3>Few tips for get better results in examination</h3></a>
                            <a href="#"><i class="fa fa-calendar"></i>25 Dec 2018</a>
                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
                        </div>
@@ -55,10 +55,10 @@
                <div class="col-lg-4">
                    <div class="singel-blog mt-30">
                        <div class="blog-image">
-                           <img src="images/blog/b-1.jpg" alt="Blog">
+                           <img src="{{ asset('assets/frontend/images/blog/b-1.jpg')}}" alt="Blog">
                        </div>
                        <div class="blog">
-                           <a href="blog-singel.html"><h3>Few tips for get better results in examination</h3></a>
+                           <a href="{{route('story.details')}}"><h3>Few tips for get better results in examination</h3></a>
                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
                        </div>
                    </div> <!-- singel blog -->
@@ -66,10 +66,10 @@
                <div class="col-lg-4">
                    <div class="singel-blog mt-30">
                        <div class="blog-image">
-                           <img src="images/blog/b-1.jpg" alt="Blog">
+                           <img src="{{ asset('assets/frontend/images/blog/b-1.jpg')}}" alt="Blog">
                        </div>
                        <div class="blog">
-                           <a href="blog-singel.html"><h3>Few tips for get better results in examination</h3></a>
+                           <a href="{{route('story.details')}}"><h3>Few tips for get better results in examination</h3></a>
                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
                        </div>
                    </div> <!-- singel blog -->
