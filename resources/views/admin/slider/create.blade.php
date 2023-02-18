@@ -12,37 +12,27 @@
                         </h3>
                     </div>
                     <hr>
-                    <form action="{{ route('instructor.store') }}" method="POST" class="needs-validation" novalidate
+                    <form action="{{ route('slider.store') }}" method="POST" class="needs-validation" novalidate
                         enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="validationCustom01" class="form-label">Instructor Name </label>
-                                    <input type="text" name="instructorName" class="form-control" id="validationCustom01"
-                                        required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="validationCustom03" class="form-label">Instructor Title </label>
-                                    <input type="text" name="instructorTitle" class="form-control" id="validationCustom02"
-                                        required>
+                                    <label for="validationCustom03" class="form-label">slider Title </label>
+                                    <input type="text" name="sliderTitle" class="form-control" id="validationCustom02" >
+                                    @if ($errors->has('sliderTitle'))
+                                        <span class="text-danger">{{ $errors->first('sliderTitle') }}</span>
+                                    @endif
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Description</label>
-                                    <textarea name="instructorDescription" required class="form-control" rows="1" required></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="validationCustom03" class="form-label">Position </label>
-                                    <input type="text" name="instructorPosition" class="form-control" id="validationCustom02"
-                                        required>
+                                    <textarea name="sliderDescription" class="form-control" rows="1"></textarea>
+                                    @if ($errors->has('sliderDescription'))
+                                    <span class="text-danger">{{ $errors->first('sliderDescription') }}</span>
+                                    @endif
                                 </div>
                             </div>
 
@@ -56,9 +46,12 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="validationCustom03" class="form-label">Instrutor Image</label>
-                                    <input type="file" name="instructorImage" id="imgInp" class="form-control"
-                                        id="validationCustom02" required>
+                                    <label for="validationCustom03" class="form-label">slider Image</label>
+                                    <input type="file" name="sliderImage" id="imgInp" class="form-control"
+                                        id="validationCustom02">
+                                        @if ($errors->has('sliderImage'))
+                                        <span class="text-danger">{{ $errors->first('sliderImage') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-md-6">

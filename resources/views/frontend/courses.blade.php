@@ -52,7 +52,7 @@
                             <a href="{{route('course.details')}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                             <div class="course-teacher">
                                 <div class="button float-left">
-                                    <a href="courses-details.html" class="main-btn">Apply Now</a>
+                                    <a href="{{ route('course.details') }}" class="main-btn">Apply Now</a>
                                 </div>
                             </div>
                         </div>
