@@ -27,12 +27,13 @@ class CourseController extends Controller
     public function store(CourseRequest $request){
         $record = new Course();
         $record->course_category_id = request('course_category_id');
-        $record->CourseName = request('CourseName');
         $record->courseTitle = request('courseTitle');
         $record->courseDescription = request('courseDescription');
         $record->price = request('price');
         $record->startDate = request('startDate');
         $record->time = request('time');
+        $record->leactures = request('leactures');
+        $record->quizzes = request('quizzes');
         $record->duration = request('duration');
         $record->instructor_id = request('instructor_id');
         $uploadPath = 'uploads/courses/';
@@ -68,6 +69,8 @@ class CourseController extends Controller
         $record->courseTitle = request('courseTitle');
         $record->courseDescription = request('courseDescription');
         $record->price = request('price');
+        $record->leactures = request('leactures');
+        $record->quizzes = request('quizzes');
         $record->startDate = request('startDate');
         $record->time = request('time');
         $record->duration = request('duration');

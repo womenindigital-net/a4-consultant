@@ -29,13 +29,6 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="validationCustom01" class="form-label">Name </label>
-                                    <input type="text" name="CourseName" class="form-control" id="validationCustom01"
-                                        required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Course Title </label>
                                     <input type="text" name="courseTitle" class="form-control" id="validationCustom02"
                                         required>
@@ -71,6 +64,20 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
+                                    <label for="validationCustom03" class="form-label">Leactures</label>
+                                    <input type="number" name="leactures" class="form-control" id="validationCustom02"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="validationCustom03" class="form-label">Quizzes</label>
+                                    <input type="number" name="quizzes" class="form-control" id="validationCustom02"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Duration</label>
                                     <input type="text" name="duration" class="form-control" id="validationCustom02"
                                         required>
@@ -96,7 +103,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label class="col-md-2 col-form-label">Status</label>
+                                <label class="form-label">Status</label>
                                 <select name="status" class="form-select">
                                     <option selected disabled value="">Select</option>
                                     <option value="1">Active</option>

@@ -24,13 +24,14 @@
                                 <tr>
                                     <th>SL</th>
                                     <th>Course Category</th>
-                                    <th>Course Name</th>
                                     <th>Course Title</th>
                                     <th>Course Description</th>
                                     <th>Courses Image</th>
                                     <th>Price</th>
                                     <th>Start Date</th>
                                     <th>Time</th>
+                                    <th>Leactures</th>
+                                    <th>Quizzes</th>
                                     <th>Duration</th>
                                     <th>Select Instructor</th>
                                     <th>status</th>
@@ -43,13 +44,14 @@
 
                                         <td>{{ $key+ 1}}</td>
                                         <td>{{ $course->courseCategory->categoryTitle }}</td>
-                                        <td>{{ $course->CourseName }}</td>
                                         <td>{{ $course->courseTitle }}</td>
                                         <td>{{ $course->courseDescription }}</td>
                                         <td><img src="{{ asset($course->coursesImage) }}" width="50px" height="50px" alt=""></td>
                                         <td>{{ $course->price }}</td>
                                         <td>{{ $course->startDate }}</td>
                                         <td>{{ $course->time }}</td>
+                                        <td>{{ $course->leactures }}</td>
+                                        <td>{{ $course->quizzes }}</td>
                                         <td>{{ $course->duration }}</td>
                                         <td>{{ $course->Instructor->instructorName }}</td>
                                         <td>{{ $course->status == '1' ? 'Active' : 'Inactive' }}</td>

@@ -11,19 +11,19 @@ use Illuminate\Support\Facades\File;
 
 class SliderController extends Controller
 {
-     //instructor list
+     //slider list
      public function index()
      {
          $data['sliders'] = Slider::orderBy('id', 'DESC')->paginate(5);
          return view('admin.slider.index', $data);
      }
-     //instructor create
+     //slider create
      public function create()
      {
          return view('admin.slider.create');
      }
 
-     //instructor store
+     //slider store
      public function store(SliderRequest $request)
      {
          $record = new Slider();
@@ -43,7 +43,7 @@ class SliderController extends Controller
      }
 
 
-     //instructor edit
+     //slider edit
      public function edit($slider_id){
          $slider = Slider::findOrFail($slider_id);
          $data = [
@@ -52,7 +52,7 @@ class SliderController extends Controller
          return view('admin.slider.edit',$data);
      }
 
-     //update instructor
+     //update slider
      public function update(SliderUpdateRequest $request ,$slider_id){
          $record = Slider::find($slider_id);
          $record->sliderTitle = request('sliderTitle');
@@ -73,7 +73,7 @@ class SliderController extends Controller
          return redirect()->route('slider.list')->with('message','Successfully Slider Updated');
      }
 
-     //delete instructor
+     //delete slider
 
      public function destroy($slider_id)
      {

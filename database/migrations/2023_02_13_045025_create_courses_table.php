@@ -16,12 +16,13 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('course_category_id');
-            $table->string('CourseName')->nullable();
             $table->string('courseTitle')->nullable();
             $table->longText('courseDescription')->nullable();
             $table->integer('price')->nullable();
             $table->date('startDate')->nullable();
             $table->time('time')->nullable();
+            $table->string('quizzes')->nullable();
+            $table->string('leactures')->nullable();
             $table->string('duration')->nullable();
             $table->unsignedBigInteger('instructor_id')->nullable();
             $table->string('coursesImage')->nullable();
