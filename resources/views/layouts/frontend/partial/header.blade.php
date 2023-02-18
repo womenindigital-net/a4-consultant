@@ -23,8 +23,8 @@
         <div class="layer layer-6"></div>
         <div class="layer layer-7"></div>
         <div class="layer layer-8"></div>
-    </div> --}}
-</div>
+    </div>
+</div> --}}
 
 <!--====== PRELOADER PART START ======-->
 

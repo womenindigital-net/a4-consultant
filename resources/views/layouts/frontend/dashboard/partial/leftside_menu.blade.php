@@ -1,8 +1,10 @@
 
 <style>
-/* .vertical-menu {
-    background: #0081B5 !important;
-} */
+.waves-effect {
+    width: 90% !important;
+    margin: auto !important;
+    margin-bottom: 8px !important;
+}
 </style>
 <div class="vertical-menu">
 

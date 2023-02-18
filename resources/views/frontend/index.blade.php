@@ -163,6 +163,19 @@
                                     </span> <!-- singel category -->
                                 </a>
                             </div>
+                            <div class="col-lg-4">
+                                <a href="#">
+                                    <span class="singel-category text-center color-4">
+                                        <span class="icon">
+                                            <img src="{{ asset('assets/frontend/images/all-icon/ctg-4.png') }}"
+                                                alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Training & Development</span>
+                                        </span>
+                                    </span> <!-- singel category -->
+                                </a>
+                            </div>
                         </div> <!-- category slied -->
                     </div>
                 </div> <!-- row -->

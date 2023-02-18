@@ -172,7 +172,7 @@ p {
 .rubix-cube .layer{
 	width:14px;
 	height:14px;
-	background-color:#000;
+	background-color:#024d6b;
 	border:1px solid #FFF;
 	position:absolute;
 	
@@ -387,7 +387,7 @@ p {
 
 /*===== Header Logo support =====*/
 .logo img {
-    width: 85px;
+    width: 70px;
     height: auto;
 }
 .align-center {
@@ -520,6 +520,7 @@ p {
 a.dropdown-item {
     padding: 5px 15px !important;
 }
+
 .navigation .navbar .navbar-nav li a{
     font-size: 13px;
     font-family: 'Montserrat', sans-serif;
@@ -540,7 +541,7 @@ a.dropdown-item {
     position: absolute;
     top: 110%;
     left: 0;
-    background-color: #0081B5;
+    background-color: #00719E;
     width: 200px;
     opacity: 0;
     visibility: hidden;
@@ -956,6 +957,9 @@ a.dropdown-item {
 }
 .color-3{
     background-color: #ff6f6f;
+}
+.color-4{
+    background-color: #FFCC17;
 }
 
 .category{
