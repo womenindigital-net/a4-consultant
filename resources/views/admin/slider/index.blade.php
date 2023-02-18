@@ -12,7 +12,7 @@
                 </div>
                 <div class="card-header">
                     <h3 class="text-primary">Slider List
-                        <a href="{{ route('slider.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Add
+                        <a href="{{ route('slider.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Crate
                             Sliders
                         </a>
                     </h3>
@@ -60,7 +60,7 @@
                             </tbody>
                         </table>
                         <div>
-                            {{ $instructors->links() }}
+                            {{ $sliders->links() }}
                         </div>
                     </div>
                 </div>

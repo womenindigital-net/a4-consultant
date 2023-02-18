@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('sliderTitle')->nullable();
             $table->string('sliderImage')->nullable();
             $table->string('sliderDescription')->nullable();
+            $table->boolean('status')->nullable();
             $table->timestamps();
         });
     }

@@ -34,7 +34,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Description</label>
-                                    <textarea name="instructorDescription" required class="form-control" rows="1" required></textarea>
+                                    <textarea name="instructorDescription" required class="form-control" rows="1" ></textarea>
                                 </div>
                             </div>
 

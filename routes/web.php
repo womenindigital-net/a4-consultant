@@ -24,11 +24,13 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 
-
+// ================User Dashboard==================
 Route::get('/dashboard', function () {
-    return view('layouts.frontend.dashboard.dashboard');
+    return view('layouts.frontend.dashboard.master');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
+// ==============Admin Dashboard====================
 Route::middleware('auth', 'admin')->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard');

@@ -7,23 +7,22 @@
                 <li class="menu-title" key="t-menu">Menu</li>
                 <li>
                     <a href="{{ route('admin.dashboard') }}" class="waves-effect">
-                        <i class="bx bx-home-circle"></i><span
-                            class="badge rounded-pill bg-danger float-end">04</span>
+                        <i class="bx bx-home-circle"></i><span class="badge rounded-pill bg-danger float-end">04</span>
                         <span key="t-dashboards">Dashboards</span>
                     </a>
                 </li>
 
 
 
-                 {{--Create Corses --}}
-                 <li>
+                {{-- Create Corses --}}
+                <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="fa-solid fa-film text-danger"></i>
                         <span key="t-dashboards">Courses</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('course.create') }}" key="t-horizontal">Courses Create</a></li>
-                            <li><a href="{{route('course.list')}}" key="t-horizontal">Courses List
+                        <li><a href="{{ route('course.list') }}" key="t-horizontal">Courses List
                                 list</a></li>
                     </ul>
                 </li>
@@ -35,8 +34,10 @@
                         <span key="t-dashboards">Category Courses</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('course.category.create') }}" key="t-horizontal">Courses Category create</a></li>
-                        <li><a href="{{ route('course.category.list')}}" key="t-horizontal">Courses Category list</a></li>
+                        <li><a href="{{ route('course.category.create') }}" key="t-horizontal">Courses Category
+                                create</a></li>
+                        <li><a href="{{ route('course.category.list') }}" key="t-horizontal">Courses Category list</a>
+                        </li>
                     </ul>
                 </li>
                 {{-- Enroll --}}
@@ -47,8 +48,8 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ url('admin/organization/package/page') }}" key="t-horizontal">hello
-                            create</a></li>
-                            <li><a href="{{ url('admin/organization/package/list') }}" key="t-horizontal">Hi
+                                create</a></li>
+                        <li><a href="{{ url('admin/organization/package/list') }}" key="t-horizontal">Hi
                                 list</a></li>
                     </ul>
                 </li>
@@ -59,8 +60,20 @@
                         <span key="t-dashboards">Courses instructor</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('instructor.create') }}" key="t-horizontal">Create Courses instructor</a></li>
-                            <li><a href="{{ route('instructor.list')}}" key="t-horizontal">Courses instructor list</a></li>
+                        <li><a href="{{ route('instructor.create') }}" key="t-horizontal">Create Courses instructor</a>
+                        </li>
+                        <li><a href="{{ route('instructor.list') }}" key="t-horizontal">Courses instructor list</a></li>
+                    </ul>
+                </li>
+                {{-- Slider  --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-film text-danger"></i>
+                        <span key="t-dashboards">Slider</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('slider.create') }}" key="t-horizontal">Create Slider instructor</a></li>
+                        <li><a href="{{ route('slider.list') }}" key="t-horizontal">Courses Slider list</a></li>
                     </ul>
                 </li>
 
