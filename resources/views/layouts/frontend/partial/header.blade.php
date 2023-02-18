@@ -90,6 +90,12 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route('courses')}}">Courses</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="courses.html">Design & Development</a></li>
+                                        <li><a href="courses-singel.html">Design & Development</a></li>
+                                        <li><a href="courses-singel.html">Design & Development</a></li>
+                                        <li><a href="courses-singel.html">Design & Development</a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route('teachers')}}">Our teachers</a>
