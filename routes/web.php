@@ -50,6 +50,14 @@ Route::namespace('frontend')->group(function () {
     Route::get('/aboutus', [FrontendController::class, 'aboutus'])->name('aboutus');
     Route::get('/service', [FrontendController::class, 'service'])->name('service');
     Route::get('/courses', [FrontendController::class, 'courses'])->name('courses');
+    Route::get('/course/details', [FrontendController::class, 'courseDetails'])->name('course.details');
+    Route::get('/teachers', [FrontendController::class, 'teachers'])->name('teachers');
+    Route::get('/stories', [FrontendController::class, 'stories'])->name('stories');
+    Route::get('/story/details', [FrontendController::class, 'storyDetails'])->name('story.details');
+    Route::get('/clints', [FrontendController::class, 'clints'])->name('clints');
+    Route::get('/news', [FrontendController::class, 'news'])->name('news');
+    Route::get('/event/details', [FrontendController::class, 'eventDetails'])->name('event.details');
+    Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 });
 
 

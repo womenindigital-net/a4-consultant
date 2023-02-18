@@ -3,7 +3,7 @@
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-2.jpg)">
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-2.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -34,7 +34,7 @@
                             <div class="singel-course">
                         <div class="thum">
                             <div class="image">
-                                <img src="images/course/cu-1.jpg" alt="Course">
+                                <img src="{{ asset('assets/frontend/images/course/cu-1.jpg')}}" alt="Course">
                             </div>
                             <div class="price">
                                 <span>Fee <br> 10,000TK</span>
@@ -49,7 +49,7 @@
                                 <li><i class="fa fa-star"></i></li>
                             </ul>
                             <span>(20 Reviws)</span>
-                            <a href="courses-details.html"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                            <a href="{{route('course.details')}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                             <div class="course-teacher">
                                 <div class="button float-left">
                                     <a href="courses-details.html" class="main-btn">Apply Now</a>

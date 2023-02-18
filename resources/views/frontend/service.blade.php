@@ -3,7 +3,7 @@
 
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-2.jpg)">
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-2.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -39,7 +39,7 @@
                 </div> <!-- about cont -->
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <img src="images/about/about-2.jpg" alt="About">
+                        <img src="{{ asset('assets/frontend/images/about/about-2.jpg')}}" alt="About">
                     </div>  <!-- about imag -->
                 </div>
             </div> <!-- row -->
@@ -85,7 +85,7 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <img src="images/about/about-2.jpg" alt="About">
+                        <img src="{{ asset('assets/frontend/images/about/about-2.jpg')}}" alt="About">
                     </div>  <!-- about imag -->
                 </div>
                 <div class="col-lg-5">
@@ -192,7 +192,7 @@
                 </div> <!-- about cont -->
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <img src="images/about/about-2.jpg" alt="About">
+                        <img src="{{ asset('assets/frontend/images/about/about-2.jpg')}}" alt="About">
                     </div>  <!-- about imag -->
                 </div>
             </div> <!-- row -->
@@ -220,7 +220,7 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <img src="images/about/about-2.jpg" alt="About">
+                        <img src="{{ asset('assets/frontend/images/about/about-2.jpg')}}" alt="About">
                     </div>  <!-- about imag -->
                 </div>
                 <div class="col-lg-5">
@@ -251,7 +251,7 @@
                 </div> <!-- about cont -->
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <img src="images/about/about-2.jpg" alt="About">
+                        <img src="{{ asset('assets/frontend/images/about/about-2.jpg')}}" alt="About">
                     </div>  <!-- about imag -->
                 </div>
             </div> <!-- row -->
@@ -263,7 +263,7 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <img src="images/about/about-2.jpg" alt="About">
+                        <img src="{{ asset('assets/frontend/images/about/about-2.jpg')}}" alt="About">
                     </div>  <!-- about imag -->
                 </div>
                 <div class="col-lg-5">

@@ -3,7 +3,7 @@
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-1.jpg)">
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-1.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -39,7 +39,7 @@
                 </div> <!-- about cont -->
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <img src="images/about/about-2.jpg" alt="About">
+                        <img src="{{ asset('assets/frontend/images/about/about-2.jpg')}}" alt="About">
                     </div>  <!-- about imag -->
                 </div>
             </div> <!-- row -->
@@ -72,41 +72,6 @@
     </section>
 
     <!--====== ABOUT PART ENDS ======-->
-
-    <!--====== COUNTER PART START ======-->
-
-    <div id="counter-part" class="bg_cover pt-65 pb-110" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">30,000</span>+</span>
-                        <p>Students enrolled</p>
-                    </div> <!-- singel counter -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">41,000</span>+</span>
-                        <p>Courses Uploaded</p>
-                    </div> <!-- singel counter -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">11,000</span>+</span>
-                        <p>People certifie</p>
-                    </div> <!-- singel counter -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">39,000</span>+</span>
-                        <p>Global Teachers</p>
-                    </div> <!-- singel counter -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div>
-
-    <!--====== COUNTER PART ENDS ======-->
 
 @endsection
 

@@ -3,7 +3,7 @@
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-3.jpg)">
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-3.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -31,7 +31,7 @@
                <div class="col-lg-3 col-sm-6">
                    <div class="singel-teachers mt-30 text-center">
                         <div class="image">
-                            <img src="images/teachers/t-1.jpg" alt="Teachers">
+                            <img src="{{ asset('assets/frontend/images/teachers/t-1.jpg')}}" alt="Teachers">
                         </div>
                         <div class="cont">
                             <a href="#"><h6>MarkMark alen</h6></a>
@@ -42,7 +42,7 @@
                <div class="col-lg-3 col-sm-6">
                    <div class="singel-teachers mt-30 text-center">
                         <div class="image">
-                            <img src="images/teachers/t-2.jpg" alt="Teachers">
+                            <img src="{{ asset('assets/frontend/images/teachers/t-2.jpg')}}" alt="Teachers">
                         </div>
                         <div class="cont">
                             <a href="#"><h6>David card </h6></a>
@@ -53,7 +53,7 @@
                <div class="col-lg-3 col-sm-6">
                    <div class="singel-teachers mt-30 text-center">
                         <div class="image">
-                            <img src="images/teachers/t-3.jpg" alt="Teachers">
+                            <img src="{{ asset('assets/frontend/images/teachers/t-3.jpg')}}" alt="Teachers">
                         </div>
                         <div class="cont">
                             <a href="#"><h6>Rebeka alig</h6></a>
@@ -64,7 +64,7 @@
                <div class="col-lg-3 col-sm-6">
                    <div class="singel-teachers mt-30 text-center">
                         <div class="image">
-                            <img src="images/teachers/t-4.jpg" alt="Teachers">
+                            <img src="{{ asset('assets/frontend/images/teachers/t-4.jpg')}}" alt="Teachers">
                         </div>
                         <div class="cont">
                             <a href="#"><h6>Hanna bein</h6></a>
@@ -75,7 +75,7 @@
                <div class="col-lg-3 col-sm-6">
                    <div class="singel-teachers mt-30 text-center">
                         <div class="image">
-                            <img src="images/teachers/t-5.jpg" alt="Teachers">
+                            <img src="{{ asset('assets/frontend/images/teachers/t-5.jpg')}}" alt="Teachers">
                         </div>
                         <div class="cont">
                             <a href="#"><h6>David card </h6></a>
@@ -86,7 +86,7 @@
                <div class="col-lg-3 col-sm-6">
                    <div class="singel-teachers mt-30 text-center">
                         <div class="image">
-                            <img src="images/teachers/t-6.jpg" alt="Teachers">
+                            <img src="{{ asset('assets/frontend/images/teachers/t-6.jpg')}}" alt="Teachers">
                         </div>
                         <div class="cont">
                             <a href="#"><h6>Mark alen</h6></a>
@@ -97,7 +97,7 @@
                <div class="col-lg-3 col-sm-6">
                    <div class="singel-teachers mt-30 text-center">
                         <div class="image">
-                            <img src="images/teachers/t-7.jpg" alt="Teachers">
+                            <img src="{{ asset('assets/frontend/images/teachers/t-7.jpg')}}" alt="Teachers">
                         </div>
                         <div class="cont">
                             <a href="#"><h6>Rebeka alig</h6></a>
@@ -108,7 +108,7 @@
                <div class="col-lg-3 col-sm-6">
                    <div class="singel-teachers mt-30 text-center">
                         <div class="image">
-                            <img src="images/teachers/t-8.jpg" alt="Teachers">
+                            <img src="{{ asset('assets/frontend/images/teachers/t-8.jpg')}}" alt="Teachers">
                         </div>
                         <div class="cont">
                             <a href="#"><h6>Hanna bein</h6></a>

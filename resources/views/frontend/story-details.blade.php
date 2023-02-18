@@ -3,7 +3,7 @@
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-1.jpg)">
+    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-1.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -31,10 +31,10 @@
                <div class="col-lg-8">
                    <div class="singel-blog mt-30">
                        <div class="blog-thum">
-                           <img src="images/blog/b-1.jpg" alt="Blog">
+                           <img src="{{ asset('assets/frontend/images/blog/b-1.jpg')}}" alt="Blog">
                        </div>
                        <div class="blog-cont">
-                           <a href="blog-singel.html"><h3>Few tips for get better results in examination</h3></a>
+                           <a href="#"><h3>Few tips for get better results in examination</h3></a>
                            <ul>
                                <li><a href="#"><i class="fa fa-calendar"></i>25 Dec 2018</a></li>
                                <li><a href="#"><i class="fa fa-user"></i>Mark anthem</a></li>
@@ -74,7 +74,7 @@
                                             <a href="#">
                                                 <div class="singel-post">
                                                    <div class="thum">
-                                                       <img src="images/blog/blog-post/bp-1.jpg" alt="Blog">
+                                                       <img src="{{ asset('assets/frontend/images/blog/blog-post/bp-1.jpg')}}" alt="Blog">
                                                    </div>
                                                    <div class="cont">
                                                        <h6>Introduction to languages</h6>
@@ -87,7 +87,7 @@
                                             <a href="#">
                                                 <div class="singel-post">
                                                    <div class="thum">
-                                                       <img src="images/blog/blog-post/bp-2.jpg" alt="Blog">
+                                                       <img src="{{ asset('assets/frontend/images/blog/blog-post/bp-2.jpg')}}" alt="Blog">
                                                    </div>
                                                    <div class="cont">
                                                        <h6>How to build a game with java</h6>
@@ -100,7 +100,7 @@
                                             <a href="#">
                                                 <div class="singel-post">
                                                    <div class="thum">
-                                                       <img src="images/blog/blog-post/bp-1.jpg" alt="Blog">
+                                                       <img src="{{ asset('assets/frontend/images/blog/blog-post/bp-1.jpg')}}" alt="Blog">
                                                    </div>
                                                    <div class="cont">
                                                        <h6>Basic accounting from primary</h6>

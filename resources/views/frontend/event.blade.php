@@ -35,7 +35,7 @@
                        </div>
                        <div class="event-cont">
                            <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                            <a href="events-singel.html"><h4>Tech Summit</h4></a>
+                            <a href="{{route('event.details')}}"><h4>Tech Summit</h4></a>
                             <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
                             <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
                             <p>Nam nec tellus a odio tincidunt auctor a ornare odionon mauris itae erat conuat</p>
@@ -49,7 +49,7 @@
                        </div>
                        <div class="event-cont">
                            <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                            <a href="events-singel.html"><h4>Tech Summit</h4></a>
+                            <a href="{{route('event.details')}}"><h4>Tech Summit</h4></a>
                             <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
                             <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
                             <p>Nam nec tellus a odio tincidunt auctor a ornare odionon mauris itae erat conuat</p>

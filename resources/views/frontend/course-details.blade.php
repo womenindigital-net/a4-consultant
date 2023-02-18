@@ -3,7 +3,7 @@
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-2.jpg)">
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-2.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -39,7 +39,7 @@
                                 <li>
                                     <div class="teacher-name">
                                         <div class="thum">
-                                            <img src="images/course/teacher/t-1.jpg" alt="Teacher">
+                                            <img src="{{ asset('assets/frontend/images/course/teacher/t-1.jpg')}}" alt="Teacher">
                                         </div>
                                         <div class="name">
                                             <span>Teacher</span>
@@ -70,7 +70,7 @@
                         </div> <!-- course terms -->
 
                         <div class="corses-singel-image pt-50">
-                            <img src="images/course/cu-1.jpg" alt="Courses">
+                            <img src="{{ asset('assets/frontend/images/course/cu-1.jpg')}}" alt="Courses">
                         </div> <!-- corses singel image -->
 
                         <div class="corses-tab mt-30">
@@ -101,7 +101,7 @@
                                     <div class="instructor-cont">
                                         <div class="instructor-author">
                                             <div class="author-thum">
-                                                <img src="images/instructor/i-1.jpg" alt="Instructor">
+                                                <img src="{{ asset('assets/frontend/images/instructor/i-1.jpg')}}" alt="Instructor">
                                             </div>
                                             <div class="author-name">
                                                 <a href="#"><h5>Sumon Hasan</h5></a>
@@ -146,7 +146,7 @@
                                 <h4>You make like </h4>
                                 <div class="singel-makelike mt-20">
                                     <div class="image">
-                                        <img src="images/your-make/y-1.jpg" alt="Image">
+                                        <img src="{{ asset('assets/frontend/images/your-make/y-1.jpg')}}" alt="Image">
                                     </div>
                                     <div class="cont">
                                         <a href="#"><h4>Introduction to machine languages</h4></a>
@@ -158,7 +158,7 @@
                                 </div>
                                 <div class="singel-makelike mt-20">
                                     <div class="image">
-                                        <img src="images/your-make/y-1.jpg" alt="Image">
+                                        <img src="{{ asset('assets/frontend/images/your-make/y-1.jpg')}}" alt="Image">
                                     </div>
                                     <div class="cont">
                                         <a href="#"><h4>How to build a basis game with java </h4></a>
@@ -170,7 +170,7 @@
                                 </div>
                                 <div class="singel-makelike mt-20">
                                     <div class="image">
-                                        <img src="images/your-make/y-1.jpg" alt="Image">
+                                        <img src="{{ asset('assets/frontend/images/your-make/y-1.jpg')}}" alt="Image">
                                     </div>
                                     <div class="cont">
                                         <a href="#"><h4>Basic accounting from primary</h4></a>
