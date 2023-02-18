@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\InstructorController;
+use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
@@ -76,4 +77,11 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/instructor/edit/{instructor_id}', [InstructorController::class, 'edit'])->name('instructor.edit');
     Route::put('/instructor/update/{instructor_id}', [InstructorController::class, 'update'])->name('instructor.update');
     Route::get('/instructor/delete/{course_id}', [InstructorController::class, 'destroy'])->name('instructor.delete');
+    //slider
+    Route::get('/slider/list', [SliderController::class, 'index'])->name('slider.list');
+    Route::get('/slider/create', [SliderController::class, 'create'])->name('slider.create');
+    Route::post('/slider/create/store', [SliderController::class, 'store'])->name('slider.store');
+    Route::get('/slider/edit/{slider_id}', [SliderController::class, 'edit'])->name('slider.edit');
+    Route::put('/slider/update/{slider_id}', [SliderController::class, 'update'])->name('slider.update');
+    Route::get('/slider/delete/{slider_id}', [SliderController::class, 'destroy'])->name('slider.delete');
 });
