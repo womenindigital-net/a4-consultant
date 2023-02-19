@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\ConsultantController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\ContractController;
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\InstructorController;
+use App\Http\Controllers\Admin\NewsAdnEventsController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\StoriesController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
@@ -104,4 +109,32 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/consultant/edit/{consultant_id}', [ConsultantController::class, 'edit'])->name('consultant.edit');
     Route::put('/consultant/update/{consultant_id}', [ConsultantController::class, 'update'])->name('consultant.update');
     Route::get('/consultant/delete/{consultant_id}', [ConsultantController::class, 'destroy'])->name('consultant.delete');
+    //stories
+    Route::get('/stories/list', [StoriesController::class, 'index'])->name('stories.list');
+    Route::get('/stories/create', [StoriesController::class, 'create'])->name('stories.create');
+    Route::post('/stories/create/store', [StoriesController::class, 'store'])->name('stories.store');
+    Route::get('/stories/edit/{stories_id}', [StoriesController::class, 'edit'])->name('stories.edit');
+    Route::put('/stories/update/{stories_id}', [StoriesController::class, 'update'])->name('stories.update');
+    Route::get('/stories/delete/{stories_id}', [StoriesController::class, 'destroy'])->name('stories.delete');
+    //news and event
+    Route::get('/event/list', [NewsAdnEventsController::class, 'index'])->name('event.list');
+    Route::get('/event/create', [NewsAdnEventsController::class, 'create'])->name('event.create');
+    Route::post('/event/create/store', [NewsAdnEventsController::class, 'store'])->name('event.store');
+    Route::get('/event/edit/{event_id}', [NewsAdnEventsController::class, 'edit'])->name('event.edit');
+    Route::put('/event/update/{event_id}', [NewsAdnEventsController::class, 'update'])->name('event.update');
+    Route::get('/event/delete/{event_id}', [NewsAdnEventsController::class, 'destroy'])->name('event.delete');
+    //Client
+    Route::get('/client/list', [ClientController::class, 'index'])->name('client.list');
+    Route::get('/client/create', [ClientController::class, 'create'])->name('client.create');
+    Route::post('/client/create/store', [ClientController::class, 'store'])->name('client.store');
+    Route::get('/client/edit/{client_id}', [ClientController::class, 'edit'])->name('client.edit');
+    Route::put('/client/update/{client_id}', [ClientController::class, 'update'])->name('client.update');
+    Route::get('/client/delete/{client_id}', [ClientController::class, 'destroy'])->name('client.delete');
+    //Contact
+    Route::get('/contact/list', [ContactController::class, 'index'])->name('contact.list');
+    Route::get('/contact/create', [ContactController::class, 'create'])->name('contact.create');
+    Route::post('/contact/create/store', [ContactController::class, 'store'])->name('contact.store');
+    Route::get('/contact/edit/{client_id}', [ContactController::class, 'edit'])->name('contact.edit');
+    Route::put('/contact/update/{client_id}', [ContactController::class, 'update'])->name('contact.update');
+    Route::get('/contact/delete/{client_id}', [ContactController::class, 'destroy'])->name('contact.delete');
 });

@@ -52,7 +52,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="13" class="text-danger text-center">No Courses Available</td>
+                                        <td colspan="13" class="text-danger text-center">No Courses Category Available</td>
                                     </tr>
                                 @endforelse
                             </tbody>

@@ -11,9 +11,9 @@
                     @endif
                 </div>
                 <div class="card-header">
-                    <h3 class="text-primary">Slider List
-                        <a href="{{ route('slider.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Crate
-                            Sliders
+                    <h3 class="text-primary">Client List
+                        <a href="{{ route('client.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Crate
+                            Clients
                         </a>
                     </h3>
                 </div>
@@ -23,29 +23,27 @@
                             <thead>
                                 <tr>
                                     <th>SL</th>
-                                    <th>Slider Title</th>
-                                    <th>Slider Image</th>
-                                    <th>Description</th>
+                                    <th>Name</th>
+                                    <th>image</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($sliders as $key  => $slider)
+                                @forelse ($clients as $key  => $client)
                                     <tr>
 
                                         <td>{{ $key + 1 }}</td>
-                                        <td>{{ $slider->sliderTitle }}</td>
-                                        <td><img src="{{ asset($slider->sliderImage) }}" width="50px" height="50px"
+                                        <td>{{ $client->name }}</td>
+                                        <td><img src="{{ asset($client->image) }}" width="50px" height="50px"
                                                 alt=""></td>
-                                        <td>{{ $slider->sliderDescription }}</td>
-                                        <td>{{ $slider->status == '1' ? 'Active' : 'Inactive' }}</td>
+                                        <td>{{ $client->status == '1' ? 'Active' : 'Inactive' }}</td>
                                         <td>
-                                            <a href="{{ route('slider.edit', $slider->id) }}" type="button"
+                                            <a href="{{ route('client.edit', $client->id) }}" type="button"
                                                 class="btn btn-sm btn-success btn-rounded waves-effect waves-light mb-2 me-1"
                                                 class="btn btn-sm btn-success"> <i class="mdi mdi-pencil"></i></a>
 
-                                            <a type="button" href="{{ route('slider.delete', $slider->id) }}"
+                                            <a type="button" href="{{ route('client.delete', $client->id) }}"
                                                 onclick="return confirm('Are you sure, you want to delete?')"
                                                 class="btn btn-sm mb-2 me-1 btn-danger btn-rounded waves-effect waves-light">
                                                 <i class="fas fa-trash-alt"></i>
@@ -54,13 +52,13 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="13" class="text-danger text-center">No Slider Available</td>
+                                        <td colspan="13" class="text-danger text-center">No Client Available</td>
                                     </tr>
                                 @endforelse
                             </tbody>
                         </table>
                         <div>
-                            {{ $sliders->links() }}
+                            {{ $clients->links() }}
                         </div>
                     </div>
                 </div>

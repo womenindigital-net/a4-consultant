@@ -47,7 +47,7 @@
         var resizefunc = [];
     </script> --}}
     <script src="{{ asset('assets/admin/assets/libs/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/assets/libs/datatables.net-select-bs4/js/select.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('assets/admin/assets/libs/metismenu/metisMenu.min.js') }}"></script>
     <script src="{{ asset('assets/admin/assets/libs/simplebar/simplebar.min.js') }}"></script>
     <script src="{{ asset('assets/admin/assets/libs/node-waves/waves.min.js') }}"></script>

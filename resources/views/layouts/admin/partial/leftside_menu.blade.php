@@ -8,14 +8,14 @@
                 <li>
                     <a href="{{ route('admin.dashboard') }}" class="waves-effect">
                         <i class="bx bx-home-circle"></i><span class="badge rounded-pill bg-danger float-end">04</span>
-                        <span key="t-dashboards">Dashboards</span>
+                        <span key="t-dashboards">DASHBORARD</span>
                     </a>
                 </li>
                 {{-- Create Corses --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">Courses</span>
+                        <span key="t-dashboards">COURSES</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('course.create') }}" key="t-horizontal">Courses Create</a></li>
@@ -28,7 +28,7 @@
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">Category Courses</span>
+                        <span key="t-dashboards">CATEGORY COURSES</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('course.category.create') }}" key="t-horizontal">Courses Category
@@ -41,7 +41,7 @@
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">Enroll</span>
+                        <span key="t-dashboards">ENROLL</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ url('admin/organization/package/page') }}" key="t-horizontal">hello
@@ -54,7 +54,7 @@
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">Courses instructor</span>
+                        <span key="t-dashboards">COURSES INSTRUCTOR</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('instructor.create') }}" key="t-horizontal">Create Courses instructor</a>
@@ -66,7 +66,7 @@
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">Our Consultants</span>
+                        <span key="t-dashboards">OUR CONSULTANT</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('consultant.create') }}" key="t-horizontal">Create Consultant</a>
@@ -78,11 +78,44 @@
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">Slider</span>
+                        <span key="t-dashboards">SLIDER</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('slider.create') }}" key="t-horizontal">Create Slider instructor</a></li>
                         <li><a href="{{ route('slider.list') }}" key="t-horizontal">Courses Slider list</a></li>
+                    </ul>
+                </li>
+                {{-- story  --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-film text-danger"></i>
+                        <span key="t-dashboards">STORIES</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('stories.create') }}" key="t-horizontal">Create story</a></li>
+                        <li><a href="{{ route('stories.list') }}" key="t-horizontal">Story list</a></li>
+                    </ul>
+                </li>
+                {{-- NEWS & EVENTS  --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-film text-danger"></i>
+                        <span key="t-dashboards">NEWS & EVENTS</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('event.create') }}" key="t-horizontal">Create News & Events</a></li>
+                        <li><a href="{{ route('event.list') }}" key="t-horizontal">News & Events list</a></li>
+                    </ul>
+                </li>
+                {{-- NEWS & EVENTS  --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-film text-danger"></i>
+                        <span key="t-dashboards">Client</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('client.create') }}" key="t-horizontal">Create Client</a></li>
+                        <li><a href="{{ route('client.list') }}" key="t-horizontal">Client list</a></li>
                     </ul>
                 </li>
 
