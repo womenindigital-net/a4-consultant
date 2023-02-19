@@ -678,16 +678,34 @@ a.dropdown-item {
 }
 .navigation-3.sticky .navbar .navbar-nav > li > a.active,
 .navigation-3.sticky .navbar .navbar-nav > li > a:hover{
-    color: #ffc600;
+    color: #ffc600 !important;
 }
 
 .navigation-3 .navbar .navbar-toggler .icon-bar{
     background-color: #fff;
 }
 .navigation-3.sticky .navbar .navbar-toggler .icon-bar{
-    background-color: #000;
+    background-color: #000 !important;
 }
 
+/* user dropdown  */
+.dropdown-item:hover{
+    color: #ffc600 !important;
+    padding-left: 20px !important;
+    background-color: #00719E;
+}
+.dropdown-item{
+    padding: 10px 15px;
+    display: block;
+    border-bottom: 1px solid rgba(255, 198, 0, 0.5);
+    color: #fff;
+}
+.dropdown-menu{
+    padding: 0px;
+}
+.dropdown-menu li{
+    margin-right: 0px !important;
+}
 
 
 /*===== SEARCH BOX =====*/

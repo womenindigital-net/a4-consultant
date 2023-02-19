@@ -1,7 +1,24 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <style>
-    
-
-
+    /* user dropdown  */
+.dropdown-item:hover{
+    color: #ffc600 !important;
+    /* padding-left: 20px !important; */
+    background-color: #00719E;
+}
+.dropdown-item{
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255, 198, 0, 0.5);
+    color: #fff;
+    background-color: #00719E;
+}
+.dropdown-menu{
+    padding: 0px;
+}
+.dropdown-menu li{
+    margin-right: 0px !important;
+}
 </style>
 <header id="page-topbar">
     <div class="navbar-header">
@@ -52,7 +69,7 @@
                         </ul> --}}
                     </li>
                     <li class="">
-                        <a href="{{route('teachers')}}">Our teachers</a>
+                        <a href="{{route('teachers')}}  ">Our teachers</a>
 
                     </li>
                     <li class="">
@@ -72,60 +89,46 @@
 
                 </ul>
             </div>
+        </div>
+        <div class="" style="margin-right:10px;">
+            @if (Route::has('login'))
+            <div class="hidden fixed top-0 right-0 px-6 sm:block d-flex">
+                @auth
+                    <li class="nav-item btn-group nav-item">
+                        <li type="button"  data-bs-toggle="dropdown">
+                            <a type="button" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role=""
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?php echo "<img src='" . asset(Auth::user()->prodicle) . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>"; ?> {{ Auth::user()->name }}
+                            </a>
+                        </li>
+                        <ul class="dropdown-menu dropdown-menu-lg-end sub-menu">
+                            <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                            <a class="dropdown-item" href="{{ url('live-chat') }}">Message</a>
+                            <a class="dropdown-item" href="{{ url('notification') }}">Notifications</a>
+                            <a class="dropdown-item" href="#">Purchase History</a>
+                            <a class="dropdown-item" href="{{ url('help') }}">Help</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}">Log out </a>
 
+                        </ul>
+                    </li>
+                @else
+                    <li class="nav-item {{ request()->is('login') ? 'active' : '' }}">
+                        <a class="nav-link text-success-custom" href="{{ url('login') }}">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success-custom" href="#">|</a>
+                    </li>
+
+                    @if (Route::has('register'))
+                    <li class="nav-item {{ request()->is('user-type') ? 'active' : '' }}">
+                        <a href="{{ route('register') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                    </li>
+                    @endif
+                @endauth
+            </div>
+            @endif
         </div>
 
-        <div class="d-flex">
-
-            <div class="dropdown d-inline-block d-lg-none ms-2">
-                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="mdi mdi-magnify"></i>
-                </button>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                    aria-labelledby="page-header-search-dropdown">
-
-                    <form class="p-3">
-                        <div class="form-group m-0">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-
-
-
-
-
-
-            <div class="dropdown d-inline-block">
-                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="{{ asset('assets/image/logo.jpg') }}"
-                        alt="Header Avatar">
-                    <span class="d-none d-xl-inline-block ms-1" key="t-henry">{{ Auth::user()->name }}</span>
-                </button>
-                <div class="dropdown-menu dropdown-menu-end">
-                    <!-- item-->
-                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
-                    <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet">My Wallet</span></a>
-                    <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
-                    <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
-                    <div class="dropdown-divider"></div>
-                           <form action="{{ route('logout') }}" method="post">
-                        @csrf
-                        <button class="dropdown-item text-danger">
-                            <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> Logout
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
 </header>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
