@@ -54,7 +54,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="13" class="text-danger text-center">No instructors Available</td>
+                                        <td colspan="13" class="text-danger text-center">No Consultant Available</td>
                                     </tr>
                                 @endforelse
                             </tbody>
