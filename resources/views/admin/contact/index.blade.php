@@ -12,8 +12,8 @@
                 </div>
                 <div class="card-header">
                     <h3 class="text-primary">Contact List
-                        <a href="{{ route('client.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Crate
-                            Clients
+                        <a href="{{ route('contact.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Create
+                            Contact
                         </a>
                     </h3>
                 </div>
@@ -23,27 +23,28 @@
                             <thead>
                                 <tr>
                                     <th>SL</th>
-                                    <th>Name</th>
-                                    <th>image</th>
+                                    <th>Address</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($clients as $key  => $client)
+                                @forelse ($contacts as $key  => $contact)
                                     <tr>
 
                                         <td>{{ $key + 1 }}</td>
-                                        <td>{{ $client->name }}</td>
-                                        <td><img src="{{ asset($client->image) }}" width="50px" height="50px"
-                                                alt=""></td>
-                                        <td>{{ $client->status == '1' ? 'Active' : 'Inactive' }}</td>
+                                        <td>{{ $contact->address }}</td>
+                                        <td>{{ $contact->phone }}</td>
+                                        <td>{{ $contact->email }}</td>
+                                        <td>{{ $contact->status == '1' ? 'Active' : 'Inactive' }}</td>
                                         <td>
-                                            <a href="{{ route('client.edit', $client->id) }}" type="button"
+                                            <a href="{{ route('contact.edit', $contact->id) }}" type="button"
                                                 class="btn btn-sm btn-success btn-rounded waves-effect waves-light mb-2 me-1"
                                                 class="btn btn-sm btn-success"> <i class="mdi mdi-pencil"></i></a>
 
-                                            <a type="button" href="{{ route('client.delete', $client->id) }}"
+                                            <a type="button" href="{{ route('contact.delete', $contact->id) }}"
                                                 onclick="return confirm('Are you sure, you want to delete?')"
                                                 class="btn btn-sm mb-2 me-1 btn-danger btn-rounded waves-effect waves-light">
                                                 <i class="fas fa-trash-alt"></i>
@@ -52,13 +53,13 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="13" class="text-danger text-center">No Client Available</td>
+                                        <td colspan="13" class="text-danger text-center">No contact Available</td>
                                     </tr>
                                 @endforelse
                             </tbody>
                         </table>
                         <div>
-                            {{ $clients->links() }}
+                            {{ $contacts->links() }}
                         </div>
                     </div>
                 </div>

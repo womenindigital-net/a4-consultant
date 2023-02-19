@@ -5,52 +5,52 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card p-2 mt-1">
-                        <h3 class="text-primary">Edit Clients
-                            <a href="{{ route('client.list') }}"
-                                class="btn btn-primary btn-sm text-white  float-end p-2"></i>
-                                Clients List
+                        <h3 class="text-primary">Edit Contact
+                            <a href="{{ route('contact.list') }}"
+                                class="btn btn-primary btn-sm text-white float-end p-2"></i>
+                                Contact List
                             </a>
                         </h3>
                     </div>
                     <hr>
-                    <form action="{{ route('client.update', $clients->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('contact.update', $contacts->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="validationCustom03" class="form-label">Name(optional)</label>
-                                    <input type="text" name="name" value="{{ $clients->name }}" class="form-control" id="validationCustom02">
-                                    @if ($errors->has('name'))
-                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                    <label for="validationCustom03" class="form-label">Address</label>
+                                    <input type="text" name="address" value="{{ $contacts->address }}" class="form-control" id="validationCustom02">
+                                    @if ($errors->has('address'))
+                                        <span class="text-danger">{{ $errors->first('address') }}</span>
                                     @endif
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="validationCustom03" class="form-label">Image</label>
-                                    <input type="file" name="image" id="imgInp" class="form-control"
-                                        id="validationCustom02">
-                                    @if ($errors->has('image'))
-                                        <span class="text-danger">{{ $errors->first('image') }}</span>
+                                    <label for="validationCustom03" class="form-label">Phone</label>
+                                    <input type="text" name="phone" value="{{ $contacts->phone }}" class="form-control" id="validationCustom02">
+                                    @if ($errors->has('phone'))
+                                        <span class="text-danger">{{ $errors->first('phone') }}</span>
                                     @endif
                                 </div>
                             </div>
-
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="validationCustom03" class="form-label">Email</label>
+                                    <input type="text" value="{{ $contacts->email }}" name="email" class="form-control" id="validationCustom02">
+                                    @if ($errors->has('email'))
+                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                    @endif
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <label class="form-label">Status</label>
                                 <select name="status" class="form-select">
                                     <option selected disabled value="">Select</option>
-                                    <option value="1"{{ $clients->status == 1 ? 'selected' : '' }}>Active</option>
-                                    <option value="0" {{ $clients->status == 0 ? 'selected' : '' }}>Inactive</option>
+                                    <option value="1"{{ $contacts->status == 1 ? 'selected' : '' }}>Active</option>
+                                    <option value="0" {{ $contacts->status == 0 ? 'selected' : '' }}>Inactive</option>
                                 </select>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="col-md-6">
-                                    <img  src="{{ asset($clients->image) }}" width="100px" height="100px" id="blah" src="#"
-                                        alt="your image" />
-                                </div>
                             </div>
                         </div>
                         {{-- preview image  --}}

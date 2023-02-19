@@ -27,48 +27,33 @@ class ContactController extends Controller
    public function store(ContactStoreRequest $request)
    {
        $record = new Contact();
-       $record->name = request('name');
-       $uploadPath = 'uploads/clients/';
-       if ($request->hasFile('image')) {
-           $file = $request->file('image');
-           $ext = $file->getClientOriginalExtension();
-           $filename = time() . '.' . $ext;
-           $file->move('uploads/clients/', $filename);
-           $record->image = $uploadPath . $filename;
-       }
+       $record->address = request('address');
+       $record->phone = request('phone');
+       $record->email = request('email');
        $record->status = request('status');
        $record->save();
-       return redirect()->route('client.list')->with('message', 'Successfully client Created');
+       return redirect()->route('contact.list')->with('message', 'Successfully Contacts Created');
    }
 
 
    //event edit
    public function edit($id){
-       $clients = Contact::findOrFail($id);
+       $contact = Contact::findOrFail($id);
        $data = [
-           'clients' => $clients
+           'contacts' => $contact
        ];
-       return view('admin.client.edit',$data);
+       return view('admin.contact.edit',$data);
    }
 
    //event update
-   public function update(ContactUpdateRequest $request ,$id){
+   public function update(ContactStoreRequest $request ,$id){
        $record = Contact::find($id);
-       $record->name = request('name');
-       if ($request->hasFile('image')) {
-           $destination = $record->image;
-           if(File::exists($destination)){
-               File::delete($destination);
-           }
-           $file = $request->file('image');
-           $ext = $file->getClientOriginalExtension();
-           $filename = time() . '.' . $ext;
-           $file->move('uploads/clients/', $filename);
-           $record->image = 'uploads/clients/' . $filename;
-       }
+       $record->address = request('address');
+       $record->phone = request('phone');
+       $record->email = request('email');
        $record->status = request('status');
        $record->update();
-       return redirect()->route('client.list')->with('message','Successfully Clients Updated');
+       return redirect()->route('contact.list')->with('message','Successfully Contact Updated');
    }
 
    //delete event
@@ -82,6 +67,6 @@ class ContactController extends Controller
            }
            $record->delete();
        }
-       return redirect()->back()->with('message', 'Successfully Delete Clients');
+       return redirect()->back()->with('message', 'Successfully Delete Contact');
    }
 }
