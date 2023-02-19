@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ConsultantController;
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\InstructorController;
@@ -96,4 +97,11 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/slider/edit/{slider_id}', [SliderController::class, 'edit'])->name('slider.edit');
     Route::put('/slider/update/{slider_id}', [SliderController::class, 'update'])->name('slider.update');
     Route::get('/slider/delete/{slider_id}', [SliderController::class, 'destroy'])->name('slider.delete');
+    //consultant
+    Route::get('/consultant/list', [ConsultantController::class, 'index'])->name('consultant.list');
+    Route::get('/consultant/create', [ConsultantController::class, 'create'])->name('consultant.create');
+    Route::post('/consultant/create/store', [ConsultantController::class, 'store'])->name('consultant.store');
+    Route::get('/consultant/edit/{consultant_id}', [ConsultantController::class, 'edit'])->name('consultant.edit');
+    Route::put('/consultant/update/{consultant_id}', [ConsultantController::class, 'update'])->name('consultant.update');
+    Route::get('/consultant/delete/{consultant_id}', [ConsultantController::class, 'destroy'])->name('consultant.delete');
 });

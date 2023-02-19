@@ -11,9 +11,6 @@
                         <span key="t-dashboards">Dashboards</span>
                     </a>
                 </li>
-
-
-
                 {{-- Create Corses --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
@@ -63,6 +60,18 @@
                         <li><a href="{{ route('instructor.create') }}" key="t-horizontal">Create Courses instructor</a>
                         </li>
                         <li><a href="{{ route('instructor.list') }}" key="t-horizontal">Courses instructor list</a></li>
+                    </ul>
+                </li>
+                {{-- Consultant --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-film text-danger"></i>
+                        <span key="t-dashboards">Our Consultants</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('consultant.create') }}" key="t-horizontal">Create Consultant</a>
+                        </li>
+                        <li><a href="{{ route('consultant.list') }}" key="t-horizontal">Consultant list</a></li>
                     </ul>
                 </li>
                 {{-- Slider  --}}

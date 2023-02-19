@@ -25,12 +25,13 @@ class CourseRequest extends FormRequest
     {
         return [
             'course_category_id' => 'nullable',
-            'CourseName' => 'nullable',
             'courseTitle' => 'nullable',
             'courseDescription' => 'nullable',
             'price' => 'nullable',
             'startDate' => 'nullable',
             'time' => 'nullable',
+            'quizzes' => 'nullable',
+            'leactures' => 'nullable',
             'duration' => 'nullable',
             'instructor_id' => 'nullable',
             'coursesImage' => 'nullable',

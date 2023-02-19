@@ -29,19 +29,11 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="validationCustom01" class="form-label">Name </label>
-                                    <input type="text" value="{{ $courses->CourseName }}" name="CourseName"
-                                        class="form-control" id="validationCustom01" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Course Title </label>
                                     <input type="text" value="{{ $courses->courseTitle }}" name="courseTitle"
                                         class="form-control" id="validationCustom02" required>
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Course Description</label>
@@ -66,6 +58,20 @@
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Time</label>
                                     <input type="time" value="{{ $courses->time }}" name="time" class="form-control"
+                                        id="validationCustom02" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="validationCustom03" class="form-label">Leactures</label>
+                                    <input type="time" value="{{ $courses->time }}" name="leactures" class="form-control"
+                                        id="validationCustom02" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="validationCustom03" class="form-label">Quizzes</label>
+                                    <input type="time" value="{{ $courses->time }}" name="quizzes" class="form-control"
                                         id="validationCustom02" required>
                                 </div>
                             </div>
@@ -96,7 +102,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label class="col-md-2 col-form-label">Status</label>
+                                <label class=" form-label">Status</label>
                                 <select name="status" class="form-select">
                                     <option selected disabled value="">Select</option>
                                     <option value="1" {{ $courses->status == 1 ? 'selected' : '' }}>Active</option>
