@@ -1280,3 +1280,24 @@ table.dataTable tfoot td {
     height: 11.25px !important;
     padding: 5px;
 }
+
+
+
+/* user dropdown  */
+.dropdown-item:hover{
+    color: #ffc600 !important;
+    padding-left: 20px !important;
+    background-color: #00719E;
+}
+.dropdown-item{
+    padding: 10px 15px;
+    display: block;
+    border-bottom: 1px solid rgba(255, 198, 0, 0.5);
+    color: #fff;
+}
+.dropdown-menu{
+    padding: 0px;
+}
+.dropdown-menu li{
+    margin-right: 0px !important;
+}
