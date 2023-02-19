@@ -1,3 +1,8 @@
+<style>
+    
+
+
+</style>
 <header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
@@ -22,18 +27,51 @@
                 </a>
             </div>
 
-            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+            <button type="button" class="btn btn-sm font-size-16 header-item waves-effect" style="padding: 10px;" id="vertical-menu-btn">
                 <i class="fa fa-fw fa-bars"></i>
             </button>
+            <div class="dash-menu">
+                <ul class="d-flex" style="padding-left:0px;">
+                    <li class="">
+                        <a class="active" href="{{route('index')}}">Home</a>
 
-            <!-- App Search-->
-            <form class="app-search d-none d-lg-block">
-                <div class="position-relative">
-                    <input type="text" class="form-control" placeholder="Search...">
-                    <span class="bx bx-search-alt"></span>
-                </div>
-            </form>
+                    </li>
+                    <li class="">
+                        <a href="{{route('aboutus')}}">About Us</a>
+                    </li>
+                    <li class="">
+                        <a href="{{route('service')}}">Our Services</a>
+                    </li>
+                    <li class="">
+                        <a href="{{route('courses')}}">Courses</a>
+                        {{-- <ul class="sub-menu">
+                            <li><a href="courses.html">Design & Development</a></li>
+                            <li><a href="courses-singel.html">Design & Development</a></li>
+                            <li><a href="courses-singel.html">Design & Development</a></li>
+                            <li><a href="courses-singel.html">Design & Development</a></li>
+                        </ul> --}}
+                    </li>
+                    <li class="">
+                        <a href="{{route('teachers')}}">Our teachers</a>
 
+                    </li>
+                    <li class="">
+                        <a href="{{route('stories')}}">Stories</a>
+
+                    </li>
+                    <li class="">
+                        <a href="{{route('clints')}}">Our Clints</a>
+                    </li>
+                    <li class="">
+                        <a href="{{route('news')}}">News & Events</a>
+                    </li>
+                    <li class="">
+                        <a href="{{route('contact')}}">Contact Us</a>
+
+                    </li>
+
+                </ul>
+            </div>
 
         </div>
 

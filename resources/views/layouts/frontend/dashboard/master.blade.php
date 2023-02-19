@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- font Css -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Bootstrap Css -->
     <link href="{{ URL::asset('assets/frontend/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet"
         type="text/css" />
@@ -20,6 +25,7 @@
     <link href="{{ URL::asset('assets/frontend/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
     <!--custom css -->
     <link href="{{ URL::asset('assets/frontend/assets/css/style.css') }}" rel="stylesheet" type="text/css" />
+
 
 </head>
 

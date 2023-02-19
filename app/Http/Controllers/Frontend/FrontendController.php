@@ -78,4 +78,9 @@ class FrontendController extends Controller
     public function contact(){
         return view('frontend.contact');
     }
+
+    // ===========Contact page============
+    public function userProfile(){
+        return view('layouts.frontend.dashboard.profile');
+    }
 }

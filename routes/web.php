@@ -61,6 +61,8 @@ Route::namespace('frontend')->group(function () {
     Route::get('/news', [FrontendController::class, 'news'])->name('news');
     Route::get('/event/details', [FrontendController::class, 'eventDetails'])->name('event.details');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+    Route::get('/profile', [FrontendController::class, 'userProfile'])->name('profile');
+
 });
 
 
