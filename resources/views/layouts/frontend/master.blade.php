@@ -86,7 +86,7 @@
     <!--====== Ajax Contact js ======-->
     <script src="{{ asset('assets/frontend/js/ajax-contact.js') }}"></script>
     <!--====== jQ cdn ======-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> --}}
     <!--====== Main js ======-->
     <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
 
