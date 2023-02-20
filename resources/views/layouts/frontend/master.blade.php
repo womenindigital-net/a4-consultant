@@ -40,12 +40,16 @@
 
       <!--====== Responsive css ======-->
       <link rel="stylesheet" href="{{ asset('assets/frontend/css/responsive.css') }}">
+      <!--====== login css ======-->
+      <link rel="stylesheet" href="{{ asset('assets/frontend/login-css/custom.css') }}">
+
 </head>
 <body>
     @include('layouts.frontend.partial.header')
 
     @yield('content')
     @include('layouts.frontend.partial.footer')
+
 
 
 
@@ -81,7 +85,8 @@
 
     <!--====== Ajax Contact js ======-->
     <script src="{{ asset('assets/frontend/js/ajax-contact.js') }}"></script>
-
+    <!--====== jQ cdn ======-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <!--====== Main js ======-->
     <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
 
@@ -89,5 +94,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!--====== custom js ======-->
+    <script src="{{ asset('assets/frontend/custom-js/custom.js') }}"></script>
 </body>
 </html>

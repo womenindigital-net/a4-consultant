@@ -145,7 +145,7 @@
                                 </li>
                             @endauth --}}
                                 @if (Route::has('login'))
-                                    <div class="hidden fixed top-0 right-0 px-6 sm:block d-flex">
+                                    <div class="hidden top-0 right-0 px-6 sm:block d-flex">
                                         @auth
                                             <li class="nav-item btn-group nav-item">
                                                 <li type="button"  data-bs-toggle="dropdown">
