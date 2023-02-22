@@ -27,7 +27,7 @@ p {
     border-radius: 10px;
 }
 input[type="text"]:focus {
-    border: 3px solid #ffb317 !important;
+    border: 3px solid #0081B5 !important;
 }
 .submit-button {
     margin: auto;

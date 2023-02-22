@@ -88,13 +88,13 @@
                                 <li class="nav-item">
                                     <a href="{{route('service')}}">Our Services</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#">Courses</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="{{route('courses')}}">All Courses</a></li>
-                                        <li><a href="courses-singel.html">Design & Development</a></li>
-                                        <li><a href="courses-singel.html">Design & Development</a></li>
-                                        <li><a href="courses-singel.html">Design & Development</a></li>
+                                <li class="nav-item dropdown show">
+                                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+                                    <ul class="sub-menu dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <li><a href="{{route('courses')}}" class="dropdown-item">All Courses</a></li>
+                                        <li><a href="courses-singel.html" class="dropdown-item">Design & Development</a></li>
+                                        <li><a href="courses-singel.html" class="dropdown-item">Design & Development</a></li>
+                                        <li><a href="courses-singel.html" class="dropdown-item">Design & Development</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -147,19 +147,13 @@
                                 @if (Route::has('login'))
                                     <div class="hidden top-0 right-0 px-6 sm:block d-flex">
                                         @auth
-                                            <li class="nav-item btn-group nav-item">
-                                                <li type="button"  data-bs-toggle="dropdown">
-                                                    <a type="button" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role=""
-                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <?php echo "<img src='" . asset(Auth::user()->prodicle) . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>"; ?> {{ Auth::user()->name }}
-                                                    </a>
-                                                </li>
+                                            <li class="nav-item btn-group dropdown show">
+                                                <a type="button" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role=""
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <?php echo "<img src='" . asset(Auth::user()->prodicle) . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>"; ?> {{ Auth::user()->name }}
+                                                </a>
                                                 <ul class="dropdown-menu dropdown-menu-lg-end sub-menu">
                                                     <li><a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a></li>
-                                                    <li><a class="dropdown-item" href="{{ url('live-chat') }}">Message</a></li>
-                                                    <li><a class="dropdown-item" href="{{ url('notification') }}">Notifications</a></li>
-                                                    <li><a class="dropdown-item" href="#">Purchase History</a></li>
-                                                    <li><a class="dropdown-item" href="{{ url('help') }}">Help</a></li>
                                                    <li><a class="dropdown-item" href="{{ route('logout') }}">Log out </a></li>
 
                                                 </ul>

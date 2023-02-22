@@ -2,7 +2,7 @@
 @section('content')
     <section class="form_sign_in">
         <div>
-            <div class="container ">
+            <div class="container py-5">
                 <div class="text-center">
                     {{-- <h2 class="d-title mt-4 mb-3">Welcome to A4-Consultants</h2> --}}
                     <h2 class="mb-4 mt-3 d-title">Sign in</h2>
