@@ -3,14 +3,16 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     // ===========Index page============
-    
+
     public function index(){
-        return view('frontend.index');
+        $data['sliders'] = Slider::get();
+        return view('frontend.index',$data);
     }
 
 
@@ -18,7 +20,7 @@ class FrontendController extends Controller
     public function aboutus(){
         return view('frontend.about');
     }
-    
+
 
     // ===========Service page============
     public function service(){

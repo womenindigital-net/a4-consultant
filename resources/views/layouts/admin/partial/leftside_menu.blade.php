@@ -81,7 +81,7 @@
                         <span key="t-dashboards">SLIDER</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('slider.create') }}" key="t-horizontal">Create Slider instructor</a></li>
+                        <li><a href="{{ route('slider.create') }}" key="t-horizontal">Create Slider </a></li>
                         <li><a href="{{ route('slider.list') }}" key="t-horizontal">Courses Slider list</a></li>
                     </ul>
                 </li>
