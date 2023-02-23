@@ -26,9 +26,9 @@ p {
     border-color: #fff !important;
     border-radius: 10px;
 }
-input[type="text"]:focus {
+/* input[type="text"]:focus {
     border: 3px solid #0081B5 !important;
-}
+} */
 .submit-button {
     margin: auto;
     display: flex;
@@ -36,7 +36,7 @@ input[type="text"]:focus {
     align-items: center;
 }
 .submit-button .continue {
-    color: #fff;
+    color: #fff !important;
 }
 .submit-button {
     width: 90%;
@@ -70,6 +70,6 @@ input[type="text"]:focus {
     font-weight: 400;
 }
 .color-default{
-    color: #0081b5;
+    color: #0081b5 !important;
     font-weight: 400;
 }

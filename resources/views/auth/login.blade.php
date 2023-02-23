@@ -5,7 +5,7 @@
             <div class="container py-5">
                 <div class="text-center">
                     {{-- <h2 class="d-title mt-4 mb-3">Welcome to A4-Consultants</h2> --}}
-                    <h2 class="mb-4 mt-3 d-title">Sign in</h2>
+                    <h2 class="mb-4 mt-3 d-title">Sign In</h2>
                 </div>
                 <div class="row mb-5">
                     <div class="col-md-6 my-0 mx-auto">
@@ -59,7 +59,7 @@
 
                                     <button class="submit-button" type="submit"
                                         class="form_btn mt-3 inputPadding btn btn-dark border-0 w-100 text-bold ">
-                                        <p class="continue">Continue</p>
+                                        <p class="continue" style="color:#FFF">Continue</p>
                                     </button>
 
                                     {{-- <div class="submit-button">
@@ -79,7 +79,7 @@
                                         </div>
                                         <div class="col-md-6 col-sm-12 d-md-flex justify-content-end">
                                             <a style="font-size: 14px; padding-right:11%;" class="color-default"
-                                                href="{{ route('register') }}">Create_an_Account</a>
+                                                href="{{ route('register') }}">Create an Account</a>
                                         </div>
                                     </div>
                                 </div>
