@@ -1,21 +1,22 @@
-
 @extends('layouts.frontend.master')
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-2.jpg')}})">
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"
+        style="background-image: url({{ asset('assets/frontend/images/page-banner-2.jpg') }})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page-banner-cont">
-                        <h2>Our Courses</h2>
+                        <h2>{{ $categoryTitle->categoryTitle }}</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                                <li class="breadcrumb-item"><a href="{{ route('index') }}">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"> <a href="">All Courses</a>
+                                </li>
                             </ol>
                         </nav>
-                    </div>  <!-- page banner cont -->
+                    </div> <!-- page banner cont -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
@@ -28,41 +29,48 @@
     <section id="courses-part" class="pt-120 pb-120 gray-bg">
         <div class="container">
             <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="courses-grid" role="tabpanel" aria-labelledby="courses-grid-tab">
+                <div class="tab-pane fade show active" id="courses-grid" role="tabpanel" aria-labelledby="courses-grid-tab">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course">
-                        <div class="thum">
-                            <div class="image">
-                                <img src="{{ asset('assets/frontend/images/course/cu-1.jpg')}}" alt="Course">
+                        @forelse ($categories as $categoryCourse)
+                            <div class="col-lg-4 col-md-6">
+                                <div class="singel-course">
+                                    <div class="thum">
+                                        <div class="image">
+                                            <img src="{{ asset($categoryCourse->coursesImage) }}" alt="Course">
+                                        </div>
+                                        <div class="price">
+                                            <span>Fee <br> {{ $categoryCourse->price }}TK</span>
+                                        </div>
+                                    </div>
+                                    <div class="cont">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        <span>(20 Reviws)</span>
+                                        <a href="{{ route('course.details', $categoryCourse->id) }}">
+                                            <h4>{{ $categoryCourse->courseTitle }}</h4>
+                                        </a>
+                                        <div class="course-teacher">
+                                            <div class="button float-left">
+                                                <a href="{{ route('course.details', $categoryCourse->id) }}"
+                                                    class="main-btn">Apply Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- singel course -->
                             </div>
-                            <div class="price">
-                                <span>Fee <br> 10,000TK</span>
-                            </div>
-                        </div>
-                        <div class="cont">
-                            <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>(20 Reviws)</span>
-                            <a href="{{route('course.details')}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
-                            <div class="course-teacher">
-                                <div class="button float-left">
-                                    <a href="{{ route('course.details') }}" class="main-btn">Apply Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- singel course -->
-                        </div>
+                        @empty
+                            <h1  class="text-danger">No Couses available</h1>
+                        @endforelse
 
                     </div> <!-- row -->
                 </div>
             </div> <!-- tab content -->
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-lg-12">
                     <nav class="courses-pagination mt-50">
                         <ul class="pagination justify-content-center">
@@ -80,12 +88,11 @@
                                 </a>
                             </li>
                         </ul>
-                    </nav>  <!-- courses pagination -->
+                    </nav> <!-- courses pagination -->
                 </div>
-            </div>  <!-- row -->
+            </div> <!-- row --> --}}
         </div> <!-- container -->
     </section>
 
     <!--====== COURSES PART ENDS ======-->
 @endsection
-
