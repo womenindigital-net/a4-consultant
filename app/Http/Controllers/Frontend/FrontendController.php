@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Client;
 use App\Models\Course;
+use App\Models\CourseCategory;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -23,10 +24,9 @@ class FrontendController extends Controller
     // =========== category course show ============
     public function courseShow($id){
         $category_id = $id;
-        $data['categories'] = Course::where($category_id)->get();
-        $data['courses'] = Courses::where('course_cat',$id)->where('status',1)->get();
-        dd($data);
-        return view('frontend.category-course-show');
+        $data['categories'] = Course::where('course_category_id',$category_id)->where('status',1)->get();
+        $data['categoryTitle'] = CourseCategory::where('id',$category_id)->first();
+        return view('frontend.category-course-show',$data);
     }
 
     // ===========About us page============
@@ -60,8 +60,9 @@ class FrontendController extends Controller
     }
 
     // ===========Course Details page============
-    public function courseDetails(){
-        return view('frontend.course-details');
+    public function courseDetails($course_id){
+        $data['categoriesDetails'] = Course::where('id',$course_id)->where('status',1)->first();
+        return view('frontend.course-details',$data);
     }
 
 

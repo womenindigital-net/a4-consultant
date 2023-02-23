@@ -185,19 +185,19 @@ p {
 	background-color:#024d6b;
 	border:1px solid #FFF;
 	position:absolute;
-	
+
 }
 .rubix-cube .layer-1{
 	left:0px;
 	top:0px;
 	-webkit-animation: rubixcube4 2s infinite linear;
-	animation: rubixcube4 2s infinite linear; 
+	animation: rubixcube4 2s infinite linear;
 }
 .rubix-cube .layer-2{
 	left:16px;
 	top:0px;
 	-webkit-animation: rubixcube3 2s infinite  linear;
-	animation: rubixcube3 2s infinite  linear; 
+	animation: rubixcube3 2s infinite  linear;
 }
 .rubix-cube .layer-3{
 	left:32px;
@@ -207,57 +207,57 @@ p {
 	left:0px;
 	top:16px;
 	-webkit-animation: rubixcube5 2s infinite linear;
-	animation: rubixcube5 2s infinite linear; 
-	
+	animation: rubixcube5 2s infinite linear;
+
 }
 .rubix-cube .layer-5{
 	left:16px;
 	top:16px;
 	-webkit-animation: rubixcube2 2s infinite linear;
-	animation: rubixcube2 2s infinite linear; 
+	animation: rubixcube2 2s infinite linear;
 }
 .rubix-cube .layer-6{
 	left:32px;
 	top:16px;
 	-webkit-animation: rubixcube1 2s infinite linear;
-	animation: rubixcube1 2s infinite linear; 
+	animation: rubixcube1 2s infinite linear;
 }
 .rubix-cube .layer-7{
 	left:0px;
 	top:32px;
 	-webkit-animation: rubixcube6 2s infinite linear;
-	animation: rubixcube6 2s infinite linear; 
+	animation: rubixcube6 2s infinite linear;
 }
 .rubix-cube .layer-8{
 	left:16px;
 	top:32px;
 	-webkit-animation: rubixcube7 2s infinite linear;
-	animation: rubixcube7 2s infinite linear; 
-	
+	animation: rubixcube7 2s infinite linear;
+
 }
 @-webkit-keyframes rubixcube1{
 	20%{ top:16px; left:32px;}
 	30%{ top:32px; left:32px; }
 	40%{ top:32px; left:32px; }
 	50%{ top:32px; left:32px; }
-	60%{ top:32px; left:32px; }	
-	70%{ top:32px; left:32px; }	
-	80%{ top:32px; left:32px; }	
-	90%{ top:32px; left:32px; }	
+	60%{ top:32px; left:32px; }
+	70%{ top:32px; left:32px; }
+	80%{ top:32px; left:32px; }
+	90%{ top:32px; left:32px; }
 	100%{ top:32px; left:16px; }
-	
+
 }
 @keyframes rubixcube1{
 	20%{ top:16px; left:32px;}
 	30%{ top:32px; left:32px; }
 	40%{ top:32px; left:32px; }
 	50%{ top:32px; left:32px; }
-	60%{ top:32px; left:32px; }	
-	70%{ top:32px; left:32px; }	
-	80%{ top:32px; left:32px; }	
-	90%{ top:32px; left:32px; }	
+	60%{ top:32px; left:32px; }
+	70%{ top:32px; left:32px; }
+	80%{ top:32px; left:32px; }
+	90%{ top:32px; left:32px; }
 	100%{ top:32px; left:16px; }
-	
+
 }
 @-webkit-keyframes rubixcube2{
 	30%{ left:16px;}
@@ -359,7 +359,7 @@ p {
 
 
 /*=====================================================
-    2. HEADER css 
+    2. HEADER css
 ======================================================*/
 
 
@@ -779,7 +779,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    3. SLIDER css 
+    3. SLIDER css
 ======================================================*/
 
 .single-slider{
@@ -945,9 +945,9 @@ a.dropdown-item {
     display: -o-flex;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; 
-    -webkit-box-align: start; 
-    -ms-flex-align: start; 
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
 }
 .singel-slider-feature .icon{}
@@ -967,7 +967,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    4. CATEGORY css 
+    4. CATEGORY css
 ======================================================*/
 
 .color-1{
@@ -1055,7 +1055,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    5. ABOUT css 
+    5. ABOUT css
 ======================================================*/
 
 #about-part{
@@ -1135,7 +1135,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    6. APPLY css 
+    6. APPLY css
 ======================================================*/
 
 
@@ -1173,7 +1173,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    7. COURSE css 
+    7. COURSE css
 ======================================================*/
 
 .course-part{}
@@ -1359,7 +1359,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    8. VIDEO FEATURES css 
+    8. VIDEO FEATURES css
 ======================================================*/
 
 #video-feature{
@@ -1425,7 +1425,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    9. TEACHERS css 
+    9. TEACHERS css
 ======================================================*/
 
 #teachers-part{
@@ -1485,7 +1485,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    10. PUBLICATION css 
+    10. PUBLICATION css
 ======================================================*/
 
 
@@ -1583,7 +1583,7 @@ a.dropdown-item {
 }
 
 /*=====================================================
-    11. TEASTIMONIAL css 
+    11. TEASTIMONIAL css
 ======================================================*/
 
 #testimonial{}
@@ -1673,7 +1673,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    12. NEWS css 
+    12. NEWS css
 ======================================================*/
 
 .singel-news{}
@@ -1726,7 +1726,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    13. FOOTER css 
+    13. FOOTER css
 ======================================================*/
 
 .footer-top{
@@ -1758,14 +1758,14 @@ a.dropdown-item {
     background-color: #0081B5;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
-    
+
 }
 .footer-about ul li a:hover{
     background-color: #ffc600;
     color: #000;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
-    
+
 }
 
 
@@ -1865,7 +1865,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    14. CATEGORY 2 css 
+    14. CATEGORY 2 css
 ======================================================*/
 
 .category-2-items{}
@@ -1939,7 +1939,7 @@ a.dropdown-item {
     padding-right: 40px;
     padding-bottom: 40px;
     background-color: #fff;
-    
+
 }
 .category-form .main-form .singel-form{
     margin-top: 20px;
@@ -1961,7 +1961,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    15. COURSE 2 css 
+    15. COURSE 2 css
 ======================================================*/
 
 .singel-course-2{}
@@ -2052,7 +2052,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    16. COUNTER css 
+    16. COUNTER css
 ======================================================*/
 
 .singel-counter{
@@ -2082,7 +2082,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    17. TEACHERS 2 css 
+    17. TEACHERS 2 css
 ======================================================*/
 
 .teachers-2{}
@@ -2184,7 +2184,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    18. EVENT 2 css 
+    18. EVENT 2 css
 ======================================================*/
 
 .event-bg{
@@ -2200,8 +2200,8 @@ a.dropdown-item {
     width: 100%;
     height: 100%;
     background: -webkit-gradient(linear, left top, right top, from(rgba(7,41,77,0.3)),color-stop(10%, rgba(7,41,77,0.3)),to(rgba(7,41,77,1)));
-    background: linear-gradient(to right, rgba(7,41,77,0.3) 0%,rgba(7,41,77,0.3) 10%,rgba(7,41,77,1) 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#000',GradientType=1 ); 
+    background: linear-gradient(to right, rgba(7,41,77,0.3) 0%,rgba(7,41,77,0.3) 10%,rgba(7,41,77,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#000',GradientType=1 );
 }
 
 .event-2 .event-title h3 {
@@ -2244,7 +2244,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    19. COUNT DOWN css 
+    19. COUNT DOWN css
 ======================================================*/
 
 .count-down-cont{
@@ -2271,7 +2271,7 @@ a.dropdown-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    
+
 }
 .count-down-time .singel-count{
     -webkit-box-flex: 1;
@@ -2338,7 +2338,7 @@ a.dropdown-item {
 }
 
 /*=====================================================
-    20. PAGE BANNER  css 
+    20. PAGE BANNER  css
 ======================================================*/
 
 .page-banner-cont{
@@ -2372,7 +2372,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    21. ABOUT PAGE css 
+    21. ABOUT PAGE css
 ======================================================*/
 
 .about-image img {
@@ -2404,7 +2404,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    22. COURSES PAGE css 
+    22. COURSES PAGE css
 ======================================================*/
 
 .tab-content{}
@@ -2492,7 +2492,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    23. COURSE SINGEl PAGE css 
+    23. COURSE SINGEl PAGE css
 ======================================================*/
 
 .corses-singel-left{
@@ -2526,6 +2526,7 @@ a.dropdown-item {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 0;
+    width: 50px;
 }
 .corses-singel-left .course-terms ul li .teacher-name .thum img{
     border-radius: 50%;
@@ -2710,6 +2711,8 @@ a.dropdown-item {
 .instructor-cont .instructor-author .author-thum{
     float: left;
     margin-right: 30px;
+    width: 150px;
+    height: 150px;
 }
 .instructor-cont .instructor-author .author-name{
     float: left;
@@ -2983,7 +2986,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    24. EVENT PAGE css 
+    24. EVENT PAGE css
 ======================================================*/
 
 .singel-event-list{
@@ -3041,7 +3044,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    25. EVENT SINGEL PAGE css 
+    25. EVENT SINGEL PAGE css
 ======================================================*/
 
 .events-area{
@@ -3139,7 +3142,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    26. TEACHERS SInGEL PAGE css 
+    26. TEACHERS SInGEL PAGE css
 ======================================================*/
 
 .teachers-left{
@@ -3233,7 +3236,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    27. BLOG PAGE css 
+    27. BLOG PAGE css
 ======================================================*/
 
 .singel-blog {
@@ -3278,7 +3281,7 @@ a.dropdown-item {
     padding-bottom: 10px;
 }
 .singel-blog .blog h3{
-    font-size: 22px;	
+    font-size: 22px;
     color: #000;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
@@ -3414,7 +3417,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    28. BLOG SINGEL PAGE css 
+    28. BLOG SINGEL PAGE css
 ======================================================*/
 
 
@@ -3562,7 +3565,7 @@ a.dropdown-item {
 }
 
 /*=====================================================
-    29. SHOP PAGE css 
+    29. SHOP PAGE css
 ======================================================*/
 
 .shop-top-search {
@@ -3636,7 +3639,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    30. SHOP SINGEL PAGE css 
+    30. SHOP SINGEL PAGE css
 ======================================================*/
 
 .shop-destails{
@@ -3764,7 +3767,7 @@ a.dropdown-item {
 
 
 /*=====================================================
-    31. CONTACT PAGE css 
+    31. CONTACT PAGE css
 ======================================================*/
 
 .contact-from{

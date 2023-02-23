@@ -59,7 +59,7 @@ Route::namespace('frontend')->group(function () {
     Route::get('/aboutus', [FrontendController::class, 'aboutus'])->name('aboutus');
     Route::get('/service', [FrontendController::class, 'service'])->name('service');
     Route::get('/courses', [FrontendController::class, 'courses'])->name('courses');
-    Route::get('/course/details', [FrontendController::class, 'courseDetails'])->name('course.details');
+    Route::get('/course/details/{course_id}', [FrontendController::class, 'courseDetails'])->name('course.details');
     Route::get('/teachers', [FrontendController::class, 'teachers'])->name('teachers');
     Route::get('/stories', [FrontendController::class, 'stories'])->name('stories');
     Route::get('/story/details', [FrontendController::class, 'storyDetails'])->name('story.details');

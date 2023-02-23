@@ -8,12 +8,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page-banner-cont">
-                        <h2>Learn basic javascript</h2>
+                        <h2>{{ $categoriesDetails->courseCategory->categoryTitle }}</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('index') }}">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Courses</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Learn basic javasript</li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ $categoriesDetails->courseCategory->categoryTitle }}</li>
                             </ol>
                         </nav>
                     </div>  <!-- page banner cont -->
@@ -32,25 +32,25 @@
                 <div class="col-lg-8">
                     <div class="corses-singel-left mt-30">
                         <div class="title">
-                            <h3>Learn basis javascirpt from start for beginner</h3>
+                            <h3>{{ $categoriesDetails->courseTitle }}</h3>
                         </div> <!-- title -->
                         <div class="course-terms">
                             <ul>
                                 <li>
                                     <div class="teacher-name">
                                         <div class="thum">
-                                            <img src="{{ asset('assets/frontend/images/course/teacher/t-1.jpg')}}" alt="Teacher">
+                                            <img  src="{{ asset($categoriesDetails->Instructor->instructorImage)}}" alt="Teacher">
                                         </div>
                                         <div class="name">
                                             <span>Teacher</span>
-                                            <h6>Mark anthem</h6>
+                                            <h6>{{ $categoriesDetails->Instructor->instructorName }}</h6>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="course-category">
                                         <span>Category</span>
-                                        <h6>Programaming </h6>
+                                        <h6>{{ $categoriesDetails->courseCategory->categoryTitle }} </h6>
                                     </div>
                                 </li>
                                 <li>
@@ -70,7 +70,7 @@
                         </div> <!-- course terms -->
 
                         <div class="corses-singel-image pt-50">
-                            <img src="{{ asset('assets/frontend/images/course/cu-1.jpg')}}" alt="Courses">
+                            <img src="{{ asset($categoriesDetails->coursesImage)}}" alt="Courses">
                         </div> <!-- corses singel image -->
 
                         <div class="corses-tab mt-30">
@@ -88,12 +88,8 @@
                                 <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                                     <div class="overview-description">
                                         <div class="singel-description pt-40">
-                                            <h6>Course Summery</h6>
-                                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
-                                        </div>
-                                        <div class="singel-description pt-40">
-                                            <h6>Requrements</h6>
-                                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
+                                            <h6>Course Description</h6>
+                                            <p>{{ $categoriesDetails->courseDescription }}</p>
                                         </div>
                                     </div> <!-- overview description -->
                                 </div>
@@ -101,21 +97,21 @@
                                     <div class="instructor-cont">
                                         <div class="instructor-author">
                                             <div class="author-thum">
-                                                <img src="{{ asset('assets/frontend/images/instructor/i-1.jpg')}}" alt="Instructor">
+                                                <img src="{{ asset($categoriesDetails->Instructor->instructorImage)}}" alt="Instructor">
                                             </div>
                                             <div class="author-name">
-                                                <a href="#"><h5>Sumon Hasan</h5></a>
-                                                <span>Senior WordPress Developer</span>
-                                                <ul class="social">
+                                                <a href="#"><h5>{{ $categoriesDetails->Instructor->instructorName }}</h5></a>
+                                                <span>{{ $categoriesDetails->Instructor->instructorPosition }}</span>
+                                                {{-- <ul class="social">
                                                     <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                </ul>
+                                                </ul> --}}
                                             </div>
                                         </div>
                                         <div class="instructor-description pt-25">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus fuga ratione molestiae unde provident quibusdam sunt, doloremque. Error omnis mollitia, ex dolor sequi. Et, quibusdam excepturi. Animi assumenda, consequuntur dolorum odio sit inventore aliquid, optio fugiat alias. Veritatis minima, dicta quam repudiandae repellat non sit, distinctio, impedit, expedita tempora numquam?</p>
+                                            <p>{{ $categoriesDetails->Instructor->instructorDescription }}</p>
                                         </div>
                                     </div> <!-- instructor cont -->
                                 </div>
@@ -130,10 +126,10 @@
                             <div class="course-features mt-30">
                                <h4>Course Features </h4>
                                 <ul>
-                                    <li><i class="fa fa-clock-o"></i>Duaration : <span>10 Hours</span></li>
-                                    <li><i class="fa fa-clone"></i>Leactures : <span>09</span></li>
-                                    <li><i class="fa fa-beer"></i>Quizzes :  <span>05</span></li>
-                                    <li><i class="fa fa-user-o"></i>Time :  <span>100</span></li>
+                                    <li><i class="fa fa-clock-o"></i>Duaration : <span>{{  $categoriesDetails->duration }}</span></li>
+                                    <li><i class="fa fa-clone"></i>Leactures : <span>{{  $categoriesDetails->leactures }}</span></li>
+                                    <li><i class="fa fa-beer"></i>Quizzes :  <span>{{  $categoriesDetails->quizzes }}</span></li>
+                                    <li><i class="fa fa-user-o"></i>Time :  <span>{{  $categoriesDetails->time }}</span></li>
                                 </ul>
                                 <div class="price-button pt-10">
                                     <!-- <span>Price : <b>$25</b></span> -->
