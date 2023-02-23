@@ -25,49 +25,6 @@
                 </div> <!-- container -->
             </div> <!-- single slider -->
         @endforeach
-        {{-- <div class="single-slider bg_cover pt-150" style="background-image: url('{{ asset('assets/frontend/images/slider/s-2.jpg')}}');" data-overlay="4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-9">
-                        <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right institute for your education
-                            </h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s">Sed ut perspiciatis unde omnis iste natus error
-                                sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#">Our
-                                        Courses</a></li>
-                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2"
-                                        href="#">Apply Now</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- single slider --> --}}
-
-        {{-- <div class="single-slider bg_cover pt-150" style="background-image: url('{{ asset('assets/frontend/images/slider/s-3.jpg')}}');" data-overlay="4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-9">
-                        <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right institute for your education
-                            </h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s">Sed ut perspiciatis unde omnis iste natus error
-                                sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#">Our
-                                        Courses</a></li>
-                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2"
-                                        href="#">Apply Now</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- single slider --> --}}
     </section>
 
     <!--====== SLIDER PART ENDS ======-->
@@ -630,36 +587,13 @@
                 </div>
             </div>
             <div class="row patnar-slied">
-                <div class="col-lg-12">
-                    <div class="singel-patnar text-center mt-40">
-                        <img src="{{ asset('assets/frontend/images/patnar-logo/p-1.png') }}" alt="Logo">
+                @foreach ($clients as $client)
+                    <div class="col-lg-12">
+                        <div class="singel-patnar text-center mt-40">
+                            <img src="{{ asset($client->image) }}" alt="Logo">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="singel-patnar text-center mt-40">
-                        <img src="{{ asset('assets/frontend/images/patnar-logo/p-2.png') }}" alt="Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="singel-patnar text-center mt-40">
-                        <img src="{{ asset('assets/frontend/images/patnar-logo/p-3.png') }}" alt="Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="singel-patnar text-center mt-40">
-                        <img src="{{ asset('assets/frontend/images/patnar-logo/p-4.png') }}" alt="Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="singel-patnar text-center mt-40">
-                        <img src="{{ asset('assets/frontend/images/patnar-logo/p-2.png') }}" alt="Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="singel-patnar text-center mt-40">
-                        <img src="{{ asset('assets/frontend/images/patnar-logo/p-3.png') }}" alt="Logo">
-                    </div>
-                </div>
+                @endforeach
             </div> <!-- row -->
         </div> <!-- container -->
     </div>
