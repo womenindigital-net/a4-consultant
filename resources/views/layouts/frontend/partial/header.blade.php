@@ -29,16 +29,19 @@
 <!--====== PRELOADER PART START ======-->
 
 <!--====== HEADER PART START ======-->
+@php
+    use App\Models\CourseCategory;
+    $categorys = CourseCategory::get();
+@endphp
+
 
 <header id="header-part">
-
-
     <div class="header-logo-support pt-2 pb-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="logo">
-                        <a href="{{route('index')}}">
+                        <a href="{{ route('index') }}">
                             <img src="{{ asset('assets/frontend/images/logo.png') }}" alt="Logo">
                         </a>
                     </div>
@@ -79,40 +82,41 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="active" href="{{route('index')}}">Home</a>
+                                    <a class="active" href="{{ route('index') }}">Home</a>
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('aboutus')}}">About Us</a>
+                                    <a href="{{ route('aboutus') }}">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('service')}}">Our Services</a>
+                                    <a href="{{ route('service') }}">Our Services</a>
                                 </li>
                                 <li class="nav-item dropdown show">
-                                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+                                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
                                     <ul class="sub-menu dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <li><a href="{{route('courses')}}" class="dropdown-item">All Courses</a></li>
-                                        <li><a href="courses-singel.html" class="dropdown-item">Design & Development</a></li>
-                                        <li><a href="courses-singel.html" class="dropdown-item">Design & Development</a></li>
-                                        <li><a href="courses-singel.html" class="dropdown-item">Design & Development</a></li>
+                                        <li><a href="{{ route('courses') }}" class="dropdown-item">All Courses</a></li>
+                                        @foreach ($categorys as $cat)
+                                        <li><a href="{{ route('category.course.show', $cat->id) }}" class="dropdown-item">{{ $cat->categoryTitle }}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('teachers')}}">Our teachers</a>
+                                    <a href="{{ route('teachers') }}">Our teachers</a>
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('stories')}}">Stories</a>
+                                    <a href="{{ route('stories') }}">Stories</a>
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('clints')}}">Our Clints</a>
+                                    <a href="{{ route('clints') }}">Our Clints</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('news')}}">News & Events</a>
+                                    <a href="{{ route('news') }}">News & Events</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('contact')}}">Contact Us</a>
+                                    <a href="{{ route('contact') }}">Contact Us</a>
 
                                 </li>
 
@@ -148,28 +152,33 @@
                                     <div class="hidden top-0 right-0 px-6 sm:block d-flex">
                                         @auth
                                             <li class="nav-item btn-group dropdown show">
-                                                <a type="button" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <?php echo "<img src='" . asset(Auth::user()->prodicle) . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>"; ?> {{ Auth::user()->name }}
+                                                <a type="button" class="nav-link dropdown-toggle" href="#"
+                                                    id="navbarDropdown" role="" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <?php echo "<img src='" . asset(Auth::user()->prodicle) . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>"; ?> {{ Auth::user()->name }}
                                                 </a>
                                                 <ul class="dropdown-menu dropdown-menu-lg-end sub-menu">
-                                                    <li><a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a></li>
-                                                   <li><a class="dropdown-item" href="{{ route('logout') }}">Log out </a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ url('/dashboard') }}">Dashboard</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('logout') }}">Log out </a>
+                                                    </li>
 
                                                 </ul>
                                             </li>
                                         @else
                                             <li class="nav-item {{ request()->is('login') ? 'active' : '' }}">
-                                                <a class="nav-link text-success-custom" href="{{ url('login') }}">Log in</a>
+                                                <a class="nav-link text-success-custom" href="{{ url('login') }}">Log
+                                                    in</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link text-success-custom" href="#">|</a>
                                             </li>
 
                                             @if (Route::has('register'))
-                                            <li class="nav-item {{ request()->is('user-type') ? 'active' : '' }}">
-                                                <a href="{{ route('register') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                                            </li>
+                                                <li class="nav-item {{ request()->is('user-type') ? 'active' : '' }}">
+                                                    <a href="{{ route('register') }}"
+                                                        class="text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                                                </li>
                                             @endif
                                         @endauth
                                     </div>
@@ -177,7 +186,7 @@
                             </ul>
                             <div class="">
 
-                              </div>
+                            </div>
 
                         </div>
                     </nav> <!-- nav -->

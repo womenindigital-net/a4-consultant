@@ -3,22 +3,33 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Client;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     // ===========Index page============
-    
+
     public function index(){
-        return view('frontend.index');
+        $data['sliders'] = Slider::get();
+        $data['clients'] = Client::get();
+        return view('frontend.index',$data);
     }
 
+
+
+    // =========== category course show ============
+    public function courseShow($category_id){
+
+        return view('frontend.category-course-show');
+    }
 
     // ===========About us page============
     public function aboutus(){
         return view('frontend.about');
     }
-    
+
 
     // ===========Service page============
     public function service(){

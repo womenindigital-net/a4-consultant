@@ -68,6 +68,7 @@ Route::namespace('frontend')->group(function () {
     Route::get('/event/details', [FrontendController::class, 'eventDetails'])->name('event.details');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
     Route::get('/profile', [FrontendController::class, 'userProfile'])->name('profile');
+    Route::get('/category/course/show/{id}', [FrontendController::class, 'courseShow'])->name('category.course.show');
 
 });
 
