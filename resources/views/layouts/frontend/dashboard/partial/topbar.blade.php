@@ -19,6 +19,9 @@
 .dropdown-menu li{
     margin-right: 0px !important;
 }
+#page-topbar {
+    box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 18%);
+}
 </style>
 <header id="page-topbar">
     <div class="navbar-header">

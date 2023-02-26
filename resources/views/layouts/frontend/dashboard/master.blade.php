@@ -26,7 +26,27 @@
     <!--custom css -->
     <link href="{{ URL::asset('assets/frontend/assets/css/style.css') }}" rel="stylesheet" type="text/css" />
 
-
+    <style>
+        .propic {
+            width: 100px;
+            height: 100px;
+            /* aspect-ratio: 16/9; */
+            background: #ddd;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            color: #aaa;
+            border: 2px dashed currentcolor;
+            cursor: pointer;
+            font-family: sans-serif;
+            transition: color 300ms ease-in-out, background 300ms ease-in-out;
+            outline: none;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        
+    </style>
 </head>
 
 <body data-sidebar="dark">
@@ -65,6 +85,7 @@
     {{-- <script src="{{ asset('assets/frontend/assets/js/app.js') }}"></script> --}}
     <script src="{{ asset('assets/frontend/assets/libs/parsleyjs/parsley.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/assets/js/pages/form-validation.init.js') }}"></script>
+    
 
 
 

@@ -1,8 +1,17 @@
 .vertical-menu {
     background: #fff !important;
 }
-#sidebar-menu ul li a {
+#sidebar-menu ul li a,i {
+    color: #cccccc !important;
+    font-weight: bold;
+}
+#sidebar-menu ul li a:hover {
     color: #fff !important;
+
+}
+#sidebar-menu ul li i:hover {
+    color: #fff !important;
+
 }
 .waves-effect {
     background: #0081B5;
@@ -40,4 +49,11 @@
 .dash-menu ul li a:hover{
     color: #0081B5;
     transition: 0.5s;
+}
+@media all and (max-width: 575px) {
+    /*Desing Check 414px*/
+    .dash-menu{
+        display: none;
+    }
+
 }

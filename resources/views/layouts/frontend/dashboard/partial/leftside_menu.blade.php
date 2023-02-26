@@ -1,10 +1,12 @@
-
 <style>
-.waves-effect {
-    width: 90% !important;
-    margin: auto !important;
-    margin-bottom: 8px !important;
-}
+    .metismenu li {
+        display: block;
+        width: 91%;
+        margin-left: 10px;
+    }
+    .vertical-menu {
+        box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 26%);
+    }
 </style>
 <div class="vertical-menu">
 
@@ -15,61 +17,60 @@
                 <li class="menu-title" key="t-menu">Menu</li>
                 <li>
                     <a href="{{ route('admin.dashboard') }}" class="waves-effect">
-                        <i class="bx bx-home-circle"></i>
-                        <span key="t-dashboards">Dashboards</span>
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <span key="t-dashboards">DASHBORARD</span>
                     </a>
                 </li>
-
-
-
-                 {{--Create Corses --}}
-                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">Courses</span>
+                {{-- Create Corses --}}
+                <li>
+                    <a href="{{ route('profile') }}" class="waves-effect">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <span key="t-dashboards">PROFILE</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('course.create') }}" key="t-horizontal">Courses Create</a></li>
-                            <li><a href="{{route('course.list')}}" key="t-horizontal">Courses List
-                                list</a></li>
-                    </ul>
+                    
                 </li>
 
                 {{-- Create Catergory Courses --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">Category Courses</span>
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <span key="t-dashboards">COURSES</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('course.category.create') }}" key="t-horizontal">Courses Category create</a></li>
-                        <li><a href="{{ route('course.category.list')}}" key="t-horizontal">Courses Category list</a></li>
-                    </ul>
+                    
                 </li>
                 {{-- Enroll --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">Enroll</span>
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <span key="t-dashboards">ENROLL</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ url('admin/organization/package/page') }}" key="t-horizontal">hello
-                            create</a></li>
-                            <li><a href="{{ url('admin/organization/package/list') }}" key="t-horizontal">Hi
-                                list</a></li>
-                    </ul>
+                    
                 </li>
                 {{-- Courses instructor --}}
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">Courses instructor</span>
+                    <a href="{{ route('instructor.create') }}" class="waves-effect">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <span key="t-dashboards">COURSES INSTRUCTOR</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('instructor.create') }}" key="t-horizontal">Create Courses instructor</a></li>
-                            <li><a href="{{ route('instructor.list')}}" key="t-horizontal">Courses instructor list</a></li>
-                    </ul>
+                    
                 </li>
+                {{-- Consultant --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <span key="t-dashboards">OUR CONSULTANT</span>
+                    </a>
+                    
+                </li>
+                {{-- Slider  --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <span key="t-dashboards">SLIDER</span>
+                    </a>
+                    
+                </li>
+                
 
             </ul>
         </div>
