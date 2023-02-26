@@ -133,49 +133,28 @@
                                 </ul>
                                 <div class="price-button pt-10">
                                     <!-- <span>Price : <b>$25</b></span> -->
-                                    <a href="#" class="main-btn">Enroll Now</a>
+                                    <a href="{{ route('enroll', $categoriesDetails->id) }}" class="main-btn">Enroll Now</a>
                                 </div>
                             </div> <!-- course features -->
                         </div>
                         <div class="col-lg-12 col-md-6">
                             <div class="You-makelike mt-30">
                                 <h4>You make like </h4>
-                                <div class="singel-makelike mt-20">
+
+                                 @foreach ($latestCourses as $latestCourse)
+                                 <div class="singel-makelike mt-20">
                                     <div class="image">
-                                        <img src="{{ asset('assets/frontend/images/your-make/y-1.jpg')}}" alt="Image">
+                                        <img src="{{ asset($latestCourse->coursesImage)}}" alt="Image">
                                     </div>
                                     <div class="cont">
-                                        <a href="#"><h4>Introduction to machine languages</h4></a>
+                                        <a href="{{ route('course.details', $latestCourse->id) }}"><h4>{{ $latestCourse->courseTitle }}</h4></a>
                                         <ul>
-                                            <li><a href="#"><i class="fa fa-user"></i>31</a></li>
-                                            <li>$50</li>
+                                            {{-- <li><a href="#"><i class="fa fa-user"></i>31</a></li> --}}
+                                            <li>{{ $latestCourse->price }}</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="singel-makelike mt-20">
-                                    <div class="image">
-                                        <img src="{{ asset('assets/frontend/images/your-make/y-1.jpg')}}" alt="Image">
-                                    </div>
-                                    <div class="cont">
-                                        <a href="#"><h4>How to build a basis game with java </h4></a>
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-user"></i>31</a></li>
-                                            <li>$50</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="singel-makelike mt-20">
-                                    <div class="image">
-                                        <img src="{{ asset('assets/frontend/images/your-make/y-1.jpg')}}" alt="Image">
-                                    </div>
-                                    <div class="cont">
-                                        <a href="#"><h4>Basic accounting from primary</h4></a>
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-user"></i>31</a></li>
-                                            <li>$50</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                 @endforeach
                             </div>
                         </div>
                     </div>

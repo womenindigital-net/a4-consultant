@@ -16,6 +16,7 @@ class FrontendController extends Controller
     public function index(){
         $data['sliders'] = Slider::get();
         $data['clients'] = Client::get();
+        $data['allCourses'] = Course::get();
         return view('frontend.index',$data);
     }
 
@@ -55,13 +56,15 @@ class FrontendController extends Controller
     }
 
     // ===========Course page============
-    public function courses(){
-        return view('frontend.courses');
+    public function allCourses(){
+        $data['allCourses'] = Course::get();
+        return view('frontend.all-courses',$data);
     }
 
     // ===========Course Details page============
     public function courseDetails($course_id){
         $data['categoriesDetails'] = Course::where('id',$course_id)->where('status',1)->first();
+        $data['latestCourses'] = Course::orderBy('created_at', 'DESC')->paginate(3);
         return view('frontend.course-details',$data);
     }
 

@@ -95,7 +95,7 @@
                                     <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
                                     <ul class="sub-menu dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <li><a href="{{ route('courses') }}" class="dropdown-item">All Courses</a></li>
+                                        <li><a href="{{ route('all-courses') }}" class="dropdown-item">All Courses</a></li>
                                         @foreach ($categorys as $cat)
                                         <li><a href="{{ route('category.course.show', $cat->id) }}" class="dropdown-item">{{ $cat->categoryTitle }}</a></li>
                                         @endforeach

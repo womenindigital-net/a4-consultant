@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ContractController;
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\EnrollController;
 use App\Http\Controllers\Admin\InstructorController;
 use App\Http\Controllers\Admin\NewsAdnEventsController;
 use App\Http\Controllers\Admin\SliderController;
@@ -58,7 +59,7 @@ Route::namespace('frontend')->group(function () {
     Route::get('/', [FrontendController::class, 'index'])->name('index');
     Route::get('/aboutus', [FrontendController::class, 'aboutus'])->name('aboutus');
     Route::get('/service', [FrontendController::class, 'service'])->name('service');
-    Route::get('/courses', [FrontendController::class, 'courses'])->name('courses');
+    Route::get('/all-courses', [FrontendController::class, 'allCourses'])->name('all-courses');
     Route::get('/course/details/{course_id}', [FrontendController::class, 'courseDetails'])->name('course.details');
     Route::get('/teachers', [FrontendController::class, 'teachers'])->name('teachers');
     Route::get('/stories', [FrontendController::class, 'stories'])->name('stories');
@@ -69,7 +70,7 @@ Route::namespace('frontend')->group(function () {
     Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
     Route::get('/profile', [FrontendController::class, 'userProfile'])->name('profile');
     Route::get('/category/course/show/{id}', [FrontendController::class, 'courseShow'])->name('category.course.show');
-
+    Route::get('/enroll/create/store', [EnrollController::class, 'enroll'])->name('enroll');
 });
 
 
@@ -138,4 +139,12 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/contact/edit/{client_id}', [ContactController::class, 'edit'])->name('contact.edit');
     Route::put('/contact/update/{client_id}', [ContactController::class, 'update'])->name('contact.update');
     Route::get('/contact/delete/{client_id}', [ContactController::class, 'destroy'])->name('contact.delete');
+
+    //enroll
+    // Route::get('/enroll/list', [ContactController::class, 'index'])->name('enroll.list');
+    // Route::get('/enroll/create', [ContactController::class, 'create'])->name('enroll.create');
+    // Route::post('/enroll/create/store', [EnrollController::class, 'enroll'])->name('enroll');
+    // Route::get('/enroll/edit/{enroll_id}', [ContactController::class, 'edit'])->name('enroll.edit');
+    // Route::put('/enroll/update/{enroll_id}', [ContactController::class, 'update'])->name('enroll.update');
+    // Route::get('/enroll/delete/{enroll_id}', [ContactController::class, 'destroy'])->name('enroll.delete');
 });
