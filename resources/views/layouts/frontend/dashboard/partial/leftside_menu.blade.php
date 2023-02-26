@@ -16,7 +16,7 @@
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title" key="t-menu">Menu</li>
                 <li>
-                    <a href="{{ route('admin.dashboard') }}" class="waves-effect">
+                    <a href="{{ route('dashboard') }}" class="waves-effect">
                         <i class="fa-solid fa-crosshairs"></i>
                         <span key="t-dashboards">DASHBORARD</span>
                     </a>
@@ -27,7 +27,7 @@
                         <i class="fa-solid fa-crosshairs"></i>
                         <span key="t-dashboards">PROFILE</span>
                     </a>
-                    
+
                 </li>
 
                 {{-- Create Catergory Courses --}}
@@ -36,7 +36,7 @@
                         <i class="fa-solid fa-crosshairs"></i>
                         <span key="t-dashboards">COURSES</span>
                     </a>
-                    
+
                 </li>
                 {{-- Enroll --}}
                 <li>
@@ -44,7 +44,7 @@
                         <i class="fa-solid fa-crosshairs"></i>
                         <span key="t-dashboards">ENROLL</span>
                     </a>
-                    
+
                 </li>
                 {{-- Courses instructor --}}
                 <li>
@@ -52,7 +52,7 @@
                         <i class="fa-solid fa-crosshairs"></i>
                         <span key="t-dashboards">COURSES INSTRUCTOR</span>
                     </a>
-                    
+
                 </li>
                 {{-- Consultant --}}
                 <li>
@@ -60,17 +60,10 @@
                         <i class="fa-solid fa-crosshairs"></i>
                         <span key="t-dashboards">OUR CONSULTANT</span>
                     </a>
-                    
+
                 </li>
-                {{-- Slider  --}}
-                <li>
-                    <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-crosshairs"></i>
-                        <span key="t-dashboards">SLIDER</span>
-                    </a>
-                    
-                </li>
-                
+
+
 
             </ul>
         </div>

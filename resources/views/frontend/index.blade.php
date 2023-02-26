@@ -14,10 +14,8 @@
                                 </h1>
                                 <p data-animation="fadeInUp" data-delay="1.3s">{{ $slider->sliderDescription }}</p>
                                 <ul>
-                                    <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#">Our
+                                    <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{{ route('all-courses') }}">Our
                                             Courses</a></li>
-                                    <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2"
-                                            href="#">Apply Now</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -247,20 +245,20 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-title pb-45">
-                        <h5>Our course</h5>
-                        <h2>Featured courses </h2>
+                        <h2>Our courses </h2>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
             <div class="row course-slied mt-30">
+                @forelse ($allCourses as $allCourse )
                 <div class="col-lg-4">
                     <div class="singel-course">
                         <div class="thum">
                             <div class="image">
-                                <img src="{{ asset('assets/frontend/images/course/cu-1.jpg') }}" alt="Course">
+                                <img src="{{ asset($allCourse->coursesImage) }}" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Fee <br> 10,000TK</span>
+                                <span>Fee <br>{{ $allCourse->price }}TK</span>
                             </div>
                         </div>
                         <div class="cont">
@@ -273,149 +271,21 @@
                             </ul>
                             <span>(20 Reviws)</span>
                             <a href="courses-singel.html">
-                                <h4>Learn basis javascirpt from start for beginner</h4>
+                                <h4>{{ $allCourse->courseTitle }}</h4>
                             </a>
                             <div class="course-teacher">
                                 <div class="button float-left">
-                                    <a href="#" class="main-btn">Apply Now</a>
+                                    <a href="{{ route('course.details', $allCourse->id) }}" class="main-btn">Apply Now</a>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- singel course -->
                 </div>
-                <div class="col-lg-4">
-                    <div class="singel-course">
-                        <div class="thum">
-                            <div class="image">
-                                <img src="{{ asset('assets/frontend/images/course/cu-2.jpg') }}" alt="Course">
-                            </div>
-                            <div class="price">
-                                <span>Fee <br> 10000TK</span>
-                            </div>
-                        </div>
-                        <div class="cont">
-                            <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>(20 Reviws)</span>
-                            <a href="courses-singel.html">
-                                <h4>Learn basis javascirpt from start for beginner</h4>
-                            </a>
-                            <div class="course-teacher">
-                                <div class="button float-left">
-                                    <a href="#" class="main-btn">Apply Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- singel course -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="singel-course">
-                        <div class="thum">
-                            <div class="image">
-                                <img src="{{ asset('assets/frontend/images/course/cu-3.jpg') }}" alt="Course">
-                            </div>
-                            <div class="price">
-                                <span>Fee <br> 10,000TK</span>
-                            </div>
-                        </div>
-                        <div class="cont">
-                            <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>(20 Reviws)</span>
-                            <a href="courses-singel.html">
-                                <h4>Learn basis javascirpt from start for beginner</h4>
-                            </a>
-                            <div class="course-teacher">
-                                <div class="button float-left">
-                                    <a href="#" class="main-btn">Apply Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- singel course -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="singel-course">
-                        <div class="thum">
-                            <div class="image">
-                                <img src="{{ asset('assets/frontend/images/course/cu-4.jpg') }}" alt="Course">
-                            </div>
-                            <div class="price">
-                                <span class="p-0 m-0">Fee <br> 10,000TK</span>
-                            </div>
-                        </div>
-                        <div class="cont">
-                            <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>(20 Reviws)</span>
-                            <a href="courses-singel.html">
-                                <h4>Learn basis javascirpt from start for beginner</h4>
-                            </a>
-                            <div class="course-teacher">
-                                <div class="button float-left">
-                                    <a href="#" class="main-btn">Apply Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- singel course -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="singel-course">
-                        <div class="thum">
-                            <div class="image">
-                                <img src="{{ asset('assets/frontend/images/course/cu-5.jpg') }}" alt="Course">
-                            </div>
-                            <div class="price">
-                                <span>Fee <br> 10,000TK</span>
-                            </div>
-                        </div>
-                        <div class="cont">
-                            <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>(20 Reviws)</span>
-                            <a href="courses-singel.html">
-                                <h4>Learn basis javascirpt from start for beginner</h4>
-                            </a>
-                            <div class="course-teacher">
-                                <div class="thum">
-                                    <a href="#"><img
-                                            src="{{ asset('assets/frontend/images/course/teacher/t-5.jpg') }}"
-                                            alt="teacher"></a>
-                                </div>
-                                <div class="name">
-                                    <a href="#">
-                                        <h6>Mark anthem</h6>
-                                    </a>
-                                </div>
-                                <div class="admin">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-user"></i><span>31</span></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i><span>10</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- singel course -->
-                </div>
+                @empty
+                <h1 class="text-danger">No Couses available</h1>
+                @endforelse
+
+
             </div> <!-- course slied -->
         </div> <!-- container -->
     </section>

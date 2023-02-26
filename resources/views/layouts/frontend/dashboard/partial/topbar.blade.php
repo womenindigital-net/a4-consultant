@@ -63,7 +63,7 @@
                         <a href="{{route('service')}}">Our Services</a>
                     </li>
                     <li class="">
-                        <a href="{{route('courses')}}">Courses</a>
+                        <a href="{{route('all-courses')}}">Courses</a>
                         {{-- <ul class="sub-menu">
                             <li><a href="courses.html">Design & Development</a></li>
                             <li><a href="courses-singel.html">Design & Development</a></li>
