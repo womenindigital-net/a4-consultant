@@ -1,78 +1,87 @@
 @extends('layouts.frontend.dashboard.master')
-@push('css')
-
-@endpush
+<style>
+    .picture__image img{
+        width: 100px !important;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    #picture__input {
+        display: none !important;
+    }
+    .pro_button{
+        background: #FFCC17 !important;
+        color:#494949da !important;
+        font-weight: bold !important;
+    }
+    input[type=text]:focus {
+    border: none !important;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+  }
+    input[type=password]:focus {
+    border: none !important;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+  }
+  textarea[type=text]:focus {
+    border: none !important;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+  }
+</style>
 
 @section('page_content')
-<div class="col-md-10 col-lg-12 m-0 p-0 mt-1 border">
-    <div class="container-fluid  side-bar_left   overflow_scroll mt-1 ">
+<div class="col-md-10 col-lg-12 m-0 p-0 mt-1 border" style="background:#FFF">
+    <div class="container-fluid  side-bar_left   overflow_scroll ">
             <form action="{{ url('/profile') }}" method="POST"
                 enctype="multipart/form-data">
-                <div class="row   bg-white border_radius mb-2 ">
+                <div class="row border_radius" style="background: #FFF;">
                     <div class="col-sm-4 mt-4  verticaleHeight verticaleHeight_col_4">
                         <div class="d-flex justify-content-center">
                             <div class="card my-2" style="width: 18rem;">
-                                <div class="card-body p-5" style="margin: 0 auto;">
+                                <div class="card-body p-5" style="text-align:center;">
                                     <label for="picture__input" tabIndex="0">
                                         <img id="hide_image" class="propic"
                                             src="{{ asset('uploads/userImage/') }}"
                                             alt="">
                                         <span style="" class="picture__image"></span>
-                                        <span class="text_hidden text-warning">{{ __('messages.Edit_your_profile_picture') }}</span>
+                                        <span class="text_hidden text-warning">Edit your profile picture</span>
                                     </label>
-                                    <input type="file" name="picture__input" id="picture__input" accept="image/*" style="display:block;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <div class="card  " style="width: 18rem; ">
-                                <div class="card-body ">
-                                    <div class="text-center">
-                                        <img style="width: 100px; height:100px; object-fit:contain;"
-                                            src="{{ asset('uploads/signature/') }}"
-                                            alt="">
-                                    </div>
+                                    <input type="file" name="picture__input" id="picture__input" accept="image/*">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-8 mt-4  verticaleHeight verticaleHeight_col_8">
-                        <div class="row ">
+                        <div class="row d-flex ">
                             <div class="col-6">
                                 <div class="mb-3">
-                                    <label class="form-label">{{__('messages.User_name')}}</label>
+                                    <label class="form-label">User Name</label>
                                     <input style="border-radius: 10px !important;" type="text" name="name"
                                         value="" class="form-control py-2">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">{{__('messages.Address')}}</label>
-                                    <textarea style="border-radius: 10px !important;" type="text" rows="5" name="address" value=""
+                                    <label class="form-label">Address</label>
+                                    <textarea style="border-radius: 10px !important;" type="text" rows="1" name="address" value=""
                                         class="form-control py-2"> </textarea>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="mb-3">
-                                    <label class="form-label">{{__('messages.Phone')}}</label>
+                                    <label class="form-label">Phone</label>
                                     <input style="border-radius: 10px !important;" type="text" name="phone"
                                         value="" class="form-control py-2">
                                 </div>
                                 <div class="mb-3 ">
-                                    <label class="form-label mt-1"> {{__('messages.email')}}</label>
+                                    <label class="form-label">Email</label>
                                     <input style="border-radius: 10px !important;" type="text" name="email"
                                         value="" class="form-control py-2" readonly>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label mt-2">{{__('messages.Signature')}}</label>
-                            <input style="border-radius: 10px !important;" id="imgInp" name="signature" type="file" name="signature" class="form-control " accept="image/*" readonly>
-                                    <img class="mt-3 d-none"  width="80px" height="80px" id="blah" src="#" alt="Add your signature" />
-                                </div>
+                               
 
                             </div>
                             <div class="mb-2">
-                                <button type="submit" class="btn settingUpdatebutton">{{__('messages.Update_btn')}}</button>
-                                <button type="button" class="btn settingUpdatebutton" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{__('messages.Change_password')}}
-                                    </button>
+                                <button type="submit" class="btn pro_button">Update</button>
+                                <button type="button" class="btn pro_button" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" data-bs-whatever="">Change Password</button>
                             </div>
                         </div>
                     </div>
@@ -85,7 +94,7 @@
         <div class="modal-dialog  modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{__('messages.Change_password')}}</h5>
+                    <h5 class="modal-title" id="exampleModalLabel" style="color:#0081B5;">Change Password</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
@@ -94,31 +103,31 @@
                      
                         <div class="card-body">
                             <div class="mb-3">
-                                <label for="oldPasswordInput" class="form-label">{{__('messages.Old_Password')}}</label>
+                                <label for="oldPasswordInput" class="form-label">Old Password</label>
                                 <input name="old_password" type="password"
                                     class="form-control "
-                                    id="oldPasswordInput" placeholder="{{__('messages.Old_Password')}}">
+                                    id="oldPasswordInput" placeholder="Old Password">
                               
                                     <span class="text-danger"></span>
                           
                             </div>
                             <div class="mb-3">
-                                <label for="newPasswordInput" class="form-label">{{__('messages.New_Password')}}</label>
+                                <label for="newPasswordInput" class="form-label">New Password</label>
                                 <input name="new_password" type="password"
                                     class="form-control"
-                                    id="newPasswordInput" placeholder="{{__('messages.New_Password')}}">
+                                    id="newPasswordInput" placeholder="New Password">
                                 
                                     <span class="text-danger"></span>
                             
                             </div>
                             <div class="mb-1">
-                                <label for="confirmNewPasswordInput" class="form-label "> {{__('messages.Confirm_New_Password')}}</label>
+                                <label for="confirmNewPasswordInput" class="form-label ">Confirm New Password</label>
                                 <input name="new_password_confirmation" type="password" class="form-control"
-                                    id="confirmNewPasswordInput" placeholder="{{__('messages.Confirm_New_Password')}}">
+                                    id="confirmNewPasswordInput" placeholder="Confirm New Password">
                             </div>
                         </div>
-                        <div class="">
-                            <button class="btn settingUpdatebutton ms-3">{{__('messages.Update_Password')}}</button>
+                        <div class="mt-3">
+                            <button class="btn pro_button">Update Password</button>
                         </div>
                     </form>
                 </div>
@@ -126,13 +135,7 @@
             </div>
         </div>
     </div>
-    <style>
-        .picture__image img{
-        width: 100px !important;
-        height: 100px;
-        border-radius: 50%;
-    }
-    </style>
+
     <script>
         const inputFile = document.querySelector("#picture__input");
         const pictureImage = document.querySelector(".picture__image");
