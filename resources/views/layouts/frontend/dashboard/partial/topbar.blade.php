@@ -62,14 +62,31 @@
                     <li class="">
                         <a href="{{route('service')}}">Our Services</a>
                     </li>
-                    <li class="">
-                        <a href="{{route('all-courses')}}">Courses</a>
-                        {{-- <ul class="sub-menu">
-                            <li><a href="courses.html">Design & Development</a></li>
-                            <li><a href="courses-singel.html">Design & Development</a></li>
-                            <li><a href="courses-singel.html">Design & Development</a></li>
-                            <li><a href="courses-singel.html">Design & Development</a></li>
-                        </ul> --}}
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                    <li class="nav-item btn-group nav-item">
+                        <li type="button"  data-bs-toggle="dropdown">
+                            <a type="button" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role=""
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </a>
+                        </li>
+                        <ul class="dropdown-menu dropdown-menu-lg-end sub-menu">
+                            <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                            <a class="dropdown-item" href="{{ url('live-chat') }}">Message</a>
+                            <a class="dropdown-item" href="{{ url('notification') }}">Notifications</a>
+                            <a class="dropdown-item" href="#">Purchase History</a>
+                            <a class="dropdown-item" href="{{ url('help') }}">Help</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}">Log out </a>
+
+                        </ul>
                     </li>
                     <li class="">
                         <a href="{{route('teachers')}}  ">Our teachers</a>

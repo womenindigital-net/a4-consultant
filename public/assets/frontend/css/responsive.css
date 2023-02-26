@@ -609,6 +609,9 @@
 	padding-bottom: 200px;
 	padding-top: 100px;
 }
+.single-slider {
+	background-size:cover !important;
+  }
 .category {
 	margin-top: -100px;
 }
@@ -1100,7 +1103,10 @@
 	float: none;
 	margin-top: 15px;
 }
+.singel-course .cont {
 
+    height: auto;
+}
 .You-makelike .singel-makelike .cont {
 	padding: 0 15px;
 }
@@ -1379,6 +1385,10 @@
 	padding-top: 40px;
 	padding-bottom: 70px;
 }
+.single-slider {
+	background-size:cover !important;
+	/* object-fit: cover; */
+  }
 
 
 
