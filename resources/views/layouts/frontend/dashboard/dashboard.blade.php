@@ -33,9 +33,9 @@
     <body data-sidebar="dark">
 
         <!-- Begin page -->
-        <div id="layout-wrapper">
+        {{-- <div id="layout-wrapper">
 
-            {{-- @include('layouts.frontend.dashboard.tophead') --}}
+            @include('layouts.frontend.dashboard.tophead')
 
             @include('layouts.frontend.dashboard.sidebar')
             <!-- page content -->
@@ -46,12 +46,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        @include('layouts.admin.partial.footer')
+        {{-- @include('layouts.admin.partial.footer') --}}
 
         <!-- END wrapper -->
-        @include('layouts.vendor-scripts')
+        {{-- @include('layouts.vendor-scripts') --}}
 
         {{-- <script>
         var resizefunc = [];

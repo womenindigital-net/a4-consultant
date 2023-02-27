@@ -53,9 +53,12 @@
                                         </ul>
                                         <span class="pl-3">(20 Reviws)</span>
                                     </div>
-                                    <a href="">
-                                        <h4>{{ $course->courseTitle }}</h4>
-                                    </a>
+                                    <div class="course-cart" style="height: 120px;">
+                                        <a href="">
+                                            <h4>{{ $course->courseTitle }}</h4>
+                                        </a>
+                                    </div>
+                                    
                                     <div class="course-teacher">
                                         <div class="button float-left">
                                             <a href="{{ route('course.details', $course->id) }}" class="main-btn"  >Apply Now</a>
