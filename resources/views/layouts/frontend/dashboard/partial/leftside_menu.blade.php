@@ -5,7 +5,7 @@
         margin-left: 10px;
     }
     .vertical-menu {
-        box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 26%);
+        box-shadow: 0 0.75rem 1.5rem rgb(173 176 181 / 36%);
     }
 </style>
 <div class="vertical-menu">

@@ -21,7 +21,7 @@
     margin-right: 0px !important;
 }
 #page-topbar {
-    box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 18%);
+    /* box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 18%); */
 }
 .mobile-dash-menu{
     display: none !important;
@@ -71,8 +71,8 @@
                 </a>
             </div>
 
-            <button type="button" class="btn btn-sm font-size-16 header-item waves-effect" style="padding: 10px;" id="vertical-menu-btn">
-                <i class="fa fa-fw fa-bars"></i>
+            <button type="button" class="btn btn-sm font-size-16 header-item" style="padding: 10px; color:#000 !important;" id="vertical-menu-btn">
+                <i style="color:#000 !important;" class="fa fa-fw fa-bars"></i>
             </button>
             <div class="dash-menu">
                 <ul class="d-flex align-items-center" style="padding-left:0px;">
