@@ -240,7 +240,7 @@
 
     <!--====== COURSE PART START ======-->
 
-    <section id="course-part" class="pt-115 pb-120 gray-bg">
+    <section id="course-part" class="pt-90 pb-120 gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -272,9 +272,11 @@
                                 </ul>
                                 <span class="pl-3">(20 Reviws)</span>
                             </div>
-                            <a href="courses-singel.html">
-                                <h4>{{ $allCourse->courseTitle }}</h4>
-                            </a>
+                            <div class="course-cart" style="height: 120px;">
+                                <a href="courses-singel.html">
+                                    <h4>{{ $allCourse->courseTitle }}</h4>
+                                </a>
+                            </div>
                             <div class="course-teacher">
                                 <div class="button float-left">
                                     <a href="{{ route('course.details', $allCourse->id) }}" class="main-btn">Apply Now</a>

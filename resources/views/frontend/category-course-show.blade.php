@@ -53,9 +53,12 @@
                                             </ul>
                                             <span class="pl-3">(20 Reviws)</span>
                                         </div>
-                                        <a href="{{ route('course.details', $categoryCourse->id) }}">
-                                            <h4>{{ $categoryCourse->courseTitle }}</h4>
-                                        </a>
+                                        <div class="course-cart" style="height: 120px;">
+                                            <a href="{{ route('course.details', $categoryCourse->id) }}">
+                                                <h4>{{ $categoryCourse->courseTitle }}</h4>
+                                            </a>
+                                        </div>
+                                        
                                         <div class="course-teacher">
                                             <div class="button float-left">
                                                 <a href="{{ route('course.details', $categoryCourse->id) }}"

@@ -50,13 +50,7 @@
     color: #0081B5;
     transition: 0.5s;
 }
-@media all and (max-width: 575px) {
-    /*Desing Check 414px*/
-    .dash-menu{
-        display: none;
-    }
 
-}
 input[type=text]:focus {
     border: none;
     box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);

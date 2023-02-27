@@ -46,6 +46,7 @@
             border-radius: 50%;
         }
         
+        
     </style>
 </head>
 
@@ -77,6 +78,8 @@
     </script> --}}
     <script src="{{ asset('assets/frontend/assets/libs/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+      <!--====== Bootstrap js ======-->
+      <script src="{{ asset('assets/frontend/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/assets/libs/metismenu/metisMenu.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/assets/libs/simplebar/simplebar.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/assets/libs/node-waves/waves.min.js') }}"></script>

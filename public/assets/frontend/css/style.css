@@ -1181,7 +1181,7 @@ a.dropdown-item {
 ======================================================*/
 
 .course-part{}
-.singel-course{
+.singel-course {
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
@@ -1230,7 +1230,7 @@ a.dropdown-item {
     padding-bottom: 34px;
     padding-left: 30px;
     padding-right: 30px;
-    height: 250px;
+    /* height: 250px; */
 }
 .service{
     padding: 30px;

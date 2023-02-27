@@ -68,7 +68,7 @@
 }
 
 .category-form {
-	margin-top: -197px;
+	margin-top: -150px;
 }
 .singel-course-2 > .thum .course-teacher .review {
 	margin-left: 50px;
@@ -613,7 +613,7 @@
 	background-size:cover !important;
   }
 .category {
-	margin-top: -100px;
+	margin-top: -135px;
 }
 
 #about-part {
@@ -1389,7 +1389,20 @@
 	background-size:cover !important;
 	/* object-fit: cover; */
   }
-
+  .category-text h2 {
+    font-size: 30px;
+    color: #fff;
+    padding: 0 50px;
+}
+.category {
+    margin-top: -166px;
+}
+.course-cart{
+	height: auto !important;
+}
+.singel-course {
+    margin-bottom: 20px;
+}
 
 
 
