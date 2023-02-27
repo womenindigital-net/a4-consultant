@@ -77,7 +77,8 @@ class FrontendController extends Controller
 
     // ===========Clint page============
     public function clints(){
-        return view('frontend.clint');
+        $data['clients'] = Client::where('status',1)->get();
+        return view('frontend.clint',$data);
     }
 
 
