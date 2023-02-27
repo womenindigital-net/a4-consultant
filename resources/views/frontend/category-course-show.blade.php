@@ -43,14 +43,16 @@
                                         </div>
                                     </div>
                                     <div class="cont">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                        <span>(20 Reviws)</span>
+                                        <div class="d-flex align-items-center">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                            <span class="pl-3">(20 Reviws)</span>
+                                        </div>
                                         <a href="{{ route('course.details', $categoryCourse->id) }}">
                                             <h4>{{ $categoryCourse->courseTitle }}</h4>
                                         </a>
@@ -64,7 +66,7 @@
                                 </div> <!-- singel course -->
                             </div>
                         @empty
-                            <h1  class="text-danger">No Couses available</h1>
+                            <h1  class="text-danger">No Courses Available !</h1>
                         @endforelse
 
                     </div> <!-- row -->

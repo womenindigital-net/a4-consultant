@@ -32,7 +32,7 @@
 
                     <div class="row">
                         @forelse ($allCourses as $course)
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 mb-5">
                             <div class="singel-course">
                                 <div class="thum">
                                     <div class="image">
@@ -43,14 +43,16 @@
                                     </div>
                                 </div>
                                 <div class="cont">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                    <span>(20 Reviws)</span>
+                                    <div class="d-flex align-items-center">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        <span class="pl-3">(20 Reviws)</span>
+                                    </div>
                                     <a href="">
                                         <h4>{{ $course->courseTitle }}</h4>
                                     </a>
