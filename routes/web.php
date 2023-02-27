@@ -70,7 +70,7 @@ Route::namespace('frontend')->group(function () {
     Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
     Route::get('/profile', [FrontendController::class, 'userProfile'])->name('profile');
     Route::get('/category/course/show/{id}', [FrontendController::class, 'courseShow'])->name('category.course.show');
-    Route::get('/enroll/create/store', [EnrollController::class, 'enroll'])->name('enroll');
+    Route::get('/enroll/create/{course_id}', [EnrollController::class, 'enroll'])->name('enroll');
 });
 
 
@@ -141,7 +141,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/contact/delete/{client_id}', [ContactController::class, 'destroy'])->name('contact.delete');
 
     //enroll
-    // Route::get('/enroll/list', [ContactController::class, 'index'])->name('enroll.list');
+    Route::get('/enroll/list', [EnrollController::class, 'index'])->name('enroll.list');
     // Route::get('/enroll/create', [ContactController::class, 'create'])->name('enroll.create');
     // Route::post('/enroll/create/store', [EnrollController::class, 'enroll'])->name('enroll');
     // Route::get('/enroll/edit/{enroll_id}', [ContactController::class, 'edit'])->name('enroll.edit');

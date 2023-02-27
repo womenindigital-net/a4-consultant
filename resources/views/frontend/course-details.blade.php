@@ -2,7 +2,13 @@
 @extends('layouts.frontend.master')
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
-
+    <div>
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
+    </div>
     <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-2.jpg')}})">
         <div class="container">
             <div class="row">

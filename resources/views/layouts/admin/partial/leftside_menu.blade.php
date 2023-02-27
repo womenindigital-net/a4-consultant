@@ -44,10 +44,7 @@
                         <span key="t-dashboards">ENROLL</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ url('admin/organization/package/page') }}" key="t-horizontal">hello
-                                create</a></li>
-                        <li><a href="{{ url('admin/organization/package/list') }}" key="t-horizontal">Hi
-                                list</a></li>
+                        <li><a href="{{ route('enroll.list')}}" key="t-horizontal">List Enroll</a></li>
                     </ul>
                 </li>
                 {{-- Courses instructor --}}
