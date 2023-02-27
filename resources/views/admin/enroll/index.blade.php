@@ -1,5 +1,12 @@
 @extends('layouts.admin.master')
 @section('page_content')
+    <div>
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
+    </div>
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -28,13 +35,16 @@
                                         <td>{{ $enrollList->email }}</td>
                                         <td>{{ $enrollList->phone }}</td>
                                         <td>{{ $enrollList->course->price }}</td>
-                                        <td>{{ $enrollList->status == '1' ? 'Approved' : 'Pending' }}</td>
+                                        <td><a href="{{ route('enroll.update', $enrollList->id) }}" type="button"
+                                                class="btn btn-sm btn-success {{ $enrollList->status == '1' ? 'btn-success' : 'btn-danger' }} btn-rounded waves-effect waves-light mb-2 me-1"
+                                                class="btn btn-sm btn-success">{{ $enrollList->status == '1' ? 'Approved' : 'Pending' }}</i></a>
+                                        </td>
                                         <td>
-                                            <a href="{{ route('slider.edit', $enrollList->id) }}" type="button"
+                                            <a href="{{ route('enroll.show', $enrollList->id) }}" type="button"
                                                 class="btn btn-sm btn-success btn-rounded waves-effect waves-light mb-2 me-1"
-                                                class="btn btn-sm btn-success"> <i class="mdi mdi-pencil"></i></a>
+                                                class="btn btn-sm btn-success"> <i class="mdi mdi-eye"></i></a>
 
-                                            <a type="button" href="{{ route('slider.delete', $enrollList->id) }}"
+                                            <a type="button" href="{{ route('enroll.delete', $enrollList->id) }}"
                                                 onclick="return confirm('Are you sure, you want to delete?')"
                                                 class="btn btn-sm mb-2 me-1 btn-danger btn-rounded waves-effect waves-light">
                                                 <i class="fas fa-trash-alt"></i>

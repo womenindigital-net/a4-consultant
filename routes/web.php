@@ -144,7 +144,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/enroll/list', [EnrollController::class, 'index'])->name('enroll.list');
     // Route::get('/enroll/create', [ContactController::class, 'create'])->name('enroll.create');
     // Route::post('/enroll/create/store', [EnrollController::class, 'enroll'])->name('enroll');
-    // Route::get('/enroll/edit/{enroll_id}', [ContactController::class, 'edit'])->name('enroll.edit');
-    // Route::put('/enroll/update/{enroll_id}', [ContactController::class, 'update'])->name('enroll.update');
-    // Route::get('/enroll/delete/{enroll_id}', [ContactController::class, 'destroy'])->name('enroll.delete');
+    Route::get('/enroll/show/{enroll_id}', [EnrollController::class, 'show'])->name('enroll.show');
+    Route::get('/enroll/update/{enroll_id}', [EnrollController::class, 'update'])->name('enroll.update');
+    Route::get('/enroll/delete/{enroll_id}', [EnrollController::class, 'delete'])->name('enroll.delete');
 });
