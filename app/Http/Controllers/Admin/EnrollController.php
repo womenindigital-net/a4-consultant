@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Auth;
 
 class EnrollController extends Controller
 {
+    //list enroll
+    public function index()
+    {
+        $data['enrollLists'] = Enroll::get();
+        return view('admin.enroll.index', $data);
+    }
+
+    // store enroll
     public function enroll($course_id)
     {
         $course_id = $course_id;
@@ -21,14 +29,33 @@ class EnrollController extends Controller
             $record->phone = Auth::user()->phone;
             $record->course_id = $course_id;
             $record->save();
-            return redirect()->route('course.details',$course_id)->with('message', 'Successfully Enrolled Wait for Authority approval.');
+            return redirect()->route('course.details', $course_id)->with('message', 'Successfully Enrolled Wait for Authority approval.');
         } else {
             return redirect()->route('login');
         }
     }
 
-    public function index(){
-        $data['enrollLists'] = Enroll::get();
-        return view('admin.enroll.index',$data);
+    //show enroll
+    public function show($enroll_id)
+    {
+        $enroll = Enroll::find($enroll_id);
+        $data = ['enroll' => $enroll];
+        return view('admin.enroll.show', $data);
+    }
+
+    //show update
+    public function update(Request $request, $enroll_id)
+    {
+        $record = Enroll::find($enroll_id);
+        $record->status = 1;
+        $record->update();
+        return redirect()->route('enroll.list')->with('message', 'Successfully approved ');
+    }
+    //enroll delete
+    public function delete( $enroll_id)
+    {
+        $record = Enroll::find($enroll_id);
+        $record->delete();
+        return redirect()->route('enroll.list')->with('message', 'Successfully delete ');
     }
 }
