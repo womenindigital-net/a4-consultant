@@ -33,7 +33,7 @@ Route::get('/', function () {
 
 // ================User Dashboard==================
 Route::get('/dashboard', function () {
-    return view('layouts.frontend.dashboard.master');
+    return view('layouts.frontend.dashboard.user-dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 

@@ -2,11 +2,11 @@
     background: #fff !important;
 }
 #sidebar-menu ul li a,i {
-    color: #cccccc !important;
-    font-weight: bold;
+    color: #FFF !important;
+    font-weight: 500;
 }
 #sidebar-menu ul li a:hover {
-    color: #fff !important;
+    color: #eeebebab !important;
 
 }
 #sidebar-menu ul li i:hover {

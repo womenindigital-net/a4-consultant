@@ -10,8 +10,8 @@
         display: none !important;
     }
     .pro_button{
-        background: #FFCC17 !important;
-        color:#494949da !important;
+        background: #0081B5 !important;
+        color:#FFF !important;
         font-weight: bold !important;
     }
     input[type=text]:focus {
@@ -26,14 +26,18 @@
     border: none !important;
     box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
   }
+  .row.border_radius {
+        padding-bottom: 25px;
+        margin-top: 30px;
+    }
 </style>
 
 @section('page_content')
-<div class="col-md-10 col-lg-12 m-0 p-0 mt-1 border" style="background:#FFF">
+<div class="col-md-10 col-lg-12 m-0 p-0 mt-1 " style="background:#FFF; box-shadow: 0 0.75rem 1.5rem rgb(173 176 181 / 36%);">
     <div class="container-fluid  side-bar_left   overflow_scroll ">
             <form action="{{ url('/profile') }}" method="POST"
                 enctype="multipart/form-data">
-                <div class="row border_radius" style="background: #FFF;">
+                <div class="row border_radius">
                     <div class="col-sm-4 mt-4  verticaleHeight verticaleHeight_col_4">
                         <div class="d-flex justify-content-center">
                             <div class="card my-2" style="width: 18rem;">
@@ -43,7 +47,7 @@
                                             src="{{ asset('uploads/userImage/') }}"
                                             alt="">
                                         <span style="" class="picture__image"></span>
-                                        <span class="text_hidden text-warning">Edit your profile picture</span>
+                                        <span style="color:#0081B5 !important;" class="text_hidden text-warning">Edit your profile picture</span>
                                     </label>
                                     <input type="file" name="picture__input" id="picture__input" accept="image/*">
                                 </div>
