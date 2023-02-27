@@ -1,51 +1,40 @@
 @extends('layouts.admin.master')
 @section('page_content')
-    {{-- <div class="row">
+    <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div>
-                    @if (session()->has('message'))
-                        <div class="alert alert-success">
-                            {{ session('message') }}
-                        </div>
-                    @endif
-                </div>
-                <div class="card-header">
-                    <h3 class="text-primary">Slider List
-                        <a href="{{ route('slider.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Crate
-                            Sliders
-                        </a>
-                    </h3>
-                </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="responsive table table-borderd ">
                             <thead>
                                 <tr>
                                     <th>SL</th>
-                                    <th>Slider Title</th>
-                                    <th>Slider Image</th>
-                                    <th>Description</th>
+                                    <th>Name</th>
+                                    <th>Course Name</th>
+                                    <th>Email</th>
+                                    <th>phone</th>
+                                    <th>Course Price</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($sliders as $key  => $slider)
+                                @forelse ($enrollLists as $key  => $enrollList)
                                     <tr>
 
                                         <td>{{ $key + 1 }}</td>
-                                        <td>{{ $slider->sliderTitle }}</td>
-                                        <td><img src="{{ asset($slider->sliderImage) }}" width="50px" height="50px"
-                                                alt=""></td>
-                                        <td>{{ $slider->sliderDescription }}</td>
-                                        <td>{{ $slider->status == '1' ? 'Active' : 'Inactive' }}</td>
+                                        <td>{{ $enrollList->userName }}</td>
+                                        <td>{{ $enrollList->course->courseTitle }}</td>
+                                        <td>{{ $enrollList->email }}</td>
+                                        <td>{{ $enrollList->phone }}</td>
+                                        <td>{{ $enrollList->course->price }}</td>
+                                        <td>{{ $enrollList->status == '1' ? 'Approved' : 'Pending' }}</td>
                                         <td>
-                                            <a href="{{ route('slider.edit', $slider->id) }}" type="button"
+                                            <a href="{{ route('slider.edit', $enrollList->id) }}" type="button"
                                                 class="btn btn-sm btn-success btn-rounded waves-effect waves-light mb-2 me-1"
                                                 class="btn btn-sm btn-success"> <i class="mdi mdi-pencil"></i></a>
 
-                                            <a type="button" href="{{ route('slider.delete', $slider->id) }}"
+                                            <a type="button" href="{{ route('slider.delete', $enrollList->id) }}"
                                                 onclick="return confirm('Are you sure, you want to delete?')"
                                                 class="btn btn-sm mb-2 me-1 btn-danger btn-rounded waves-effect waves-light">
                                                 <i class="fas fa-trash-alt"></i>
@@ -59,12 +48,12 @@
                                 @endforelse
                             </tbody>
                         </table>
-                        <div>
-                            {{ $sliders->links() }}
-                        </div>
+                        {{-- <div>
+                            {{ $enrollLists->links() }}
+                        </div> --}}
                     </div>
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 @endsection
