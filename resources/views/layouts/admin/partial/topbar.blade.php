@@ -1,4 +1,3 @@
-
 <header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
@@ -64,39 +63,47 @@
                 </div>
             </div>
 
+            <div class="" style="margin-right:2%">
+                @if (Route::has('login'))
+                    <div class="hidden fixed top-0 right-0 px-6 sm:block d-flex">
+                        @auth
+                            <li class="nav-item btn-group nav-item">
+                            <li type="button" data-bs-toggle="dropdown">
+                                <a style="text-transform: uppercase; font-size:13px; color:black" type="button"
+                                    class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown"
+                                    role="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <?php if (Auth::user()->picture__input) {
+                                        echo "<img src='" . asset(Auth::user()->picture__input) . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>";
+                                    } else {
+                                        echo "<img src='" . asset('uploads/defoultImage/comic-boy.png') . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>";
+                                    }
+                                    ?>
+                                    {{ Auth::user()->name }}
+                                </a>
+                            </li>
+                            <ul class="dropdown-menu dropdown-menu-lg-end sub-menu">
+                                <li><a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="{{ route('logout') }}">Log out </a>
+                                </li>
+                            </ul>
+                            </li>
+                        @else
+                            <li class="nav-item {{ request()->is('login') ? 'active' : '' }}">
+                                <a class="nav-link text-success-custom" href="{{ url('login') }}">Log in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-success-custom" href="#">|</a>
+                            </li>
 
-
-
-
-
-
-            <div class="dropdown d-inline-block">
-                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="{{ asset('assets/image/logo.jpg') }}"
-                        alt="Header Avatar">
-                    <span class="d-none d-xl-inline-block ms-1" key="t-henry">{{ Auth::user()->name }}</span>
-                </button>
-                <div class="dropdown-menu dropdown-menu-end">
-                    <!-- item-->
-                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i>
-                        <span key="t-profile">Profile</span></a>
-                    <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i>
-                        <span key="t-my-wallet">My Wallet</span></a>
-                    <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i
-                            class="bx bx-wrench font-size-16 align-middle me-1"></i> <span
-                            key="t-settings">Settings</span></a>
-                    <a class="dropdown-item" href="#"><i
-                            class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock
-                            screen</span></a>
-                    <div class="dropdown-divider"></div>
-                    <form action="{{ route('logout') }}" method="post">
-                        @csrf
-                        <button class="dropdown-item text-danger">
-                            <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> Logout
-                        </button>
-                    </form>
-                </div>
+                            @if (Route::has('register'))
+                                <li class="nav-item {{ request()->is('user-type') ? 'active' : '' }}">
+                                    <a href="{{ route('register') }}"
+                                        class="text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                                </li>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
             </div>
         </div>
     </div>
@@ -105,4 +112,3 @@
 
 
 {{-- js cdn --}}
-

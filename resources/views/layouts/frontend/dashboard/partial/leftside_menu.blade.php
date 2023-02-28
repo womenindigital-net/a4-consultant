@@ -35,14 +35,14 @@
 
                 {{-- Create Catergory Courses --}}
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="{{ route('enroll.details') }}" class="waves-effect">
                         <i class="fa-solid fa-crosshairs"></i>
                         <span key="t-dashboards">ENROLL COURSES</span>
                     </a>
 
                 </li>
                 {{-- Enroll --}}
-                
+
 
 
 

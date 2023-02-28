@@ -1,7 +1,7 @@
 
-<footer class="footer" style="background:#000">
+<footer class="footer" style="background:#f2f2f5">
     <div class="container-fluid">
-        <div class="row" style="color:#FFF">
+        <div class="row" style="color: #74788d">
             <div class="col-sm-6">
                 <script>document.write(new Date().getFullYear())</script> © A4 Consultants
             </div>
