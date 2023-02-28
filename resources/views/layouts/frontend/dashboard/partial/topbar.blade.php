@@ -51,7 +51,7 @@
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
-            <div class="navbar-brand-box">
+            <div class="navbar-brand-box d-flex align-items-center justify-content-center">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{ asset('assets/admin') }}/assets/images/logo.svg" alt="" height="22">

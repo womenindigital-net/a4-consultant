@@ -11,10 +11,10 @@
                             </div>
                             <p>Gravida nibh vel velit auctor aliquetn quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate.</p>
                             <ul class="mt-20">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div> <!-- footer about -->
                     </div>
@@ -24,18 +24,15 @@
                                 <h6>Sitemap</h6>
                             </div>
                             <ul>
-                                <li><a href="index.html"><i class="fa fa-angle-right"></i>Home</a></li>
-                                <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Courses</a></li>
-                                <li><a href="blog.html"><i class="fa fa-angle-right"></i>News</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right"></i>Event</a></li>
+                                <li><a href="index.html" target="_blank"><i class="fa fa-angle-right"></i>Home</a></li>
+                                <li><a href="about.html" target="_blank"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="courses.html" target="_blank"><i class="fa fa-angle-right"></i>All Courses</a></li>
+                                <li><a href="blog.html" target="_blank"><i class="fa fa-angle-right"></i>News</a></li>
+                                <li><a href="events.html" target="_blank"><i class="fa fa-angle-right"></i>News & Event</a></li>
                             </ul>
                             <ul>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Gallery</a></li>
-                                <li><a href="shop.html"><i class="fa fa-angle-right"></i>Shop</a></li>
-                                <li><a href="teachers.html"><i class="fa fa-angle-right"></i>Teachers</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="teachers.html" target="_blank"><i class="fa fa-angle-right"></i>Teachers</a></li>
+                                <li><a href="contact.html" target="_blank"><i class="fa fa-angle-right"></i>Contact</a></li>
                             </ul>
                         </div> <!-- footer link -->
                     </div>
@@ -45,11 +42,11 @@
                                 <h6>Support</h6>
                             </div>
                             <ul>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>FAQS</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Privacy</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Policy</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Documentation</a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-angle-right"></i>FAQS</a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-angle-right"></i>Privacy</a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-angle-right"></i>Policy</a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-angle-right"></i>Support</a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-angle-right"></i>Documentation</a></li>
                             </ul>
                         </div> <!-- support -->
                     </div>
