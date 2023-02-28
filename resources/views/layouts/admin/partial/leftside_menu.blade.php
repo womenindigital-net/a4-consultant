@@ -11,19 +11,6 @@
                         <span key="t-dashboards">DASHBORARD</span>
                     </a>
                 </li>
-                {{-- Create Corses --}}
-                <li>
-                    <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">COURSES</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('course.create') }}" key="t-horizontal">Courses Create</a></li>
-                        <li><a href="{{ route('course.list') }}" key="t-horizontal">Courses List
-                                list</a></li>
-                    </ul>
-                </li>
-
                 {{-- Create Catergory Courses --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
@@ -35,16 +22,6 @@
                                 create</a></li>
                         <li><a href="{{ route('course.category.list') }}" key="t-horizontal">Courses Category list</a>
                         </li>
-                    </ul>
-                </li>
-                {{-- Enroll --}}
-                <li>
-                    <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">ENROLL</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('enroll.list')}}" key="t-horizontal">List Enroll</a></li>
                     </ul>
                 </li>
                 {{-- Courses instructor --}}
@@ -59,6 +36,31 @@
                         <li><a href="{{ route('instructor.list') }}" key="t-horizontal">Courses instructor list</a></li>
                     </ul>
                 </li>
+                {{-- Create Corses --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-film text-danger"></i>
+                        <span key="t-dashboards">COURSES</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('course.create') }}" key="t-horizontal">Courses Create</a></li>
+                        <li><a href="{{ route('course.list') }}" key="t-horizontal">Courses List
+                                list</a></li>
+                    </ul>
+                </li>
+
+                
+                {{-- Enroll --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-film text-danger"></i>
+                        <span key="t-dashboards">ENROLL</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('enroll.list')}}" key="t-horizontal">List Enroll</a></li>
+                    </ul>
+                </li>
+                
                 {{-- Consultant --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
@@ -80,6 +82,17 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('slider.create') }}" key="t-horizontal">Create Slider </a></li>
                         <li><a href="{{ route('slider.list') }}" key="t-horizontal">Courses Slider list</a></li>
+                    </ul>
+                </li>
+                {{-- about us  --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-film text-danger"></i>
+                        <span key="t-dashboards">About Us</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('aboutus.create') }}" key="t-horizontal">Create About Us </a></li>
+                        <li><a href="{{route('aboutus.list')}}" key="t-horizontal">About Us List</a></li>
                     </ul>
                 </li>
                 {{-- story  --}}

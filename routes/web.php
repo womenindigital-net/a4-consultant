@@ -1,20 +1,21 @@
 <?php
 
-use App\Http\Controllers\Admin\ClientController;
-use App\Http\Controllers\Admin\ConsultantController;
-use App\Http\Controllers\Admin\ContactController;
-use App\Http\Controllers\Admin\ContractController;
-use App\Http\Controllers\Admin\CourseCategoryController;
-use App\Http\Controllers\Admin\CourseController;
-use App\Http\Controllers\Admin\EnrollController;
-use App\Http\Controllers\Admin\InstructorController;
-use App\Http\Controllers\Admin\NewsAdnEventsController;
-use App\Http\Controllers\Admin\SliderController;
-use App\Http\Controllers\Admin\StoriesController;
-use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\EnrollController;
+use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\StoriesController;
+use App\Http\Controllers\Admin\ContractController;
+use App\Http\Controllers\Admin\ConsultantController;
+use App\Http\Controllers\Admin\InstructorController;
+use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Admin\NewsAdnEventsController;
+use App\Http\Controllers\Admin\CourseCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -140,7 +141,13 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/contact/edit/{client_id}', [ContactController::class, 'edit'])->name('contact.edit');
     Route::put('/contact/update/{client_id}', [ContactController::class, 'update'])->name('contact.update');
     Route::get('/contact/delete/{client_id}', [ContactController::class, 'destroy'])->name('contact.delete');
-
+    // about 
+    Route::get('/aboutus/list', [AboutController::class, 'index'])->name('aboutus.list');
+    Route::get('/aboutus/create', [AboutController::class, 'create'])->name('aboutus.create');
+    Route::post('/aboutus/create/store', [AboutController::class, 'store'])->name('aboutus.store');
+    Route::get('/aboutus/edit/{client_id}', [AboutController::class, 'edit'])->name('aboutus.edit');
+    Route::put('/aboutus/{client_id}', [AboutController::class, 'update'])->name('aboutus.update');
+    Route::get('/aboutus/{client_id}', [AboutController::class, 'destroy'])->name('aboutus.delete');
     //enroll
     Route::get('/enroll/list', [EnrollController::class, 'index'])->name('enroll.list');
     Route::get('/enroll/show/{enroll_id}', [EnrollController::class, 'show'])->name('enroll.show');
