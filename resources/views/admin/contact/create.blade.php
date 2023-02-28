@@ -1,43 +1,51 @@
 @extends('layouts.admin.master')
 @section('page_content')
+    
+
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">
                     <div class="card p-2 mt-1">
-                        <h3 class="text-primary">Create Client
-                            <a href="{{ route('client.list') }}"
+                        <h3 class="text-primary">Create Contact
+                            <a href="{{ route('contact.list') }}"
                                 class="btn btn-primary btn-sm text-white  float-end p-2"></i>
-                                Client List
+                                Contact List
                             </a>
                         </h3>
                     </div>
                     <hr>
-                    <form action="{{ route('client.store') }}" method="POST" class="needs-validation" novalidate
+                    <form action="{{ route('contact.store') }}" method="POST" class="needs-validation" novalidate
                         enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="validationCustom03" class="form-label">Name(optional)</label>
-                                    <input type="text" name="name" class="form-control" id="validationCustom02">
-                                    @if ($errors->has('name'))
-                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                    <label for="validationCustom03" class="form-label">Address</label>
+                                    <input type="text" name="address" class="form-control" id="validationCustom02">
+                                    @if ($errors->has('address'))
+                                        <span class="text-danger">{{ $errors->first('address') }}</span>
                                     @endif
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="validationCustom03" class="form-label">Image</label>
-                                    <input type="file" name="image" id="imgInp" class="form-control"
-                                        id="validationCustom02">
-                                    @if ($errors->has('image'))
-                                        <span class="text-danger">{{ $errors->first('image') }}</span>
+                                    <label for="validationCustom03" class="form-label">Phone</label>
+                                    <input type="text" name="phone" class="form-control" id="validationCustom02">
+                                    @if ($errors->has('phone'))
+                                        <span class="text-danger">{{ $errors->first('phone') }}</span>
                                     @endif
                                 </div>
                             </div>
-
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="validationCustom03" class="form-label">Email</label>
+                                    <input type="text" name="email" class="form-control" id="validationCustom02">
+                                    @if ($errors->has('email'))
+                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                    @endif
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <label class="form-label">Status</label>
                                 <select name="status" class="form-select">
@@ -46,12 +54,7 @@
                                     <option value="0">Inactive</option>
                                 </select>
                             </div>
-                            <div class="col-md-6">
-                                <img class="d-none" width="100px" height="100px" id="blah" src="#"
-                                    alt="your image" />
-                            </div>
                         </div>
-                        {{-- preview image  --}}
                         <div class="row mt-2">
                             <div class="d-flex justify-content-start">
                                 <button class="btn btn-primary mt-3" type="submit">Submit</button>
