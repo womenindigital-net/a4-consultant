@@ -45,8 +45,8 @@
             overflow: hidden;
             border-radius: 50%;
         }
-        
-        
+
+
     </style>
 </head>
 
@@ -88,7 +88,7 @@
     {{-- <script src="{{ asset('assets/frontend/assets/js/app.js') }}"></script> --}}
     <script src="{{ asset('assets/frontend/assets/libs/parsleyjs/parsley.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/assets/js/pages/form-validation.init.js') }}"></script>
-    
+
 
 
 

@@ -52,10 +52,27 @@ class EnrollController extends Controller
         return redirect()->route('enroll.list')->with('message', 'Successfully approved ');
     }
     //enroll delete
-    public function delete( $enroll_id)
+    public function delete(Request $request, $enroll_id)
     {
         $record = Enroll::find($enroll_id);
         $record->delete();
         return redirect()->route('enroll.list')->with('message', 'Successfully delete ');
+    }
+
+
+
+
+
+    /////for user
+    public function enrollDetails(){
+        $data['enrollLists'] = Enroll::where('email', Auth::user()->email)->get();
+        return view('layouts.frontend.dashboard.enroll-list', $data);
+    }
+
+    //
+    public function allDetails($enroll_id){
+        $enroll = Enroll::find($enroll_id);
+        $data = ['enroll' => $enroll];
+        return view('layouts.frontend.dashboard.enroll-all-details', $data);
     }
 }

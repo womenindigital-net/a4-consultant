@@ -95,9 +95,11 @@
                                     <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
                                     <ul class="sub-menu dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <li><a href="{{ route('all-courses') }}" class="dropdown-item">All Courses</a></li>
+                                        <li><a href="{{ route('all-courses') }}" class="dropdown-item">All Courses</a>
+                                        </li>
                                         @foreach ($categorys as $cat)
-                                        <li><a href="{{ route('category.course.show', $cat->id) }}" class="dropdown-item">{{ $cat->categoryTitle }}</a></li>
+                                            <li><a href="{{ route('category.course.show', $cat->id) }}"
+                                                    class="dropdown-item">{{ $cat->categoryTitle }}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>
@@ -155,7 +157,12 @@
                                                 <a type="button" class="nav-link dropdown-toggle" href="#"
                                                     id="navbarDropdown" role="" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
-                                                    <?php echo "<img src='" . asset(Auth::user()->prodicle) . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>"; ?> {{ Auth::user()->name }}
+                                                    <?php if (Auth::user()->picture__input) {
+                                                        echo "<img src='" . asset(Auth::user()->picture__input) . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>";
+                                                    } else {
+                                                        echo "<img src='" . asset('uploads/defoultImage/comic-boy.png') . "'  style='height: 30px;width: 30px;border-radius: 100%;object-fit: cover;object-position: center center;'>";
+                                                    }
+                                                    ?> {{ Auth::user()->name }}
                                                 </a>
                                                 <ul class="dropdown-menu dropdown-menu-lg-end sub-menu">
                                                     <li><a class="dropdown-item"

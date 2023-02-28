@@ -16,6 +16,9 @@ use App\Http\Controllers\Admin\InstructorController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Admin\NewsAdnEventsController;
 use App\Http\Controllers\Admin\CourseCategoryController;
+use App\Http\Controllers\Frontend\UserProfielController;
+use App\Http\Controllers\Frontend\UserProfileController;
+use App\Models\Enroll;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,9 +73,14 @@ Route::namespace('frontend')->group(function () {
     Route::get('/event/details', [FrontendController::class, 'eventDetails'])->name('event.details');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
     Route::get('/profile', [FrontendController::class, 'userProfile'])->name('profile');
-    Route::get('/profile/update', [FrontendController::class, 'userProfileUpdate'])->name('user.profile.update');
+    // Route::get('/profile/update', [FrontendController::class, 'userProfileUpdate'])->name('user.profile.update');
     Route::get('/category/course/show/{id}', [FrontendController::class, 'courseShow'])->name('category.course.show');
     Route::get('/enroll/create/{course_id}', [EnrollController::class, 'enroll'])->name('enroll');
+    Route::put('/user/update/{user_id}', [UserProfileController::class, 'profileUpdate'])->name('user.profile.update');
+    Route::post('/user/change/password', [UserProfileController::class, 'changePassword'])->name('passwordChange');
+    Route::get('/user/enroll/details', [EnrollController::class, 'enrollDetails'])->name('enroll.details');
+    Route::get('/user/enroll/all-details/{enroll_id}', [EnrollController::class, 'allDetails'])->name('user.enroll.show');
+    Route::get('/user/delete/{enroll_id}', [EnrollController::class, 'delete'])->name('user.enroll.delete');
 });
 
 
