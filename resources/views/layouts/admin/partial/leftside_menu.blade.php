@@ -115,6 +115,16 @@
                         <li><a href="{{ route('client.list') }}" key="t-horizontal">Client list</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-film text-danger"></i>
+                        <span key="t-dashboards">contact</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('contact.create') }}" key="t-horizontal">Create Contact</a></li>
+                        <li><a href="{{ route('contact.list') }}" key="t-horizontal">Contact list</a></li>
+                    </ul>
+                </li>
 
             </ul>
         </div>

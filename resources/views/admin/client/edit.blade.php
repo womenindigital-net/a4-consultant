@@ -1,5 +1,7 @@
 @extends('layouts.admin.master')
 @section('page_content')
+    
+
     <div class="row">
         <div class="col-sm-12">
             <div class="card">

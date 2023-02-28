@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Models\Client;
 use App\Models\Course;
-use App\Models\CourseCategory;
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use App\Models\CourseCategory;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
 {
@@ -101,6 +103,7 @@ class FrontendController extends Controller
 
     // ===========Contact page============
     public function userProfile(){
-        return view('layouts.frontend.dashboard.profile');
+        $data['userInfo'] = User::where('id', Auth::user()->id)->first();
+        return view('layouts.frontend.dashboard.profile',$data);
     }
 }
