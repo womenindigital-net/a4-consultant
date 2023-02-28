@@ -44,7 +44,7 @@
                                 <div class="card-body p-5" style="text-align:center;">
                                     <label for="picture__input" tabIndex="0">
                                         <img id="hide_image" class="propic"
-                                            src="{{ asset('') }}"
+                                            src=""
                                             alt="">
                                         <span style="" class="picture__image"></span>
                                         <span style="color:#0081B5 !important;" class="text_hidden text-warning">Edit your profile picture</span>
