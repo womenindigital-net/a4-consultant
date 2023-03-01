@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\User;
+use App\Models\About;
 use App\Models\Client;
 use App\Models\Course;
 use App\Models\Slider;
@@ -34,7 +35,9 @@ class FrontendController extends Controller
 
     // ===========About us page============
     public function aboutus(){
-        return view('frontend.about');
+        $data['aboutus'] = About::first();
+
+        return view('frontend.about', $data);
     }
 
 

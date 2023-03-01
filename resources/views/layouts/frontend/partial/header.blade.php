@@ -52,14 +52,14 @@
                             <div class="icon">
                                 <img src="{{ asset('assets/frontend/images/all-icon/support.png') }}" alt="icon">
                             </div>
-                            <div class="cont">
+                            <div class="cont text-right">
                                 <p>Need Help? call us free</p>
                                 <span>321 325 5678</span>
                             </div>
                         </div>
-                        <div class="button float-left">
+                        {{-- <div class="button float-left">
                             <a href="#" class="main-btn" style="padding: 0 30px; line-height: 45px;">Apply Now</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div> <!-- row -->

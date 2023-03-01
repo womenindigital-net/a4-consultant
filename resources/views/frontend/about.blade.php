@@ -32,9 +32,10 @@
                     <div class="section-title mt-50">
                         <h5>About us</h5>
                         <h2>Welcome to <br> A4 Consultants</h2>
+                        <h2>{{ $aboutus->title }}</h2>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris. <br> <br> auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris</p>
+                        <p>{{ $aboutus->des }}</p>
                     </div>
                 </div> <!-- about cont -->
                 <div class="col-lg-7">
@@ -48,22 +49,22 @@
                     <div class="col-lg-4 col-md-6 col-sm-10">
                         <div class="about-singel-items mt-30">
                             <span>01</span>
-                            <h4>Why Choose us</h4>
-                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit sollicitudirem quibibendum auci</p>
+                            <h4>{{ $aboutus->sub_title_one }}</h4>
+                            <p>{{ $aboutus->sub_title_one_des }}</p>
                         </div> <!-- about singel -->
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-10">
                         <div class="about-singel-items mt-30">
                             <span>02</span>
-                            <h4>Our Mission</h4>
-                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit sollicitudirem quibibendum auci</p>
+                            <h4>{{ $aboutus->sub_title_two }}</h4>
+                            <p>{{ $aboutus->sub_title_two_des }}</p>
                         </div> <!-- about singel -->
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-10">
                         <div class="about-singel-items mt-30">
                             <span>03</span>
-                            <h4>Our vission</h4>
-                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit sollicitudirem quibibendum auci</p>
+                            <h4>{{ $aboutus->sub_title_three }}</h4>
+                            <p>{{ $aboutus->sub_title_three_des }}</p>
                         </div> <!-- about singel -->
                     </div>
                 </div> <!-- row -->

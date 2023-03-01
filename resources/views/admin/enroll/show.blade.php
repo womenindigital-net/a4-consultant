@@ -14,6 +14,7 @@
             .table tbody tr th{
                 padding-top:3px;
                 padding-bottom:3px;
+                width: 20%;
             }
             .table tbody tr td{
                 padding-top:3px;
@@ -23,7 +24,7 @@
         </style>
         <div class="row">
             <div class="col-1"></div>
-            <div class="col-md-6">
+            <div class="col-md-11">
                 <div class="row">
                     <table class="table table-borderless">
                         <thead>
