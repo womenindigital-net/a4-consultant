@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 @section('page_content')
-    
+
 
     <div class="row">
         <div class="col-sm-12">
@@ -49,7 +49,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Sub Title One Description</label>
-                                    <textarea type="text" name="sub_title_one_des" class="form-control" id="validationCustom02">{{$aboutus->sub_title_one_des}}</textarea>
+                                    <textarea rows="1" type="text" name="sub_title_one_des" class="form-control" id="validationCustom02">{{$aboutus->sub_title_one_des}}</textarea>
                                     @if ($errors->has('sub_title_one_des'))
                                         <span class="text-danger">{{ $errors->first('sub_title_one_des') }}</span>
                                     @endif
@@ -67,7 +67,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Sub Title Two Description</label>
-                                    <textarea type="text" name="sub_title_two_des" class="form-control" id="validationCustom02">{{$aboutus->sub_title_two_des}}</textarea>
+                                    <textarea rows="1" type="text" name="sub_title_two_des" class="form-control" id="validationCustom02">{{$aboutus->sub_title_two_des}}</textarea>
                                     @if ($errors->has('sub_title_two_des'))
                                         <span class="text-danger">{{ $errors->first('sub_title_two_des') }}</span>
                                     @endif
@@ -85,7 +85,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Sub Title Three Description</label>
-                                    <textarea type="text" name="sub_title_three_des" class="form-control" id="validationCustom02">{{$aboutus->sub_title_three_des}}</textarea>
+                                    <textarea rows="1" type="text" name="sub_title_three_des" class="form-control" id="validationCustom02">{{$aboutus->sub_title_three_des}}</textarea>
                                     @if ($errors->has('sub_title_three_des'))
                                         <span class="text-danger">{{ $errors->first('sub_title_three_des') }}</span>
                                     @endif

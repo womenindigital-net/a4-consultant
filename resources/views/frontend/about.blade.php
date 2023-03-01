@@ -35,7 +35,7 @@
                         <h2>{{ $aboutus->title }}</h2>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>{{ $aboutus->des }}</p>
+                        <p>{{ $aboutus->des  }}</p>
                     </div>
                 </div> <!-- about cont -->
                 <div class="col-lg-7">

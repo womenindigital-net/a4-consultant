@@ -85,7 +85,7 @@ class FrontendController extends Controller
     // ===========Teachers page============
     public function teachers(){
         $data['instractor'] = Instructor::paginate(16);
-      
+
         return view('frontend.teachers',$data);
     }
 

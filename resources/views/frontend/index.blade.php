@@ -12,7 +12,7 @@
         height: 40px;
         border: 2px solid #aaa;
         border-radius: 5px;
-        margin-left:5px !important; 
+        margin-left:5px !important;
     }
     .page-item.disabled .page-link {
         z-index: 1;
@@ -25,9 +25,9 @@
         height: 40px;
         border: 2px solid #aaa;
         border-radius: 5px;
-        margin-left:5px !important; 
+        margin-left:5px !important;
     }
-   
+
     .pagination {
         justify-content: center;
     }
@@ -182,7 +182,7 @@
                         <h2>Welcome to <br> A4 Consultants</h2>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>{{ $aboutus->des }}</p>
+                        <p>{{ $aboutus->des ??'' }}</p>
                         <a href="#" class="main-btn mt-55">Learn More</a>
                     </div>
                 </div> <!-- about cont -->
@@ -358,7 +358,7 @@
                                 </div> <!-- singel teachers -->
                             </div>
                            @endforeach
-                           
+
                         </div> <!-- row -->
                         <div class="row text-end">
                             <div class="mt-5 text-end">

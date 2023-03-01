@@ -26,9 +26,9 @@
                                 <th>SL</th>
                                 <th>Title</th>
                                 <th>Description</th>
-                                <th>Sub-Title-One</th>
-                                <th>Sub-Title-Two</th>
-                                <th>Sub-Title-Three</th>
+                                <th>Sub Title One</th>
+                                <th>Sub Title Two</th>
+                                <th>Sub Title Three</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -72,5 +72,5 @@
 </div>
 
 
-  
+
 @endsection
