@@ -1,7 +1,38 @@
 @extends('layouts.frontend.master')
 @section('content')
+<style>
+    .page-link {
+        z-index: 1;
+        color: #000;
+        background-color: #ffc600;
+        border-color: #007bff;
+        font-size: 15px;
+        color: #000;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #aaa;
+        border-radius: 5px;
+        margin-left:5px !important; 
+    }
+    .page-item.disabled .page-link {
+        z-index: 1;
+        color: #000;
+        background-color: #ffc600;
+        border-color: #007bff;
+        font-size: 15px;
+        color: #000;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #aaa;
+        border-radius: 5px;
+        margin-left:5px !important; 
+    }
+   
+    .pagination {
+        justify-content: center;
+    }
+</style>
     <!--====== SLIDER PART START ======-->
-
     <section id="slider-part" class="slider-active">
         @foreach ($sliders as $slider)
             <div class="single-slider bg_cover pt-150"
@@ -151,13 +182,7 @@
                         <h2>Welcome to <br> A4 Consultants</h2>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                            dicta sunt explicabo. br<br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                            veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis
-                            iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                            quae ab illo inventore</p>
+                        <p>{{ $aboutus->des }}</p>
                         <a href="#" class="main-btn mt-55">Learn More</a>
                     </div>
                 </div> <!-- about cont -->
@@ -251,7 +276,7 @@
             </div> <!-- row -->
             <div class="row course-slied mt-30">
                 @forelse ($allCourses as $allCourse )
-                <div class="col-lg-4">
+                <div class="col-lg-4 course-slider">
                     <div class="singel-course">
                         <div class="thum">
                             <div class="image">
@@ -318,59 +343,28 @@
                 <div class="col-lg-6 offset-lg-1">
                     <div class="teachers mt-20">
                         <div class="row">
-                            <div class="col-sm-6">
+                           @foreach ( $consultants as $consultant)
+                           <div class="col-sm-6">
                                 <div class="singel-teachers mt-30 text-center">
                                     <div class="image">
-                                        <img src="{{ asset('assets/frontend/images/teachers/t-1.jpg') }}" alt="Teachers">
+                                        <img src="{{ asset($consultant->consultantImage) }}" alt="Teachers">
                                     </div>
                                     <div class="cont">
                                         <a href="teachers-singel.html">
-                                            <h6>Mark alen</h6>
+                                            <h6>{{$consultant->consultantName}}</h6>
                                         </a>
-                                        <span>Vice chencelor</span>
+                                        <span>{{$consultant->consultantDesignation}}</span>
                                     </div>
                                 </div> <!-- singel teachers -->
                             </div>
-                            <div class="col-sm-6">
-                                <div class="singel-teachers mt-30 text-center">
-                                    <div class="image">
-                                        <img src="{{ asset('assets/frontend/images/teachers/t-2.jpg') }}" alt="Teachers">
-                                    </div>
-                                    <div class="cont">
-                                        <a href="teachers-singel.html">
-                                            <h6>David card</h6>
-                                        </a>
-                                        <span>Pro chencelor</span>
-                                    </div>
-                                </div> <!-- singel teachers -->
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="singel-teachers mt-30 text-center">
-                                    <div class="image">
-                                        <img src="{{ asset('assets/frontend/images/teachers/t-3.jpg') }}" alt="Teachers">
-                                    </div>
-                                    <div class="cont">
-                                        <a href="teachers-singel.html">
-                                            <h6>Rebeka alig</h6>
-                                        </a>
-                                        <span>Pro chencelor</span>
-                                    </div>
-                                </div> <!-- singel teachers -->
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="singel-teachers mt-30 text-center">
-                                    <div class="image">
-                                        <img src="{{ asset('assets/frontend/images/teachers/t-4.jpg') }}" alt="Teachers">
-                                    </div>
-                                    <div class="cont">
-                                        <a href="teachers-singel.html">
-                                            <h6>Hanna bein</h6>
-                                        </a>
-                                        <span>Aerobics head</span>
-                                    </div>
-                                </div> <!-- singel teachers -->
-                            </div>
+                           @endforeach
+                           
                         </div> <!-- row -->
+                        <div class="row text-end">
+                            <div class="mt-5 text-end">
+                                {{ $consultants->links() }}
+                            </div>
+                        </div>
                     </div> <!-- teachers -->
                 </div>
             </div> <!-- row -->

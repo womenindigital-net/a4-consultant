@@ -7,10 +7,14 @@ use App\Models\About;
 use App\Models\Client;
 use App\Models\Course;
 use App\Models\Slider;
+use App\Models\Stories;
+use App\Models\Consultant;
+use App\Models\Instructor;
 use Illuminate\Http\Request;
 use App\Models\CourseCategory;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use PHPUnit\TextUI\XmlConfiguration\Constant;
 
 class FrontendController extends Controller
 {
@@ -18,8 +22,10 @@ class FrontendController extends Controller
 
     public function index(){
         $data['sliders'] = Slider::get();
+        $data['consultants'] = Consultant::paginate(4);
         $data['clients'] = Client::get();
         $data['allCourses'] = Course::get();
+        $data['aboutus'] = About::first();
         return view('frontend.index',$data);
     }
 
@@ -50,14 +56,16 @@ class FrontendController extends Controller
 
     // ===========Blog/Story page============
     public function stories(){
-        return view('frontend.story');
+        $data['stories'] = Stories::paginate(8);
+        return view('frontend.story',$data);
     }
 
 
 
     // ===========Blog/Story Details page============
     public function storyDetails(){
-        return view('frontend.story-details');
+        $data['stories'] = Stories::get();
+        return view('frontend.story-details',$data);
     }
 
     // ===========Course page============
@@ -76,7 +84,9 @@ class FrontendController extends Controller
 
     // ===========Teachers page============
     public function teachers(){
-        return view('frontend.teachers');
+        $data['instractor'] = Instructor::paginate(16);
+      
+        return view('frontend.teachers',$data);
     }
 
 

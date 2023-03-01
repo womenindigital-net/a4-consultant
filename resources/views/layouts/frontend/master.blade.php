@@ -42,6 +42,38 @@
       <link rel="stylesheet" href="{{ asset('assets/frontend/css/responsive.css') }}">
       <!--====== login css ======-->
       <link rel="stylesheet" href="{{ asset('assets/frontend/login-css/custom.css') }}">
+      <style>
+            .page-link {
+                z-index: 1;
+                color: #000;
+                background-color: transparent;
+                border-color: #007bff;
+                font-size: 15px;
+                color: #000;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #aaa;
+                border-radius: 5px;
+                margin-left:5px !important; 
+            }
+            .page-item.disabled .page-link {
+                z-index: 1;
+                color: #000;
+                background-color: transparent;
+                border-color: #007bff;
+                font-size: 15px;
+                color: #000;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #aaa;
+                border-radius: 5px;
+                margin-left:5px !important; 
+            }
+        
+            .pagination {
+                justify-content: center;
+            }
+      </style>
 
 </head>
 <body>
