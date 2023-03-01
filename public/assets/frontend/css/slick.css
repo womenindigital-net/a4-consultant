@@ -57,7 +57,9 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    /* width: 100% !important; */
 }
+
 .slick-track:before,
 .slick-track:after
 {

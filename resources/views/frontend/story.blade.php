@@ -3,6 +3,7 @@
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
 
+
     <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-1.jpg')}})">
         <div class="container">
             <div class="row">
@@ -28,75 +29,29 @@
     <section id="blog-page" class="pt-90 pb-120 gray-bg">
         <div class="container">
            <div class="row">
-               <div class="col-lg-4">
-                   <div class="singel-blog mt-30">
-                       <div class="blog-image">
-                           <img src="{{ asset('assets/frontend/images/blog/b-1.jpg')}}" alt="Blog">
-                       </div>
-                       <div class="blog">
-                           <a href="{{route('story.details')}}"><h3>Few tips for get better results in examination</h3></a>
-                           <a href="#"><i class="fa fa-calendar"></i>25 Dec 2018</a>
-                           <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
-                       </div>
-                   </div> <!-- singel blog -->
-               </div>
-               <div class="col-lg-4">
-                   <div class="singel-blog mt-30">
-                       <div class="blog-image">
-                           <img src="{{ asset('assets/frontend/images/blog/b-1.jpg')}}" alt="Blog">
-                       </div>
-                       <div class="blog">
-                           <a href="{{route('story.details')}}"><h3>Few tips for get better results in examination</h3></a>
-                           <a href="#"><i class="fa fa-calendar"></i>25 Dec 2018</a>
-                           <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
-                       </div>
-                   </div> <!-- singel blog -->
-               </div>
-               <div class="col-lg-4">
-                   <div class="singel-blog mt-30">
-                       <div class="blog-image">
-                           <img src="{{ asset('assets/frontend/images/blog/b-1.jpg')}}" alt="Blog">
-                       </div>
-                       <div class="blog">
-                           <a href="{{route('story.details')}}"><h3>Few tips for get better results in examination</h3></a>
-                           <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
-                       </div>
-                   </div> <!-- singel blog -->
-               </div>
-               <div class="col-lg-4">
-                   <div class="singel-blog mt-30">
-                       <div class="blog-image">
-                           <img src="{{ asset('assets/frontend/images/blog/b-1.jpg')}}" alt="Blog">
-                       </div>
-                       <div class="blog">
-                           <a href="{{route('story.details')}}"><h3>Few tips for get better results in examination</h3></a>
-                           <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
-                       </div>
-                   </div> <!-- singel blog -->
-               </div>
-
+            @foreach ($stories as $story)
+            <div class="col-lg-4">
+                <div class="singel-blog mt-30">
+                    <div class="blog-image">
+                        <img src="{{ asset($story->storiesImage)}}" alt="Blog">
+                    </div>
+                    <div class="blog">
+                        <a href="{{route('story.details')}}"><h3>{{$story->title}}</h3></a>
+                        <a href="#"><i class="fa fa-calendar"></i>{{$story->date}}</a>
+                        <p>{{$story->description}}</p>
+                    </div>
+                </div> <!-- singel blog -->
+            </div>
+            @endforeach
+               
+              
            </div> <!-- row -->
-           <div class="row">
-               <div class="col-12">
-                   <nav class="courses-pagination mt-50">
-                        <ul class="pagination justify-content-lg-end justify-content-center">
-                            <li class="page-item">
-                                <a href="#" aria-label="Previous">
-                                    <i class="fa fa-angle-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="active" href="#">1</a></li>
-                            <li class="page-item"><a href="#">2</a></li>
-                            <li class="page-item"><a href="#">3</a></li>
-                            <li class="page-item">
-                                <a href="#" aria-label="Next">
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>  <!-- courses pagination -->
-               </div>
-           </div>
+           <div class="row text-end">
+                <div class="mt-5 text-end">
+                    {{ $stories->links() }}
+                </div>
+            </div>
+         
         </div> <!-- container -->
     </section>
 

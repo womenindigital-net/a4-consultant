@@ -31,35 +31,18 @@
                <div class="col-lg-8">
                    <div class="singel-blog mt-30">
                        <div class="blog-thum">
-                           <img src="{{ asset('assets/frontend/images/blog/b-1.jpg')}}" alt="Blog">
+                           <img src="{{ asset($story->storiesImage)}}" alt="Blog">
                        </div>
                        <div class="blog-cont">
-                           <a href="#"><h3>Few tips for get better results in examination</h3></a>
+                           <a href="#"><h3>{{$story->title}}</h3></a>
                            <ul>
-                               <li><a href="#"><i class="fa fa-calendar"></i>25 Dec 2018</a></li>
-                               <li><a href="#"><i class="fa fa-user"></i>Mark anthem</a></li>
-                               <li><a href="#"><i class="fa fa-tags"></i>Education</a></li>
+                               <li><a href="#"><i class="fa fa-calendar"></i>{{$story->date}}</a></li>
+                               {{-- <li><a href="#"><i class="fa fa-user"></i>Mark anthem</a></li> --}}
+                               {{-- <li><a href="#"><i class="fa fa-tags"></i>Education</a></li> --}}
                            </ul>
-                           <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
+                           <p>{{$story->description}}</p>
                        </div>
                    </div> <!-- singel blog -->
-                   <nav class="courses-pagination mt-50">
-                        <ul class="pagination justify-content-lg-end justify-content-center">
-                            <li class="page-item">
-                                <a href="#" aria-label="Previous">
-                                    <i class="fa fa-angle-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="active" href="#">1</a></li>
-                            <li class="page-item"><a href="#">2</a></li>
-                            <li class="page-item"><a href="#">3</a></li>
-                            <li class="page-item">
-                                <a href="#" aria-label="Next">
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>  <!-- courses pagination -->
                </div>
                <div class="col-lg-4">
                    <div class="saidbar">

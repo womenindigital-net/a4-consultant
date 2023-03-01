@@ -38,7 +38,7 @@
                 @foreach ($clients as $client)
                     <div class="col-lg-12">
                         <div class="singel-patnar text-center mt-40">
-                            <img src="{{ asset($client) }}" alt="Logo">
+                            <img src="{{ asset($client->image) }}" alt="Logo">
                         </div>
                     </div>
                 @endforeach
