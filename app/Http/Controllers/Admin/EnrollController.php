@@ -22,14 +22,18 @@ class EnrollController extends Controller
     {
         $course_id = $course_id;
         if (Auth::user()) {
-            $record = new Enroll();
-            $record->userName = Auth::user()->name;
-            $record->email = Auth::user()->email;
-            $record->address = Auth::user()->address;
-            $record->phone = Auth::user()->phone;
-            $record->course_id = $course_id;
-            $record->save();
-            return redirect()->route('course.details', $course_id)->with('message', 'Successfully Enrolled Wait for Authority approval.');
+            if (Enroll::where('course_id', $course_id)->exists()) {
+                return redirect()->route('course.details', $course_id)->with('message', 'This course already has been taken.');
+            } else {
+                $record = new Enroll();
+                $record->userName = Auth::user()->name;
+                $record->email = Auth::user()->email;
+                $record->address = Auth::user()->address;
+                $record->phone = Auth::user()->phone;
+                $record->course_id = $course_id;
+                $record->save();
+                return redirect()->route('course.details', $course_id)->with('message', 'Successfully Enrolled Wait for Authority approval.');
+            }
         } else {
             return redirect()->route('login');
         }
@@ -64,13 +68,15 @@ class EnrollController extends Controller
 
 
     /////for user
-    public function enrollDetails(){
+    public function enrollDetails()
+    {
         $data['enrollLists'] = Enroll::where('email', Auth::user()->email)->get();
         return view('layouts.frontend.dashboard.enroll-list', $data);
     }
 
     //
-    public function allDetails($enroll_id){
+    public function allDetails($enroll_id)
+    {
         $enroll = Enroll::find($enroll_id);
         $data = ['enroll' => $enroll];
         return view('layouts.frontend.dashboard.enroll-all-details', $data);
