@@ -63,8 +63,8 @@ class FrontendController extends Controller
 
 
     // ===========Blog/Story Details page============
-    public function storyDetails(){
-        $data['stories'] = Stories::get();
+    public function storyDetails($story_id){
+        
         return view('frontend.story-details',$data);
     }
 

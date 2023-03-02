@@ -36,22 +36,22 @@
                         <img src="{{ asset($story->storiesImage)}}" alt="Blog">
                     </div>
                     <div class="blog">
-                        <a href="{{route('story.details')}}"><h3>{{$story->title}}</h3></a>
+                        <a href="{{route('story.details',$story->id)}}"><h3>{{$story->title}}</h3></a>
                         <a href="#"><i class="fa fa-calendar"></i>{{$story->date}}</a>
                         <p>{{$story->description}}</p>
                     </div>
                 </div> <!-- singel blog -->
             </div>
             @endforeach
-               
-              
+
+
            </div> <!-- row -->
            <div class="row text-end">
                 <div class="mt-5 text-end">
                     {{ $stories->links() }}
                 </div>
             </div>
-         
+
         </div> <!-- container -->
     </section>
 

@@ -67,7 +67,7 @@ Route::namespace('frontend')->group(function () {
     Route::get('/course/details/{course_id}', [FrontendController::class, 'courseDetails'])->name('course.details');
     Route::get('/teachers', [FrontendController::class, 'teachers'])->name('teachers');
     Route::get('/stories', [FrontendController::class, 'stories'])->name('stories');
-    Route::get('/story/details', [FrontendController::class, 'storyDetails'])->name('story.details');
+    Route::get('/story/details/{story_id}', [FrontendController::class, 'storyDetails'])->name('story.details');
     Route::get('/clints', [FrontendController::class, 'clints'])->name('clints');
     Route::get('/news', [FrontendController::class, 'news'])->name('news');
     Route::get('/event/details', [FrontendController::class, 'eventDetails'])->name('event.details');
@@ -149,7 +149,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/contact/edit/{client_id}', [ContactController::class, 'edit'])->name('contact.edit');
     Route::put('/contact/update/{client_id}', [ContactController::class, 'update'])->name('contact.update');
     Route::get('/contact/delete/{client_id}', [ContactController::class, 'destroy'])->name('contact.delete');
-    // about 
+    // about
     Route::get('/aboutus/list', [AboutController::class, 'index'])->name('aboutus.list');
     Route::get('/aboutus/create', [AboutController::class, 'create'])->name('aboutus.create');
     Route::post('/aboutus/create/store', [AboutController::class, 'store'])->name('aboutus.store');
