@@ -36,7 +36,7 @@
                         <img src="{{ asset($story->storiesImage)}}" alt="Blog">
                     </div>
                     <div class="blog">
-                        <a href="{{route('story.details',$story->id)}}"><h3>{{$story->title}}</h3></a>
+                        <a href="{{route('story.details', $story->id)}}"><h3>{{$story->title}}</h3></a>
                         <a href="#"><i class="fa fa-calendar"></i>{{$story->date}}</a>
                         <p>{{$story->description}}</p>
                     </div>

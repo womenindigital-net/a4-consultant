@@ -30,11 +30,7 @@ class FrontendController extends Controller
         return view('frontend.index',$data);
     }
 
-    public function footer(){
-        $data['footercontact'] = Contact::orderby('id','desc')->limit(1)->get();
-        return view('layouts.frontend.partial.footer',$data);
-        
-    }
+
 
     // =========== category course show ============
     public function courseShow($id){
@@ -69,7 +65,8 @@ class FrontendController extends Controller
 
     // ===========Blog/Story Details page============
     public function storyDetails($story_id){
-        
+        $data['story']= Stories::find($story_id);
+        $data['latestStory']= Stories::orderBy('id', 'DESC')->paginate(3);
         return view('frontend.story-details',$data);
     }
 
@@ -116,7 +113,7 @@ class FrontendController extends Controller
 
     // ===========Contact page============
     public function contact(){
-        $data['contact'] = Contact::orderby('id','desc')->limit(1)->get();
+        $data['contact'] = Contact::first();
         return view('frontend.contact',$data);
     }
 

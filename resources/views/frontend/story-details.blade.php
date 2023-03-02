@@ -51,47 +51,23 @@
                            </div> <!-- categories -->
                            <div class="col-lg-12 col-md-6">
                                <div class="saidbar-post mt-30">
-                                   <h4>Popular Posts</h4>
+                                   <h4>Latest post</h4>
                                    <ul>
+                                       @foreach ($latestStory as $letStory)
                                        <li>
-                                            <a href="#">
-                                                <div class="singel-post">
-                                                   <div class="thum">
-                                                       <img src="{{ asset('assets/frontend/images/blog/blog-post/bp-1.jpg')}}" alt="Blog">
-                                                   </div>
-                                                   <div class="cont">
-                                                       <h6>Introduction to languages</h6>
-                                                       <span>20 Dec 2018</span>
-                                                   </div>
-                                               </div> <!-- singel post -->
-                                            </a>
-                                       </li>
-                                       <li>
-                                            <a href="#">
-                                                <div class="singel-post">
-                                                   <div class="thum">
-                                                       <img src="{{ asset('assets/frontend/images/blog/blog-post/bp-2.jpg')}}" alt="Blog">
-                                                   </div>
-                                                   <div class="cont">
-                                                       <h6>How to build a game with java</h6>
-                                                       <span>10 Dec 2018</span>
-                                                   </div>
-                                               </div> <!-- singel post -->
-                                            </a>
-                                       </li>
-                                       <li>
-                                            <a href="#">
-                                                <div class="singel-post">
-                                                   <div class="thum">
-                                                       <img src="{{ asset('assets/frontend/images/blog/blog-post/bp-1.jpg')}}" alt="Blog">
-                                                   </div>
-                                                   <div class="cont">
-                                                       <h6>Basic accounting from primary</h6>
-                                                       <span>07 Dec 2018</span>
-                                                   </div>
-                                               </div> <!-- singel post -->
-                                            </a>
-                                       </li>
+                                        <a href="#">
+                                            <div class="singel-post">
+                                               <div class="thum">
+                                                   <img src="{{ asset($letStory->storiesImage)}}" alt="Blog">
+                                               </div>
+                                               <div class="cont">
+                                                   <h6>{{ $letStory->title }}</h6>
+                                                   <span>{{ $letStory->date }}</span>
+                                               </div>
+                                           </div> <!-- singel post -->
+                                        </a>
+                                   </li>
+                                       @endforeach
                                    </ul>
                                </div> <!-- saidbar post -->
                            </div>

@@ -85,7 +85,7 @@
                         </div> <!-- main form -->
                     </div> <!--  contact from -->
                 </div>
-                @foreach ($contact as $contac )
+
                 <div class="col-lg-5">
                     <div class="contact-address mt-30">
                         <ul>
@@ -95,7 +95,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>{{$contac->address}}</p>
+                                        <p>{{$contact->address}}</p>
                                     </div>
                                 </div> <!-- singel address -->
                             </li>
@@ -105,8 +105,7 @@
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>{{$contac->phone}}</p>
-                                        {{-- <p>+1 222 345 342</p> --}}
+                                        <p>{{$contact->phone}}</p>
                                     </div>
                                 </div> <!-- singel address -->
                             </li>
@@ -116,8 +115,8 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>{{$contac->email}}</p>
-                                        {{-- <p>info@yourmail.com</p> --}}
+                                        <p>{{$contact->email}}</p>
+
                                     </div>
                                 </div> <!-- singel address -->
                             </li>
@@ -127,7 +126,7 @@
                         <div id="contact-map"></div>
                     </div> <!-- map -->
                 </div>
-                @endforeach
+
             </div> <!-- row -->
         </div> <!-- container -->
     </section>

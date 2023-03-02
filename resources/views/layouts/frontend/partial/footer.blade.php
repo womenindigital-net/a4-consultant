@@ -1,5 +1,8 @@
     <!--====== FOOTER PART START ======-->
-
+    @php
+    use App\Models\Contact;
+    $conatact = Contact::first();
+@endphp
     <footer id="footer-part">
         <div class="footer-top pt-40 pb-70">
             <div class="container">
@@ -61,7 +64,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>143 castle road 517 district, kiyev port south Canada</p>
+                                        <p>{{ $conatact->address }}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -69,7 +72,7 @@
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>+3 123 456 789</p>
+                                        <p>{{ $conatact->phone }}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -77,7 +80,7 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>info@yourmail.com</p>
+                                        <p>{{ $conatact->email }}</p>
                                     </div>
                                 </li>
                             </ul>
