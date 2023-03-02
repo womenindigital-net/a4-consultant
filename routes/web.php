@@ -70,7 +70,7 @@ Route::namespace('frontend')->group(function () {
     Route::get('/story/details/{story_id}', [FrontendController::class, 'storyDetails'])->name('story.details');
     Route::get('/clints', [FrontendController::class, 'clints'])->name('clints');
     Route::get('/news', [FrontendController::class, 'news'])->name('news');
-    Route::get('/event/details', [FrontendController::class, 'eventDetails'])->name('event.details');
+    Route::get('/event/details/{newsEvent_id}', [FrontendController::class, 'eventDetails'])->name('event.details');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
     Route::get('/profile', [FrontendController::class, 'userProfile'])->name('profile');
     // Route::get('/profile/update', [FrontendController::class, 'userProfileUpdate'])->name('user.profile.update');
