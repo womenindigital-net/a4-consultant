@@ -36,7 +36,7 @@
                                 <tr>
 
                                     <td>{{ $key + 1 }}</td>
-                                    <td>{{ $contact->address }}</td>
+                                    <td>{{ substr($contact->address, 0,  80) }}...</td>
                                     <td>{{ $contact->phone }}</td>
                                     <td>{{ $contact->email }}</td>
                                     <td>{{ $contact->status == '1' ? 'Active' : 'Inactive' }}</td>

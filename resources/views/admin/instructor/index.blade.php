@@ -39,7 +39,7 @@
                                         <td>{{ $key+ 1}}</td>
                                         <td>{{ $instructor->instructorName }}</td>
                                         <td>{{ $instructor->instructorTitle }}</td>
-                                        <td>{{ $instructor->instructorDescription }}</td>
+                                        <td>{{ substr($instructor->instructorDescription, 0,  80) }}...</td>
                                         <td>{{ $instructor->instructorPosition }}</td>
                                         <td><img src="{{ asset($instructor->instructorImage) }}" width="50px" height="50px" alt=""></td>
                                         <td>{{ $instructor->status == '1' ? 'Active' : 'Inactive' }}</td>

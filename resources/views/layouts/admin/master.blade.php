@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
+    <title>A4 Consultant</title>
+    <link rel="shortcut icon" href="{{ asset('assets/frontend/images/favicon.png') }}" type="image/png">
     <!--  fontawosome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -18,7 +18,7 @@
     <link href="{{ URL::asset('assets/admin/assets/css/icons.css') }}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="{{ URL::asset('assets/admin/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
-</head>
+</head> 
 
 <body data-sidebar="dark">
 
@@ -28,7 +28,7 @@
         @include('layouts.admin.partial.topbar')
 
         @include('layouts.admin.partial.leftside_menu')
-      <!-- page content -->
+        <!-- page content -->
         <div class="main-content">
             <div class="page-content">
                 <div class="container-fluid">
@@ -56,9 +56,6 @@
     {{-- <script src="{{ asset('assets/admin/assets/js/app.js') }}"></script> --}}
     <script src="{{ asset('assets/admin/assets/libs/parsleyjs/parsley.min.js') }}"></script>
     <script src="{{ asset('assets/admin/assets/js/pages/form-validation.init.js') }}"></script>
-
-
-
     {{-- custom js --}}
     <script src="{{ asset('assets/admin/assets/custom/custom.js') }}"></script>
 </body>
