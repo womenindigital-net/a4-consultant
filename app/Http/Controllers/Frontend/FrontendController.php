@@ -7,6 +7,7 @@ use App\Models\About;
 use App\Models\Client;
 use App\Models\Course;
 use App\Models\Slider;
+use App\Models\Contact;
 use App\Models\Stories;
 use App\Models\Consultant;
 use App\Models\Instructor;
@@ -29,7 +30,11 @@ class FrontendController extends Controller
         return view('frontend.index',$data);
     }
 
-
+    public function footer(){
+        $data['footercontact'] = Contact::orderby('id','desc')->limit(1)->get();
+        return view('layouts.frontend.partial.footer',$data);
+        
+    }
 
     // =========== category course show ============
     public function courseShow($id){
@@ -111,7 +116,8 @@ class FrontendController extends Controller
 
     // ===========Contact page============
     public function contact(){
-        return view('frontend.contact');
+        $data['contact'] = Contact::orderby('id','desc')->limit(1)->get();
+        return view('frontend.contact',$data);
     }
 
     // ===========Contact page============
