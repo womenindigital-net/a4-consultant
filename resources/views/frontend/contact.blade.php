@@ -1,6 +1,14 @@
 @extends('layouts.frontend.master')
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
+    <style>
+        .form-group input {
+            border-color: #a1a1a1 !important;
+        }
+        .form-group {
+            width: 100%;
+        }
+    </style>
 
     <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url({{ asset('assets/frontend/images/page-banner-6.jpg')}})">
         <div class="container">
@@ -77,6 +85,7 @@
                         </div> <!-- main form -->
                     </div> <!--  contact from -->
                 </div>
+                @foreach ($contact as $contac )
                 <div class="col-lg-5">
                     <div class="contact-address mt-30">
                         <ul>
@@ -86,7 +95,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>143 castle road 517 district, kiyev port south Canada</p>
+                                        <p>{{$contac->address}}</p>
                                     </div>
                                 </div> <!-- singel address -->
                             </li>
@@ -96,8 +105,8 @@
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>+3 123 456 789</p>
-                                        <p>+1 222 345 342</p>
+                                        <p>{{$contac->phone}}</p>
+                                        {{-- <p>+1 222 345 342</p> --}}
                                     </div>
                                 </div> <!-- singel address -->
                             </li>
@@ -107,8 +116,8 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>info@yourmail.com</p>
-                                        <p>info@yourmail.com</p>
+                                        <p>{{$contac->email}}</p>
+                                        {{-- <p>info@yourmail.com</p> --}}
                                     </div>
                                 </div> <!-- singel address -->
                             </li>
@@ -118,6 +127,7 @@
                         <div id="contact-map"></div>
                     </div> <!-- map -->
                 </div>
+                @endforeach
             </div> <!-- row -->
         </div> <!-- container -->
     </section>

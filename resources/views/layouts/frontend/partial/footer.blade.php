@@ -24,15 +24,15 @@
                                 <h6>Sitemap</h6>
                             </div>
                             <ul>
-                                <li><a href="index.html" target="_blank"><i class="fa fa-angle-right"></i>Home</a></li>
-                                <li><a href="about.html" target="_blank"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="courses.html" target="_blank"><i class="fa fa-angle-right"></i>All Courses</a></li>
-                                <li><a href="blog.html" target="_blank"><i class="fa fa-angle-right"></i>News</a></li>
-                                <li><a href="events.html" target="_blank"><i class="fa fa-angle-right"></i>News & Event</a></li>
+                                <li><a href="{{ route('index') }}" target="_blank"><i class="fa fa-angle-right"></i>Home</a></li>
+                                <li><a href="{{ route('aboutus') }}" target="_blank"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="{{ route('all-courses') }}" target="_blank"><i class="fa fa-angle-right"></i>All Courses</a></li>
+                                <li><a href="{{ route('stories') }}" target="_blank"><i class="fa fa-angle-right"></i>Stories</a></li>
+                                <li><a href="{{ route('news') }}" target="_blank"><i class="fa fa-angle-right"></i>News & Event</a></li>
                             </ul>
                             <ul>
-                                <li><a href="teachers.html" target="_blank"><i class="fa fa-angle-right"></i>Teachers</a></li>
-                                <li><a href="contact.html" target="_blank"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="{{ route('teachers') }}" target="_blank"><i class="fa fa-angle-right"></i>Teachers</a></li>
+                                <li><a href="{{ route('contact') }}" target="_blank"><i class="fa fa-angle-right"></i>Contact</a></li>
                             </ul>
                         </div> <!-- footer link -->
                     </div>

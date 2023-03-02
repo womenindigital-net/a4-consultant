@@ -61,6 +61,7 @@ require __DIR__ . '/auth.php';
 
 Route::namespace('frontend')->group(function () {
     Route::get('/', [FrontendController::class, 'index'])->name('index');
+    Route::get('/footer', [FrontendController::class, 'footer'])->name('footer');
     Route::get('/aboutus', [FrontendController::class, 'aboutus'])->name('aboutus');
     Route::get('/service', [FrontendController::class, 'service'])->name('service');
     Route::get('/all-courses', [FrontendController::class, 'allCourses'])->name('all-courses');
