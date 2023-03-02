@@ -106,13 +106,16 @@ class FrontendController extends Controller
 
     // ===========News and Event page============
     public function news(){
-        return view('frontend.event');
+        $data['news_event'] = NewsAdnEvents::paginate(6);
+        return view('frontend.event',$data);
     }
 
 
     // ===========News and Event page============
-    public function eventDetails(){
-        return view('frontend.event-details');
+    public function eventDetails($newsEvent_id){
+        $data['event']=NewsAdnEvents::find($newsEvent_id);
+        $data['latestEvent']= NewsAdnEvents::orderBy('id', 'DESC')->paginate(3);
+        return view('frontend.event-details',$data);
     }
 
 

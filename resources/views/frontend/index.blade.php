@@ -112,45 +112,6 @@
                             </div>
                             <div class="col-lg-4">
                                 <a href="#">
-                                    <span class="singel-category text-center color-1">
-                                        <span class="icon">
-                                            <img src="{{ asset('assets/frontend/images/all-icon/ctg-1.png') }}"
-                                                alt="Icon">
-                                        </span>
-                                        <span class="cont">
-                                            <span>Human Resources Development</span>
-                                        </span>
-                                    </span> <!-- singel category -->
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a href="#">
-                                    <span class="singel-category text-center color-2">
-                                        <span class="icon">
-                                            <img src="{{ asset('assets/frontend/images/all-icon/ctg-2.png') }}"
-                                                alt="Icon">
-                                        </span>
-                                        <span class="cont">
-                                            <span>Management Services</span>
-                                        </span>
-                                    </span> <!-- singel category -->
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a href="#">
-                                    <span class="singel-category text-center color-3">
-                                        <span class="icon">
-                                            <img src="{{ asset('assets/frontend/images/all-icon/ctg-3.png') }}"
-                                                alt="Icon">
-                                        </span>
-                                        <span class="cont">
-                                            <span>Empowerment Program</span>
-                                        </span>
-                                    </span> <!-- singel category -->
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a href="#">
                                     <span class="singel-category text-center color-4">
                                         <span class="icon">
                                             <img src="{{ asset('assets/frontend/images/all-icon/ctg-4.png') }}"

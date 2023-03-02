@@ -42,7 +42,7 @@
                                         <td>{{ $event->title }}</td>
                                         <td><img src="{{ asset($event->image) }}" width="50px" height="50px"
                                                 alt=""></td>
-                                        <td>{{ $event->description }}</td>
+                                        <td>{{ substr($event->description, 0,  80) }}...</td>
                                         <td>{{ $event->date }}</td>
                                         <td>{{ $event->time }}</td>
                                         <td>{{ $event->finishTime }}</td>

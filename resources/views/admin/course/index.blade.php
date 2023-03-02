@@ -45,7 +45,7 @@
                                         <td>{{ $key+ 1}}</td>
                                         <td>{{ $course->courseCategory->categoryTitle }}</td>
                                         <td>{{ $course->courseTitle }}</td>
-                                        <td>{{ $course->courseDescription }}</td>
+                                        <td>{{ substr($course->courseDescription, 0,  80) }}...</td>
                                         <td><img src="{{ asset($course->coursesImage) }}" width="50px" height="50px" alt=""></td>
                                         <td>{{ $course->price }}</td>
                                         <td>{{ $course->startDate }}</td>

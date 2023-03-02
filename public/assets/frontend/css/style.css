@@ -3030,9 +3030,11 @@ a.dropdown-item {
 .singel-event-list .event-thum {
 	width: 38%;
 }
-.singel-event-list .event-thum img{
+.singel-event-list .event-thum img {
     width: 100%;
     border-radius: 5px;
+    height: 160px;
+    object-fit: cover;
 }
 .singel-event-list .event-cont {
 	width: 62%;

@@ -39,7 +39,7 @@
                                         <td>{{ $story->title }}</td>
                                         <td><img src="{{ asset($story->storiesImage) }}" width="50px" height="50px"
                                                 alt=""></td>
-                                        <td>{{ $story->description }}</td>
+                                        <td>{{ substr($story->description, 0,  80) }}...</td>
                                         <td>{{ $story->date }}</td>
                                         <td>{{ $story->status == '1' ? 'Active' : 'Inactive' }}</td>
                                         <td>

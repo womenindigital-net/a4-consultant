@@ -38,7 +38,7 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $aboutus->title }}</td>
-                                    <td>{{ $aboutus->des }}</td>
+                                    <td>{{ substr($aboutus->des, 0,  80) }}...</td>
                                     <td>{{ $aboutus->sub_title_one }}</td>
                                     <td>{{ $aboutus->sub_title_two }}</td>
                                     <td>{{ $aboutus->sub_title_three }}</td>

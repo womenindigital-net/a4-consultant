@@ -118,7 +118,7 @@
                         {{-- preview image  --}}
                         <div class="row mt-2">
                             <div class="d-flex justify-content-start">
-                                <button class="btn btn-primary mt-3" type="submit">Submit</button>
+                                <button class="btn btn-primary mt-3" type="submit">Create</button>
                             </div>
                         </div>
                     </form>

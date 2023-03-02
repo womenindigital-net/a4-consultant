@@ -38,7 +38,7 @@
                                         <td>{{ $slider->sliderTitle }}</td>
                                         <td><img src="{{ asset($slider->sliderImage) }}" width="50px" height="50px"
                                                 alt=""></td>
-                                        <td>{{ $slider->sliderDescription }}</td>
+                                        <td>{{ substr($slider->sliderDescription, 0,  80) }}...</td>
                                         <td>{{ $slider->status == '1' ? 'Active' : 'Inactive' }}</td>
                                         <td>
                                             <a href="{{ route('slider.edit', $slider->id) }}" type="button"

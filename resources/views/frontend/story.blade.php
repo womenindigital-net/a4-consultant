@@ -38,7 +38,8 @@
                     <div class="blog">
                         <a href="{{route('story.details', $story->id)}}"><h3>{{$story->title}}</h3></a>
                         <a href="#"><i class="fa fa-calendar"></i>{{$story->date}}</a>
-                        <p>{{$story->description}}</p>
+                        <p>{{ substr($story->description, 0,  100) }}...</p>
+
                     </div>
                 </div> <!-- singel blog -->
             </div>
