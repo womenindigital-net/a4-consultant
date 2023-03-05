@@ -49,7 +49,7 @@
                     </ul>
                 </li>
 
-                
+
                 {{-- Enroll --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
@@ -60,7 +60,7 @@
                         <li><a href="{{ route('enroll.list')}}" key="t-horizontal">List Enroll</a></li>
                     </ul>
                 </li>
-                
+
                 {{-- Consultant --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
@@ -93,8 +93,8 @@
                         <span key="t-dashboards">SERVICE</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#" key="t-horizontal">Service Create</a></li>
-                        <li><a href="#" key="t-horizontal">Service List
+                        <li><a href="{{ route('service.create') }}" key="t-horizontal">Service Create</a></li>
+                        <li><a href="{{ route('service.list') }}" key="t-horizontal">Service List
                                 list</a></li>
                     </ul>
                 </li>

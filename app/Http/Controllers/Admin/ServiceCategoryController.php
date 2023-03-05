@@ -11,7 +11,7 @@ use App\Http\Requests\ServiceCategoryRequest;
 
 class ServiceCategoryController extends Controller
 {
-    // service category list 
+    // service category list
     public function index(){
         $data['servicesCategories'] = ServiceCategory::orderBy('id', 'DESC')->paginate(5);
         return view('admin.service-category.index',$data);
@@ -25,7 +25,15 @@ class ServiceCategoryController extends Controller
 
         $record = new ServiceCategory();
         $record->categoryTitle = request('categoryTitle');
-        $uploadPath = 'uploads/service-category/';
+        $record->categoryDescription = request('categoryDescription');
+        $uploadPath = 'uploads/Services-category/';
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $ext = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $ext;
+            $file->move('uploads/Services-category/', $filename);
+            $record->image = $uploadPath . $filename;
+        }
         $record->status = request('status');
         $record->save();
         return redirect()->route('service.category.list')->with('message', 'Successfully Category Created');
@@ -46,6 +54,17 @@ class ServiceCategoryController extends Controller
         $record = ServiceCategory::find($service_id);
         $record->categoryTitle = request('categoryTitle');
         $record->categoryDescription = request('categoryDescription');
+        if ($request->hasFile('image')) {
+            $destination = $record->image;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $file = $request->file('image');
+            $ext = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $ext;
+            $file->move('uploads/Services-category/', $filename);
+            $record->image = 'uploads/Services-category/' . $filename;
+        }
         $record->status = request('status');
         $record->update();
         return redirect()->route('service.category.list')->with('message','Successfully Category Updated');
@@ -55,10 +74,17 @@ class ServiceCategoryController extends Controller
 
     public function destroy($service_id)
     {
-        $record = ServiceCategory::where('id',$service_id)->delete();
+        $record = ServiceCategory::findOrFail($service_id);
+        if($record->count() > 0){
+            $destination = $record->image;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $record->delete();
+        }
         return redirect()->back()->with('message', 'Successfully Delete Category');
     }
-    
+
 
 
 

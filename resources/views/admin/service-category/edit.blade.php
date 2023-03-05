@@ -26,19 +26,34 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Category Description</label>
-                                    <input type="text" name="categoryDescription" class="form-control"
-                                        id="validationCustom02" 
-                                        >
+                                        <textarea name="categoryDescription" class="form-control" rows="1"> {{ $serviceCategory->categoryDescription }}</textarea>
+                                        @if ($errors->has('categoryDescription'))
+                                            <span class="text-danger">{{ $errors->first('categoryDescription') }}</span>
+                                        @endif
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label class="col-md-2 col-form-label">Status</label>
+                                <div class="mb-3">
+                                    <label for="validationCustom03" class="form-label">Image</label>
+                                    <input type="file" name="image" id="imgInp" class="form-control"
+                                        id="validationCustom02">
+                                    @if ($errors->has('image'))
+                                        <span class="text-danger">{{ $errors->first('image') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Status</label>
                                 <select name="status" class="form-select">
                                     <option selected disabled value="">Select</option>
                                     <option value="1" {{ $serviceCategory->status == 1 ? 'selected' : '' }}>Active</option>
                                     <option value="0" {{ $serviceCategory->status == 0 ? 'selected' : '' }}>Inactive</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{{ asset($serviceCategory->image) }}" width="100px" height="100px" id="blah"
+                                src="#" alt="your image" />
                         </div>
                         {{-- preview image  --}}
                         <div class="row mt-2">

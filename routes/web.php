@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Frontend\UserProfielController;
 use App\Http\Controllers\Frontend\UserProfileController;
 use App\Http\Controllers\Admin\ServiceCategoryController;
+use App\Http\Controllers\Admin\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -101,13 +102,21 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/course/category/edit/{course_id}', [CourseCategoryController::class, 'edit'])->name('course.category.edit');
     Route::put('/course/category/update/{course_id}', [CourseCategoryController::class, 'update'])->name('course.category.update');
     Route::get('/course/category/delete/{course_id}', [CourseCategoryController::class, 'destroy'])->name('course.category.delete');
-    // service category 
+    // service category
     Route::get('/service/category/list', [ServiceCategoryController::class, 'index'])->name('service.category.list');
     Route::get('/service/category/create', [ServiceCategoryController::class, 'create'])->name('service.category.create');
     Route::post('/service/category/create/store', [ServiceCategoryController::class, 'store'])->name('service.category.store');
     Route::get('/service/category/edit/{service_id}', [ServiceCategoryController::class, 'edit'])->name('service.category.edit');
     Route::put('/service/category/update/{service_id}', [ServiceCategoryController::class, 'update'])->name('service.category.update');
     Route::get('/service/category/delete/{service_id}', [ServiceCategoryController::class, 'destroy'])->name('service.category.delete');
+
+    // service category
+    Route::get('/service/list', [ServiceController::class, 'index'])->name('service.list');
+    Route::get('/service/create', [ServiceController::class, 'create'])->name('service.create');
+    Route::post('/service/create/store', [ServiceController::class, 'store'])->name('service.store');
+    Route::get('/service/edit/{service_id}', [ServiceController::class, 'edit'])->name('service.edit');
+    Route::put('/service/update/{service_id}', [ServiceController::class, 'update'])->name('service.update');
+    Route::get('/service/delete/{service_id}', [ServiceController::class, 'destroy'])->name('service.delete');
 
     //instructor
     Route::get('/instructor/list', [InstructorController::class, 'index'])->name('instructor.list');

@@ -11,8 +11,8 @@
                     @endif
                 </div>
                 <div class="card-header">
-                    <h3 class="text-primary">Service Category List
-                        <a href="{{ route('service.category.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Add Category
+                    <h3 class="text-primary">Service List
+                        <a href="{{ route('service.create') }}" class="btn btn-primary btn-sm text-white  float-end ">Add
                             Service
                         </a>
                     </h3>
@@ -23,30 +23,29 @@
                             <thead>
                                 <tr>
                                     <th>SL</th>
-                                    <th>Sevice Title</th>
-                                    <th>Sevice Image</th>
+                                    <th>Sevice Name</th>
                                     <th>Service Description</th>
+                                    <th>Service Category Name</th>
                                     <th>status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($servicesCategories as $key  => $category)
+                                @forelse ($services as $key  => $service)
                                     <tr>
                                         <td>{{ $key+ 1}}</td>
-                                        <td>{{ $category->categoryTitle }}</td>
-                                        <td><img src="{{ asset($category->image) }}" width="50px" height="50px"
-                                            alt=""></td>
-                                        <td>{{ substr($category->categoryDescription, 0,  80) }}...</td>
-                                        <td>{{ $category->status == '1' ? 'Active' : 'Inactive' }}</td>
+                                        <td>{{ $service->name }}</td>
+                                        <td>{{ substr($service->description, 0,  80) }}...</td>
+                                        <td>{{ $service->Service->categoryTitle ??'' }}</td>
+                                        <td>{{$service->status == '1' ? 'Active' : 'Inactive' }}</td>
                                             <td>
-                                                <a href="{{ route('service.category.edit',$category->id) }}"
+                                                <a href="{{ route('service.edit',$service->id) }}"
                                                     type="button"
                                                     class="btn btn-sm btn-success btn-rounded waves-effect waves-light mb-2 me-1"
                                                     class="btn btn-sm btn-success"> <i class="mdi mdi-pencil"></i></a>
 
                                                 <a type="button"
-                                                    href="{{ route('service.category.delete',$category->id) }}"
+                                                    href="{{ route('service.delete',$service->id) }}"
                                                     onclick="return confirm('Are you sure, you want to delete ')"
                                                     class="btn btn-sm mb-2 me-1 btn-danger btn-rounded waves-effect waves-light">
                                                     <i class="fas fa-trash-alt"></i>
@@ -55,7 +54,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="13" class="text-danger text-center">No Service Category Available</td>
+                                        <td colspan="13" class="text-danger text-center">No Service Available</td>
                                     </tr>
                                 @endforelse
                             </tbody>
