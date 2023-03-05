@@ -21,13 +21,18 @@
                                     <label for="validationCustom01" class="form-label">Category Name</label>
                                     <input type="text" name="categoryTitle" class="form-control" id="validationCustom01"
                                         >
+                                        @if ($errors->has('categoryTitle'))
+                                        <span class="text-danger">{{ $errors->first('categoryTitle') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="validationCustom03" class="form-label">Description</label>
-                                    <input type="text" name="categoryDescription" class="form-control"
-                                        id="validationCustom02">
+                                    <label for="validationCustom03" class="form-label">Category Description</label>
+                                        <textarea name="categoryDescription" class="form-control" rows="1"></textarea>
+                                        @if ($errors->has('categoryDescription'))
+                                            <span class="text-danger">{{ $errors->first('categoryDescription') }}</span>
+                                        @endif
                                 </div>
                             </div>
                             <div class="col-md-6">

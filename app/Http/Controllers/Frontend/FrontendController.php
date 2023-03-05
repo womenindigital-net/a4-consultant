@@ -16,6 +16,8 @@ use App\Models\NewsAdnEvents;
 use App\Models\CourseCategory;
 // use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
+use App\Models\Service;
+use App\Models\ServiceCategory;
 use Illuminate\Support\Facades\Auth;
 use PHPUnit\TextUI\XmlConfiguration\Constant;
 use Carbon\Carbon;
@@ -55,6 +57,8 @@ class FrontendController extends Controller
 
     // ===========Service page============
     public function service(){
+        // $data['serviceCategory'] = ServiceCategory::get();
+        // dd($data);
         return view('frontend.service');
     }
 
