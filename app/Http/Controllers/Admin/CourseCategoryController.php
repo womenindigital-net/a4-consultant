@@ -72,6 +72,7 @@ class CourseCategoryController extends Controller
 
     public function destroy($category_id)
     {
+      
         $record = CourseCategory::findOrFail($category_id);
         if($record->count() > 0){
             $destination = $record->categoryImage;

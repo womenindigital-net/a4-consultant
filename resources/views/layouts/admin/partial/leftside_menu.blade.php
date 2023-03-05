@@ -14,8 +14,8 @@
                 {{-- Create Catergory Courses --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
-                        <span key="t-dashboards">CATEGORY COURSES</span>
+                        <i class="fa-solid fa-copy text-info"></i>
+                        <span key="t-dashboards">COURSES CATEGORY </span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('course.category.create') }}" key="t-horizontal">Courses Category
@@ -27,7 +27,7 @@
                 {{-- Courses instructor --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
+                        <i class="fa-solid fa-copy text-info"></i>
                         <span key="t-dashboards">COURSES INSTRUCTOR</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -39,7 +39,7 @@
                 {{-- Create Corses --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
+                        <i class="fa-solid fa-copy text-info"></i>
                         <span key="t-dashboards">COURSES</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -53,7 +53,7 @@
                 {{-- Enroll --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
+                        <i class="fa-solid fa-copy text-info"></i>
                         <span key="t-dashboards">ENROLL</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -64,7 +64,7 @@
                 {{-- Consultant --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
+                        <i class="fa-solid fa-copy text-info"></i>
                         <span key="t-dashboards">OUR CONSULTANT</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -73,10 +73,35 @@
                         <li><a href="{{ route('consultant.list') }}" key="t-horizontal">Consultant list</a></li>
                     </ul>
                 </li>
+                {{-- service category --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-copy text-info"></i>
+                        <span key="t-dashboards">SERVICE CATEGORY</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('service.category.create')}}" key="t-horizontal">Service Category
+                                create</a></li>
+                        <li><a href="{{route('service.category.list')}}" key="t-horizontal">Service Category list</a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- service --}}
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-copy text-info"></i>
+                        <span key="t-dashboards">SERVICE</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#" key="t-horizontal">Service Create</a></li>
+                        <li><a href="#" key="t-horizontal">Service List
+                                list</a></li>
+                    </ul>
+                </li>
                 {{-- Slider  --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
+                        <i class="fa-solid fa-copy text-info"></i>
                         <span key="t-dashboards">SLIDER</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -87,7 +112,7 @@
                 {{-- about us  --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
+                        <i class="fa-solid fa-copy text-info"></i>
                         <span key="t-dashboards">About Us</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -98,7 +123,7 @@
                 {{-- story  --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
+                        <i class="fa-solid fa-copy text-info"></i>
                         <span key="t-dashboards">STORIES</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -109,7 +134,7 @@
                 {{-- NEWS & EVENTS  --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
+                        <i class="fa-solid fa-copy text-info"></i>
                         <span key="t-dashboards">NEWS & EVENTS</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -120,7 +145,7 @@
                 {{-- NEWS & EVENTS  --}}
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
+                        <i class="fa-solid fa-copy text-info"></i>
                         <span key="t-dashboards">Client</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -130,7 +155,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-film text-danger"></i>
+                        <i class="fa-solid fa-copy text-info"></i>
                         <span key="t-dashboards">contact</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Enroll;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\ProfileController;
@@ -18,7 +19,7 @@ use App\Http\Controllers\Admin\NewsAdnEventsController;
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Frontend\UserProfielController;
 use App\Http\Controllers\Frontend\UserProfileController;
-use App\Models\Enroll;
+use App\Http\Controllers\Admin\ServiceCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,6 +101,14 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/course/category/edit/{course_id}', [CourseCategoryController::class, 'edit'])->name('course.category.edit');
     Route::put('/course/category/update/{course_id}', [CourseCategoryController::class, 'update'])->name('course.category.update');
     Route::get('/course/category/delete/{course_id}', [CourseCategoryController::class, 'destroy'])->name('course.category.delete');
+    // service category 
+    Route::get('/service/category/list', [ServiceCategoryController::class, 'index'])->name('service.category.list');
+    Route::get('/service/category/create', [ServiceCategoryController::class, 'create'])->name('service.category.create');
+    Route::post('/service/category/create/store', [ServiceCategoryController::class, 'store'])->name('service.category.store');
+    Route::get('/service/category/edit/{service_id}', [ServiceCategoryController::class, 'edit'])->name('service.category.edit');
+    Route::put('/service/category/update/{service_id}', [ServiceCategoryController::class, 'update'])->name('service.category.update');
+    Route::get('/service/category/delete/{service_id}', [ServiceCategoryController::class, 'destroy'])->name('service.category.delete');
+
     //instructor
     Route::get('/instructor/list', [InstructorController::class, 'index'])->name('instructor.list');
     Route::get('/instructor/create', [InstructorController::class, 'create'])->name('instructor.create');

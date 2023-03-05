@@ -89,4 +89,5 @@ class StoriesController extends Controller
           }
           return redirect()->back()->with('message', 'Successfully Delete Stories');
       }
+      
 }
