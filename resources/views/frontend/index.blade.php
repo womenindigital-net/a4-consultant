@@ -153,36 +153,22 @@
                             <h3>Upcoming events</h3>
                         </div> <!-- event title -->
                         <ul>
+                            @forelse ($upcomingEvents as $Event)
                             <li>
                                 <div class="singel-event">
-                                    <span><i class="fa fa-calendar"></i> 2 December 2018</span>
+                                    <span><i class="fa fa-calendar"></i> {{ $Event->date }}</span>
                                     <a href="events-singel.html">
-                                        <h4>Campus clean workshop</h4>
+                                        <h4>{{ $Event->title }}</h4>
                                     </a>
-                                    <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                    <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
+                                    <span><i class="fa fa-clock-o"></i> {{ $Event->time }} - {{ $Event->finishTime}}</span>
+                                    <span><i class="fa fa-map-marker"></i> {{ $Event->address }}</span>
                                 </div>
                             </li>
-                            <li>
-                                <div class="singel-event">
-                                    <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                    <a href="events-singel.html">
-                                        <h4>Tech Summit</h4>
-                                    </a>
-                                    <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                    <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="singel-event">
-                                    <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                    <a href="events-singel.html">
-                                        <h4>Enviroement conference</h4>
-                                    </a>
-                                    <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                    <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
-                                </div>
-                            </li>
+
+                            @empty
+                              <h1 class="text-danger">No Upcoming Event Available.</h1>
+                            @endforelse
+
                         </ul>
                     </div> <!-- about event -->
                 </div>

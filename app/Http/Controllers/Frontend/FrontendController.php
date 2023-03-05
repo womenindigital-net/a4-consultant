@@ -14,9 +14,11 @@ use App\Models\Instructor;
 use Illuminate\Http\Request;
 use App\Models\NewsAdnEvents;
 use App\Models\CourseCategory;
+// use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use PHPUnit\TextUI\XmlConfiguration\Constant;
+use Carbon\Carbon;
 
 class FrontendController extends Controller
 {
@@ -28,6 +30,8 @@ class FrontendController extends Controller
         $data['clients'] = Client::get();
         $data['allCourses'] = Course::get();
         $data['aboutus'] = About::first();
+        $todayDate = Carbon::now()->toDateString();
+        $data['upcomingEvents']= NewsAdnEvents::where('date','>=',$todayDate )->get();
         return view('frontend.index',$data);
     }
 
