@@ -111,12 +111,12 @@
                                     <div class="row mt-2 mb-4">
                                         <div class="col-md-6 col-sm-12">
                                                 <p class="reset color-default"
-                                                    style="font-size:14px; padding-left:11%;">{{ __('messages.Already_on_Billto') }}</p>
+                                                    style="font-size:14px; padding-left:11%;">Already on A4-Consultants</p>
                                             
                                         </div>
                                         <div class="col-md-6 col-sm-12 d-md-flex justify-content-end">
                                             <a style="font-size: 14px; padding-right:11%;" class="color-default"
-                                                href="{{ route('login') }}">{{ __('messages.Sign_in_here') }} </a>
+                                                href="{{ route('login') }}"><u>Sign in here</u></a>
                                         </div>
                                     </div>
                                     {{-- <div class="my-3  form-group">

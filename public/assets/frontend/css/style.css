@@ -3096,6 +3096,7 @@ a.dropdown-item {
 .events-left img {
     margin-top: 35px;
     border-radius: 5px;
+    width:100%;
 }
 .events-left p{
     padding-top: 31px;
@@ -3415,7 +3416,7 @@ a.dropdown-item {
 }
 .saidbar .saidbar-post ul li a .singel-post .thum{
     float: left;
-    padding-right: 20px;
+    padding-bottom: 10px;
 }
 .saidbar .saidbar-post ul li a .singel-post .thum img{
     border-radius: 5px;

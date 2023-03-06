@@ -49,8 +49,7 @@ class FrontendController extends Controller
 
     // ===========About us page============
     public function aboutus(){
-        $data['aboutus'] = About::first();
-
+        $data['aboutus']= About::orderBy('id', 'DESC')->first();
         return view('frontend.about', $data);
     }
 
@@ -125,7 +124,8 @@ class FrontendController extends Controller
 
     // ===========Contact page============
     public function contact(){
-        $data['contact'] = Contact::first();
+        // $data['contact'] = Contact::first();
+        $data['contact']= Contact::orderBy('id', 'DESC')->first();
         return view('frontend.contact',$data);
     }
 
