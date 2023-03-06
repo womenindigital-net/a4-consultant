@@ -57,9 +57,9 @@ class FrontendController extends Controller
 
     // ===========Service page============
     public function service(){
-        // $data['serviceCategory'] = ServiceCategory::get();
-        // dd($data);
-        return view('frontend.service');
+        // $data['services'] = Service::get();
+        $data['servicesCategories'] = ServiceCategory::where('status',1)->get();
+        return view('frontend.service',$data);
     }
 
 

@@ -13,6 +13,10 @@ class ServiceCategory extends Model
         return $this->hasMany(Service::class,'service_category_id', 'id');
     }
 
+    public function Services()
+    {
+        return $this->belongsTo(Service::class, 'service_id', 'id');
+    }
 
     /**
      * Get all of the comments for the ServiceCategory

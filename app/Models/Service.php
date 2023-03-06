@@ -10,7 +10,7 @@ class Service extends Model
     use HasFactory;
 
 
-    public function Service()
+    public function ServiceCategory()
     {
         return $this->belongsTo(ServiceCategory::class, 'service_category_id', 'id');
     }
