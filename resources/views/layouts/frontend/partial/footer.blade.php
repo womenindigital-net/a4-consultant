@@ -74,7 +74,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>{{ $conatact->address }}</p>
+                                        <p>{{ $conatact->address ??'' }}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -82,7 +82,7 @@
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>{{ $conatact->phone }}</p>
+                                        <p>{{ $conatact->phone ??'' }}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -90,7 +90,7 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>{{ $conatact->email }}</p>
+                                        <p>{{ $conatact->email ??'' }}</p>
                                     </div>
                                 </li>
                             </ul>

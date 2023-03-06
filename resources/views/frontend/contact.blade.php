@@ -95,7 +95,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>{{$contact->address}}</p>
+                                        <p>{{$contact->address ??''}}</p>
                                     </div>
                                 </div> <!-- singel address -->
                             </li>
@@ -105,7 +105,7 @@
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>{{$contact->phone}}</p>
+                                        <p>{{$contact->phone ??''}}</p>
                                     </div>
                                 </div> <!-- singel address -->
                             </li>
@@ -115,7 +115,7 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>{{$contact->email}}</p>
+                                        <p>{{$contact->email ??''}}</p>
 
                                     </div>
                                 </div> <!-- singel address -->
