@@ -2391,6 +2391,8 @@ a.dropdown-item {
 .about-image img {
     width: 100%;
     border-radius: 5px;
+    height: 450px;
+    object-fit: cover;
 }
 
 .about-singel-items{
