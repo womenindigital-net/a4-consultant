@@ -160,7 +160,8 @@
                                     <a href="events-singel.html">
                                         <h4>{{ $Event->title }}</h4>
                                     </a>
-                                    <span><i class="fa fa-clock-o"></i> {{ $Event->time }} - {{ $Event->finishTime}}</span>
+
+                                    <span><i class="fa fa-clock-o"></i> {{ date('h:i A', strtotime($Event->time)) }} - {{ date('h:i A', strtotime($Event->finishTime))}}</span>
                                     <span><i class="fa fa-map-marker"></i> {{ $Event->address }}</span>
                                 </div>
                             </li>
