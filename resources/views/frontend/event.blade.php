@@ -37,7 +37,7 @@
                        <div class="event-cont">
                            <span><i class="fa fa-calendar"></i>{{$newsEvent->date}}</span>
                             <a href="{{route('event.details', $newsEvent->id)}}"><h4>{{$newsEvent->title}}</h4> </a>
-                            <span><i class="fa fa-clock-o"></i> {{$newsEvent->time}} - {{$newsEvent->finishTime}}</span>
+                            <span><i class="fa fa-clock-o"></i>{{ date('h:i A', strtotime($newsEvent->time)) }} - {{date('h:i A', strtotime($newsEvent->finishTime))}}</span>
                             <span><i class="fa fa-map-marker"></i>{{$newsEvent->address}}</span>
                             <p>{{ substr($newsEvent->description, 0,  80) }}...</p>
                        </div>
