@@ -80,7 +80,7 @@ class FrontendController extends Controller
 
     // ===========Course page============
     public function allCourses(){
-        $data['allCourses'] = Course::get();
+        $data['allCourses']= Course::orderBy('id', 'DESC')->get();
         return view('frontend.all-courses',$data);
     }
 

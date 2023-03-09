@@ -156,7 +156,7 @@
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="fa-solid fa-copy text-info"></i>
-                        <span key="t-dashboards">contact</span>
+                        <span key="t-dashboards">Contact</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('contact.create') }}" key="t-horizontal">Create Contact</a></li>

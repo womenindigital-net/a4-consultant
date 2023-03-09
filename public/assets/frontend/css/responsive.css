@@ -762,7 +762,13 @@
  
 /* Large Mobile :480px. */
 @media only screen and  (max-width: 575.98px) {
-
+.singel-teachers .image img {
+	height: auto;
+}
+.about-image img {
+    height: auto;
+    object-fit: contain;
+}
 .main-btn {
 	padding: 0 20px;
 	font-size: 14px;
@@ -858,7 +864,9 @@
 .category-slied .slick-arrow {
 	right: -235px;
 }
-
+.about-singel-items {
+    padding: 0px;
+}
 .about-event {
 	padding: 30px 35px 10px;
 }
