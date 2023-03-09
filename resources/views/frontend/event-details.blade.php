@@ -34,7 +34,7 @@
                         <div class="events-left">
                             <h3>{{$event->title}}</h3>
                             <a href="#"><span><i class="fa fa-calendar"></i> {{$event->date}}</span></a>
-                            <a href="#"><span><i class="fa fa-clock-o"></i>{{ date('h:i A', strtotime($event->time)) }}  - {{date('h:i A', strtotime($event->finishTime))}}</span></a>
+                            <a href="#"><span><i class="fa fa-clock-o"></i>{{date('h:i A', strtotime($event->time))}} -- {{date('h:i A', strtotime($event->finishTime))}}</span></a>
                             <a href="#"><span><i class="fa fa-map-marker"></i> {{$event->address}}</span></a>
                             <img src="{{ asset($event->image)}}" alt="Event">
                             <p>{{$event->description}}</p>
