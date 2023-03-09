@@ -34,7 +34,7 @@
                         <div class="events-left">
                             <h3>{{$event->title}}</h3>
                             <a href="#"><span><i class="fa fa-calendar"></i> {{$event->date}}</span></a>
-                            <a href="#"><span><i class="fa fa-clock-o"></i> {{$event->time}} - {{$event->finishTime}}</span></a>
+                            <a href="#"><span><i class="fa fa-clock-o"></i>{{ date('h:i A', strtotime($event->time)) }}  - {{date('h:i A', strtotime($event->finishTime))}}</span></a>
                             <a href="#"><span><i class="fa fa-map-marker"></i> {{$event->address}}</span></a>
                             <img src="{{ asset($event->image)}}" alt="Event">
                             <p>{{$event->description}}</p>
@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="events-right">
-                            
+
                             <div class="events-address mt-30">
                                 <ul>
                                     <li>
@@ -52,7 +52,7 @@
                                             </div>
                                             <div class="cont">
                                                 <h6>Start Time</h6>
-                                                <span>{{$event->time}}</span>
+                                                <span>{{date('h:i A', strtotime($event->time))}}</span>
                                             </div>
                                         </div> <!-- singel address -->
                                     </li>
@@ -63,7 +63,7 @@
                                             </div>
                                             <div class="cont">
                                                 <h6>Finish Time</h6>
-                                                <span>{{$event->finishTime}}</span>
+                                                <span>{{date('h:i A', strtotime($event->finishTime))}}</span>
                                             </div>
                                         </div> <!-- singel address -->
                                     </li>
