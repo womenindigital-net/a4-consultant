@@ -146,6 +146,8 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/stories/edit/{stories_id}', [StoriesController::class, 'edit'])->name('stories.edit');
     Route::put('/stories/update/{stories_id}', [StoriesController::class, 'update'])->name('stories.update');
     Route::get('/stories/delete/{stories_id}', [StoriesController::class, 'destroy'])->name('stories.delete');
+    //stories images delete
+    Route::get('/stories/image/delete/{image_id}', [StoriesController::class, 'destroyImage'])->name('storiesImage.delete');
     //news and event
     Route::get('/event/list', [NewsAdnEventsController::class, 'index'])->name('event.list');
     Route::get('/event/create', [NewsAdnEventsController::class, 'create'])->name('event.create');

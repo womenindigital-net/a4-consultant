@@ -50,8 +50,8 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Image</label>
-                                    <input type="file" name="storiesImage[]" multiple id="imgInp" class="form-control"
-                                        id="validationCustom02">
+                                    <input type="file" name="storiesImage[]" multiple id="gallery-photo-add"
+                                        class="form-control" id="validationCustom02">
                                     @if ($errors->has('storiesImage'))
                                         <span class="text-danger">{{ $errors->first('storiesImage') }}</span>
                                     @endif
@@ -67,8 +67,14 @@
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <img class="d-none" width="100px" height="100px" id="blah" src="#"
-                                    alt="your image" />
+                                <style>
+                                    .gallery img {
+                                        height: 80px;
+                                        width: 80px;
+                                        margin-left: 10px;
+                                    }
+                                </style>
+                                <div class="gallery"></div>
                             </div>
                         </div>
                         {{-- preview image  --}}

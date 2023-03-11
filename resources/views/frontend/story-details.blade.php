@@ -54,7 +54,7 @@
                                {{-- <li><a href="#"><i class="fa fa-tags"></i>Education</a></li> --}}
                            </ul>
                            <p>{{$story->description}}</p>
-                          
+
                        </div>
                    </div> <!-- singel blog -->
                </div>

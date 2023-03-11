@@ -37,17 +37,25 @@
 
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $story->title }}</td>
-                                        <td><img src="{{ asset($story->storiesImage) }}" width="50px" height="50px"
-                                                alt=""></td>
-                                        <td>{{ substr($story->description, 0,  80) }}...</td>
+                                        <td>
+                                            @if ($story->storiesImages)
+                                                @foreach ($story->storiesImages as $image)
+                                                    <img src="{{ asset($image->image) }}" class="m-1" width="48px" height="48px"
+                                                        alt="">
+                                                @endforeach
+                                            @else
+                                                No image Found
+                                            @endif
+                                        </td>
+                                        <td>{{ substr($story->description, 0, 80) }}...</td>
                                         <td>{{ $story->date }}</td>
                                         <td>{{ $story->status == '1' ? 'Active' : 'Inactive' }}</td>
                                         <td>
-                                            <a href="{{ route('slider.edit', $story->id) }}" type="button"
+                                            <a href="{{ route('stories.edit', $story->id) }}" type="button"
                                                 class="btn btn-sm btn-success btn-rounded waves-effect waves-light mb-2 me-1"
                                                 class="btn btn-sm btn-success"> <i class="mdi mdi-pencil"></i></a>
 
-                                            <a type="button" href="{{ route('slider.delete', $story->id) }}"
+                                            <a type="button" href="{{ route('stories.delete', $story->id) }}"
                                                 onclick="return confirm('Are you sure, you want to delete?')"
                                                 class="btn btn-sm mb-2 me-1 btn-danger btn-rounded waves-effect waves-light">
                                                 <i class="fas fa-trash-alt"></i>

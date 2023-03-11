@@ -17,6 +17,13 @@
                         @csrf
                         @method('PUT')
                         <div class="row">
+                            <div>
+                                @if (session()->has('message'))
+                                    <div class="alert alert-success">
+                                        {{ session('message') }}
+                                    </div>
+                                @endif
+                            </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Stories Title</label>
@@ -51,8 +58,8 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Image</label>
-                                    <input type="file" name="storiesImage" id="imgInp" class="form-control"
-                                        id="validationCustom02">
+                                    <input type="file" name="storiesImage[]" multiple id="gallery-photo-add"
+                                        class="form-control" id="validationCustom02">
                                     @if ($errors->has('storiesImage'))
                                         <span class="text-danger">{{ $errors->first('storiesImage') }}</span>
                                     @endif
@@ -68,9 +75,34 @@
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <img src="{{ asset($stories->storiesImage) }}" width="100px" height="100px" id="blah"
-                                    src="#" alt="your image" />
+                                {{-- <img src="{{ asset($stories->storiesImage) }}" width="100px" height="100px"  id="gallery-photo-add"
+                                    src="#" alt="your image" /> --}}
+                                <style>
+                                    .gallery img {
+                                        height: 80px;
+                                        width: 80px;
+                                        margin-left: 10px;
+                                    }
+                                </style>
+                                <div class="gallery"></div>
+                                @if ($stories->storiesImages)
+                                    <div class="row mb-4">
+                                        @foreach ($stories->storiesImages as $image)
+                                            <div class="col-md-4">
+                                                <img src="{{ asset($image->image) }}" style="width: 80px; height:80px;"
+                                                    class="m-4 border " alt="">
+                                                <a type="submit" href="{{ route('storiesImage.delete', $image->id) }}"
+                                                    class="btn btn-sm mb-2 me-1 ms-4 btn-danger btn-rounded waves-effect waves-light">
+                                                    Remove
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                @else
+                                    <h5>NO image Added</h5>
+                                @endif
                             </div>
+
 
                         </div>
                         {{-- preview image  --}}
