@@ -102,26 +102,26 @@ p {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	border: 1px solid #ffc600;
+	border: 1px solid #0081B5;
 	padding: 0 35px;
 	font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 	line-height: 50px;
 	border-radius: 5px;
-    color: #000;
+    color: #FFF;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     z-index: 5;
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
-    background-color: #ffc600;
+    background-color: #0081B5;
 }
 .main-btn:hover{
-    color: #FFF;
-    border-color: #0081B5;
-    background-color: #0081B5;
+    color: #000;
+    border-color: #ffc600;
+    background-color: #ffc600;
 }
 
 
@@ -154,7 +154,7 @@ p {
 }
 .section-title h2{
     font-size: 48px;
-    color: #000;
+    color: #0081B5;
     padding-top: 10px;
 }
 
@@ -401,7 +401,11 @@ p {
 
 /*===== Header Logo support =====*/
 .logo img {
-    width: 70px;
+    width: 80px;
+    height: auto;
+}
+.logo2 img {
+    width: 120px;
     height: auto;
 }
 .align-center {
@@ -1104,7 +1108,7 @@ a.dropdown-item {
 }
 .about-event .event-title h3{
     font-size: 36px;
-    color: #000;
+    color: #0081B5;
     padding-bottom: 5px;
 }
 .about-event ul li .singel-event{
@@ -1130,7 +1134,7 @@ a.dropdown-item {
 .about-event ul li .singel-event a h4{
     padding-top: 5px;
     padding-bottom: 10px;
-    color: #000;
+    color: #0081B5;
     font-size: 24px;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
@@ -1277,7 +1281,7 @@ a.dropdown-item {
 .singel-course .cont h4{
     font-weight: 600;
     font-size: 24px;
-    color: #000;
+    color: #0081B5;
     padding-top: 15px;
     padding-bottom: 40px;
     -webkit-transition: all 0.4s linear;
@@ -1485,13 +1489,13 @@ a.dropdown-item {
     display: block;
 }
 .singel-teachers .cont a h6{
-    color: #000;
+    color: #0081B5;
     font-size: 15px;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
 }
 .singel-teachers .cont a:hover h6{
-    color: #ffc600;
+    color: #000;
 }
 
 .singel-teachers .cont span{
@@ -1865,7 +1869,7 @@ a.dropdown-item {
     width: 40px;
     height: 40px;
     line-height: 35px;
-    background-color: #ffc600;
+    background-color: #0081B5;
     color: #fff;
     font-size: 28px;
     border-radius: 5px;
@@ -1877,7 +1881,7 @@ a.dropdown-item {
 }
 .back-to-top:hover{
     color: #fff;
-    background-color: #0081B5;
+    background-color: #ffc600;
 }
 
 
@@ -2522,7 +2526,7 @@ a.dropdown-item {
 .corses-singel-left .title{}
 .corses-singel-left .title h3{
     font-size: 30px;
-    color: #000;
+    color: #0081B5;
     font-weight: 600;
     padding-bottom: 25px;
 }
@@ -3062,7 +3066,7 @@ a.dropdown-item {
 .singel-event-list .event-cont a h4 {
 	padding-top: 5px;
 	padding-bottom: 10px;
-	color: #000;
+	color: #0081B5;
 	font-size: 20px;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
@@ -3085,7 +3089,7 @@ a.dropdown-item {
 .events-left h3{
     padding-top: 5px;
 	padding-bottom: 10px;
-	color: #000;
+	color: #0081B5;
 	font-size: 30px;
 }
 .events-left  span {
@@ -3293,7 +3297,7 @@ a.dropdown-item {
 }
 .singel-blog .blog-cont h3{
     font-size: 36px;
-    color: #000;
+    color: #0081B5;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
 }
@@ -3315,7 +3319,7 @@ a.dropdown-item {
 }
 .singel-blog .blog h3{
     font-size: 22px;
-    color: #000;
+    color: #0081B5;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
 }
@@ -3434,7 +3438,7 @@ a.dropdown-item {
 .saidbar .saidbar-post ul li a .singel-post .cont h6{
     font-weight: 600;
     font-size: 18px;
-    color: #000;
+    color: #0081B5;
     padding-bottom: 10px;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;

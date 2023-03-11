@@ -83,14 +83,14 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="active" href="{{ route('index') }}">Home</a>
+                                    <a class="{{ (request()->is('/')) ? 'active' : '' }}" href="{{ route('index') }}">Home</a>
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('aboutus') }}">About Us</a>
+                                    <a class="{{ (request()->is('aboutus')) ? 'active' : '' }}" href="{{ route('aboutus') }}">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('service') }}">Our Services</a>
+                                    <a class="{{ (request()->is('service')) ? 'active' : '' }}" href="{{ route('service') }}">Our Services</a>
                                 </li>
                                 <li class="nav-item dropdown show">
                                     <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink"
@@ -105,21 +105,21 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('teachers') }}">Our teachers</a>
+                                    <a class="{{ (request()->is('teachers')) ? 'active' : '' }}" href="{{ route('teachers') }}">Our teachers</a>
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('stories') }}">Stories</a>
+                                    <a class="{{ (request()->is('stories')) ? 'active' : '' }}" href="{{ route('stories') }}">Stories</a>
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('clints') }}">Our Clints</a>
+                                    <a class="{{ (request()->is('clints')) ? 'active' : '' }}" href="{{ route('clints') }}">Our Clients</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('news') }}">News & Events</a>
+                                    <a class="{{ (request()->is('news')) ? 'active' : '' }}" href="{{ route('news') }}">News & Events</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('contact') }}">Contact Us</a>
+                                    <a class="{{ (request()->is('contact')) ? 'active' : '' }}" href="{{ route('contact') }}">Contact Us</a>
 
                                 </li>
 

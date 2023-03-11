@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-about mt-40">
-                            <div class="logo">
+                            <div class="logo logo2">
                                 <a href="#"><img src="{{ asset('assets/frontend/images/logo-2.png') }}"
                                         alt="Logo"></a>
                             </div>
@@ -69,14 +69,14 @@
                                 <h6>Contact Us</h6>
                             </div>
                             <ul>
-                                <li>
+                                {{-- <li>
                                     <div class="icon">
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
                                         <p>{{ $conatact->address ??'' }}</p>
                                     </div>
-                                </li>
+                                </li> --}}
                                 <li>
                                     <div class="icon">
                                         <i class="fa fa-phone"></i>

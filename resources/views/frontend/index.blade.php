@@ -45,8 +45,8 @@
                                 </h1>
                                 <p data-animation="fadeInUp" data-delay="1.3s">{{ $slider->sliderDescription }}</p>
                                 <ul>
-                                    <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{{ route('all-courses') }}">Our
-                                            Courses</a></li>
+                                    <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{{ route('service') }}">Our
+                                            Services</a></li>
                                 </ul>
                             </div>
                         </div>
