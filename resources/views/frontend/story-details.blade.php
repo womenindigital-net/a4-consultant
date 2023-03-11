@@ -33,6 +33,19 @@
                        <div class="blog-thum">
                            <img src="{{ asset($story->storiesImage)}}" alt="Blog">
                        </div>
+                       <div class="story-image">
+                        <div class="row pt-20">
+                            <div class="col-4">
+                                <img src="{{ asset($story->storiesImage)}}" alt="Blog">
+                            </div>
+                            <div class="col-4">
+                                <img src="{{ asset($story->storiesImage)}}" alt="Blog">
+                            </div>
+                            <div class="col-4">
+                                <img src="{{ asset($story->storiesImage)}}" alt="Blog">
+                            </div>
+                        </div>
+                       </div>
                        <div class="blog-cont">
                            <a href="#"><h3>{{$story->title}}</h3></a>
                            <ul>
@@ -41,6 +54,7 @@
                                {{-- <li><a href="#"><i class="fa fa-tags"></i>Education</a></li> --}}
                            </ul>
                            <p>{{$story->description}}</p>
+                          
                        </div>
                    </div> <!-- singel blog -->
                </div>
