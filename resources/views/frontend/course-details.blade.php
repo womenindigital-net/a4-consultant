@@ -135,7 +135,7 @@
                                     <li><i class="fa fa-clock-o"></i>Duaration : <span>{{  $categoriesDetails->duration }}</span></li>
                                     <li><i class="fa fa-clone"></i>Leactures : <span>{{  $categoriesDetails->leactures }}</span></li>
                                     <li><i class="fa fa-beer"></i>Quizzes :  <span>{{  $categoriesDetails->quizzes }}</span></li>
-                                    <li><i class="fa fa-user-o"></i>Time :  <span>{{  $categoriesDetails->time }}</span></li>
+                                    <li><i class="fa fa-user-o"></i>Time :  <span> {{date('h:i A', strtotime( $categoriesDetails->time))}}  </span></li>
                                 </ul>
                                 <div class="price-button pt-10">
                                     <!-- <span>Price : <b>$25</b></span> -->

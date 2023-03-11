@@ -50,7 +50,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="validationCustom03" class="form-label">Image</label>
-                                    <input type="file" name="storiesImage" id="imgInp" class="form-control"
+                                    <input type="file" name="storiesImage[]" multiple id="imgInp" class="form-control"
                                         id="validationCustom02">
                                     @if ($errors->has('storiesImage'))
                                         <span class="text-danger">{{ $errors->first('storiesImage') }}</span>
