@@ -83,7 +83,7 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="active" href="{{ route('index') }}">Home</a>
+                                    <a class="" href="{{ route('index') }}">Home</a>
 
                                 </li>
                                 <li class="nav-item">
@@ -113,7 +113,7 @@
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('clints') }}">Our Clints</a>
+                                    <a href="{{ route('clints') }}">Our Clients</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('news') }}">News & Events</a>

@@ -116,7 +116,6 @@
                                     </div>
                                     <div class="cont">
                                         <p>{{$contact->email ??''}}</p>
-
                                     </div>
                                 </div> <!-- singel address -->
                             </li>
