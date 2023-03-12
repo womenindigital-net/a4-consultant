@@ -18,6 +18,7 @@ use App\Models\CourseCategory;
 use App\Http\Controllers\Controller;
 use App\Models\Service;
 use App\Models\ServiceCategory;
+use App\Models\StoriesImages;
 use Illuminate\Support\Facades\Auth;
 use PHPUnit\TextUI\XmlConfiguration\Constant;
 use Carbon\Carbon;
