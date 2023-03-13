@@ -22,7 +22,7 @@ class EnrollController extends Controller
     {
         $course_id = $course_id;
         if (Auth::user()) {
-            if (Enroll::where('course_id', $course_id)->exists()) {
+            if (Enroll::where('course_id', $course_id)->where('email', Auth::user()->email)->exists()) {
                 return redirect()->route('course.details', $course_id)->with('message', 'This course already has been taken.');
             } else {
                 $record = new Enroll();
