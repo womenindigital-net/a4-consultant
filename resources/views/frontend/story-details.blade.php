@@ -40,7 +40,7 @@
                         <div class="row pt-20">
                             @foreach ($story->StoriesImages as $storyImages)
                                 <div class="col-4 story-details-images">
-                                    <img src="{{ asset($storyImages->image) }}" alt="Blog">
+                                    <img class="my-3" src="{{ asset($storyImages->image) }}" alt="Blog">
                                 </div>
                             @endforeach
                         </div>
